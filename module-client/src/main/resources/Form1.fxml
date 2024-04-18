@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gui.Form1Controller">
+   <VBox>
+      <children>
+           <TextField fx:id="username" prefHeight="14.0" prefWidth="150.0" />
+           <AnchorPane maxHeight="128.0" maxWidth="256.0" prefHeight="5.0" prefWidth="150.0" />
+           <TextField fx:id="password" />
+         <AnchorPane prefHeight="5.0" prefWidth="200.0" />
+           <Button onAction="#handleLoginButtonAction" text="Login" translateX="75.0" />
+           <Button onAction="#handleRegisterButtonAction" text="Register" translateX="75.0" />
+      </children>
+   </VBox>
+</VBox>

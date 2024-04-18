@@ -1,0 +1,9 @@
+rootProject.name = 'Lab7Java-Modules'
+include 'module-client'
+include 'module-commons'
+include 'module-server'
+include 'module-networking'
+include 'module-services'
+include 'module-persistence'
+include 'module-models'
+

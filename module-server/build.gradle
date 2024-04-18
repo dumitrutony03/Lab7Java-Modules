@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+
+jar{
+    // Daca la crearea fisierului jar va apare o eroare cu duplicate META-INF/DEPENDENCIES,
+    // trebuie sa adaugati in sectiunea jar urmatoarea linie de cod:
+    manifest{
+        attributes('Main-Class':'org.example.Main')
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from{
+        configurations.runtimeClasspath.collect{it.isDirectory()?it:zipTree(it)}
+    }
+}
+
+
+dependencies {
+    implementation project(':module-models')
+    implementation project(':module-services')
+    implementation project(':module-persistence')
+    implementation project(':module-networking')
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    implementation 'com.google.code.gson:gson:2.9.0'
+
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.23.0'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.23.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
+application{
+    mainClass='org.example.Main' //specificam calea
+}

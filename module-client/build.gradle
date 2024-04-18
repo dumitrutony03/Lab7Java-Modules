@@ -1,0 +1,48 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version="17"
+    modules = [ 'javafx.controls', 'javafx.fxml'  ]
+}
+
+jar{
+    // Daca la crearea fisierului jar va apare o eroare cu duplicate META-INF/DEPENDENCIES,
+    // trebuie sa adaugati in sectiunea jar urmatoarea linie de cod:
+    manifest{
+        attributes('Main-Class':'org.example.Main')
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from{
+        configurations.runtimeClasspath.collect{it.isDirectory()?it:zipTree(it)}
+    }
+}
+
+dependencies {
+    implementation project(':module-models')
+    implementation project(':module-services')
+    implementation project(':module-networking')
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    implementation 'com.google.code.gson:gson:2.9.0'
+
+
+    // https://mvnrepository.com/artifact/org.openjfx/javafx
+    implementation group: 'org.openjfx', name: 'javafx', version: '23-ea+3', ext: 'pom'
+}
+
+application{
+    mainClass='org.example.Main' //specificam calea
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Masini driver - CarsDB-JavaHomework" uuid="6c65d6bd-6327-4c82-b872-4fa5936f51f2">
+      <driver-ref>11bdda8f-af85-43c7-b1e0-be137b9a5587</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\tonyc\Downloads\Anul2\Semestrul_2\MPP\databases\CarsDB-JavaHomework</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>

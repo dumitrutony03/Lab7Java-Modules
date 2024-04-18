@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gui.Form2Controller">
+    <VBox>
+        <ListView fx:id="listBox1" prefHeight="69.0" prefWidth="478.0" />
+        <Button onAction="#onShowClick" text="Participants per Race" />
+    </VBox>
+
+    <VBox>
+        <TextField fx:id="txtEchipa" promptText="Introdu numele echipei" />
+        <TextArea fx:id="textAreaRezultate" prefHeight="51.0" prefWidth="478.0" promptText="Aici vei vedea pentru echipa aleasa, fiecare participant si cursa la care participa." wrapText="true">
+        </TextArea>
+        <Button onAction="#onEchipaParticipantiClick" text="Participant:CapMotor" />
+    </VBox>
+
+    <VBox>
+        <TextField fx:id="txtNumeParticipant" promptText="Nume" />
+        <TextField fx:id="txtNumeEchipa" promptText="Echipa" />
+        <TextField fx:id="txtCapMotor" promptText="Capacitate Motor" />
+        <Button onAction="#onInscrieParticipantClick" text="AddParticipant" />
+    </VBox>
+
+    <Button onAction="#onLogoutClick" text="Logout" />
+</VBox>
