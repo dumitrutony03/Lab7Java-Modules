@@ -1,6 +1,5 @@
 package org.example.dto;
 
-import org.example.models.Cursa;
 import org.example.models.Echipa;
 
 import java.io.Serializable;
@@ -8,9 +7,9 @@ import java.io.Serializable;
 public class ParticipantDto implements Serializable {
     private String nume;
     private Echipa echipa;
-    private Cursa cursa;
+    private CursaDto cursa;
 
-    public ParticipantDto(String nume, Echipa echipa, Cursa cursa) {
+    public ParticipantDto(String nume, Echipa echipa, CursaDto cursa) {
         this.nume = nume;
         this.echipa = echipa;
         this.cursa = cursa;
@@ -32,11 +31,11 @@ public class ParticipantDto implements Serializable {
         this.echipa = echipa;
     }
 
-    public Cursa getCursa() {
+    public CursaDto getCursaDto() {
         return cursa;
     }
 
-    public void setCursa(Cursa cursa) {
+    public void setCursaDto(CursaDto cursa) {
         this.cursa = cursa;
     }
 

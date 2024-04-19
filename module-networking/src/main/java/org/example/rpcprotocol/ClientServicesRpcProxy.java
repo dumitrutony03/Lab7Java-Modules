@@ -1,5 +1,6 @@
 package org.example.rpcprotocol;
 
+import org.example.dto.CursaDto;
 import org.example.dto.DTOUtils;
 import org.example.dto.ParticipantDto;
 import org.example.dto.PersoanaOficiuDto;
@@ -59,12 +60,13 @@ public class ClientServicesRpcProxy implements IServices {
 
         Echipa e1 = Echipa.valueOf(numeEchipa); // Conversie din String în enum Echipa
         Cursa c1 = new Cursa(CapacitateMotor.valueOf(capMotor));
-        Participant participant = new Participant(numeParticipant, e1, c1);
+        CursaDto c1Dto = DTOUtils.getDTO(c1);
+        ParticipantDto participantDto = new ParticipantDto(numeParticipant, e1, c1Dto);
 
-        ParticipantDto udto = DTOUtils.getDTO(participant);
-        System.out.println("participantdto: " + udto);
+//        ParticipantDto udto = DTOUtils.getDTO(participant);
+        System.out.println("participantdto: " + participantDto);
 
-        Request req = new Request.Builder().type(RequestType.NEW_PARTICIPANT).data(udto).build();
+        Request req = new Request.Builder().type(RequestType.NEW_PARTICIPANT).data(participantDto).build();
         sendRequest(req);
         Response response = readResponse();
         if (response.type() == ResponseType.OK) {
@@ -171,7 +173,7 @@ public class ClientServicesRpcProxy implements IServices {
 
 
     private void handleUpdate(Response response) {
-        if (response.type() == ResponseType.FRIEND_LOGGED_IN) {
+        if (response.type() == ResponseType.PERSOANAOFICIU_LOGGED_IN) {
             System.out.println("handleUpdate -- FRIEND_LOGGED_IN => PersoanaOficiu logged in");
 
             PersoanaOficiu persoanaOficiu = DTOUtils.getFromDTO((PersoanaOficiuDto) response.data());
@@ -208,7 +210,7 @@ public class ClientServicesRpcProxy implements IServices {
     }
 
     private boolean isUpdate(Response response) {
-        return response.type() == ResponseType.FRIEND_LOGGED_OUT || response.type() == ResponseType.FRIEND_LOGGED_IN || response.type() == ResponseType.NEW_PARTICIPANT;
+        return response.type() == ResponseType.FRIEND_LOGGED_OUT || response.type() == ResponseType.PERSOANAOFICIU_LOGGED_IN || response.type() == ResponseType.NEW_PARTICIPANT;
     }
 
     private class ReaderThread implements Runnable {

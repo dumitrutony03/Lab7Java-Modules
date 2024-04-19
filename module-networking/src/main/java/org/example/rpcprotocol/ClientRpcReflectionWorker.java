@@ -74,7 +74,7 @@ public class ClientRpcReflectionWorker implements Runnable {
 
     public void LoginPersoanaOficiu(PersoanaOficiu persoanaOficiu) {
         PersoanaOficiuDto udto= DTOUtils.getDTO(persoanaOficiu);
-        Response resp=new Response.Builder().type(ResponseType.FRIEND_LOGGED_IN).data(udto).build();
+        Response resp=new Response.Builder().type(ResponseType.PERSOANAOFICIU_LOGGED_IN).data(udto).build();
         System.out.println("Friend logged in "+persoanaOficiu);
         try {
             sendResponse(resp);
