@@ -73,6 +73,12 @@ public class ClientServicesJsonProxy implements IServices {
     public void InscrieParticipant(String numeParticipant, String numeEchipa, String capMotor) {
 
     }
+
+    @Override
+    public void Logout(String numeParticipant) {
+
+    }
+
     public void logout(PersoanaOficiu persoanaOficiu) throws Exception {
 
         Request req = JsonProtocolUtils.createLogoutRequest(persoanaOficiu);

@@ -11,7 +11,6 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -54,6 +53,36 @@ public class ClientServicesRpcProxy implements IServices {
         }
         return false;
     }
+
+//    @Override
+//    public void Logout(String numeParticipant) {
+//        Request req = new Request.Builder().type(RequestType.LOGOUT).data(numeParticipant).build();
+//        sendRequest(req);
+//        Response response = readResponse();
+//        if (response.type() == ResponseType.OK) {
+//            System.out.println("Raspuns OK pentru LOGOUT - PersoanaOficiu");
+//        } else if (response.type() == ResponseType.ERROR) {
+//            String err = response.data().toString();
+//            closeConnection();
+//            System.out.println("EROARE persoanaOficiuLoggedIn: " + err);
+//            // Optionally rethrow the error as unchecked to handle upstream or log it.
+//        }
+//    }
+
+    @Override
+    public void Logout(String numeParticipant) {
+        Request req = new Request.Builder().type(RequestType.LOGOUT).data(numeParticipant).build();
+        sendRequest(req);
+        Response response = readResponse();
+        closeConnection();
+        if (response.type() == ResponseType.OK) {
+            System.out.println("Raspuns OK pentru LOGOUT - PersoanaOficiu");
+        } else if (response.type() == ResponseType.ERROR) {
+            String err = response.data().toString();
+            System.out.println("EROARE LOGOUT PERSOANA OFICIU: " + err);
+        }
+    }
+
 
     @Override
     public void InscrieParticipant(String numeParticipant, String numeEchipa, String capMotor) {
@@ -126,44 +155,6 @@ public class ClientServicesRpcProxy implements IServices {
         return null;
     }
 
-//    public void sendMessage(Message message) throws ChatException {
-//        MessageDTO mdto = DTOUtils.getDTO(message);
-//        Request req = new Request.Builder().type(RequestType.SEND_MESSAGE).data(mdto).build();
-//        sendRequest(req);
-//        Response response = readResponse();
-//        if (response.type() == ResponseType.ERROR) {
-//            String err = response.data().toString();
-//            throw new ChatException(err);
-//        }
-//    }
-
-    public void logout(User user, IChatObserver client) {
-        UserDTO udto = DTOUtils.getDTO(user);
-        Request req = new Request.Builder().type(RequestType.LOGOUT).data(udto).build();
-        sendRequest(req);
-        Response response = readResponse();
-        closeConnection();
-        if (response.type() == ResponseType.ERROR) {
-            String err = response.data().toString();
-            throw new ChatException(err);
-        }
-    }
-
-
-//    public User[] getLoggedFriends(User user) throws ChatException {
-//        UserDTO udto = DTOUtils.getDTO(user);
-//        Request req = new Request.Builder().type(RequestType.GET_LOGGED_FRIENDS).data(udto).build();
-//        sendRequest(req);
-//        Response response = readResponse();
-//        if (response.type() == ResponseType.ERROR) {
-//            String err = response.data().toString();
-//            throw new ChatException(err);
-//        }
-//        UserDTO[] frDTO = (UserDTO[]) response.data();
-//        User[] friends = DTOUtils.getFromDTO(frDTO);
-//        return friends;
-//    }
-
     private void closeConnection() {
         finished = true;
         try {
@@ -220,7 +211,7 @@ public class ClientServicesRpcProxy implements IServices {
 
     private void handleUpdate(Response response) {
         if (response.type() == ResponseType.PERSOANAOFICIU_LOGGED_IN) {
-            System.out.println("handleUpdate -- FRIEND_LOGGED_IN => PersoanaOficiu logged in");
+            System.out.println("handleUpdate -- PERSOANAOFICIU_LOGGED_IN => PersoanaOficiu logged in");
 
             PersoanaOficiu persoanaOficiu = DTOUtils.getFromDTO((PersoanaOficiuDto) response.data());
             System.out.println("Friend logged in " + persoanaOficiu);
@@ -231,16 +222,18 @@ public class ClientServicesRpcProxy implements IServices {
                 e.printStackTrace();
             }
         }
-//        if (response.type() == ResponseType.FRIEND_LOGGED_OUT) {
-//            User friend = DTOUtils.getFromDTO((UserDTO) response.data());
-//            System.out.println("Friend logged out " + friend);
-//            try {
-//                client.friendLoggedOut(friend);
-//            } catch (ChatException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//
+        if (response.type() == ResponseType.PERSOANAOFICIU_LOGGED_OUT) {
+            System.out.println("handleUpdate -- PERSOANAOFICIU_LOGGED_OUT => PersoanaOficiu logged out");
+
+            String name = response.data().toString();
+            System.out.println("PERSOANAOFICIU_LOGGED_OUT " + name);
+            try {
+                System.out.println("Persoana oficiu logged out!");
+//                client.friendLoggedIn(persoanaOficiu);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
         if (response.type() == ResponseType.NEW_PARTICIPANT) {
             System.out.println("Suntem pe handleUpdate");
 
@@ -269,7 +262,7 @@ public class ClientServicesRpcProxy implements IServices {
     }
 
     private boolean isUpdate(Response response) {
-        return response.type() == ResponseType.FRIEND_LOGGED_OUT || response.type() == ResponseType.PERSOANAOFICIU_LOGGED_IN || response.type() == ResponseType.NEW_PARTICIPANT;
+        return response.type() == ResponseType.PERSOANAOFICIU_LOGGED_OUT || response.type() == ResponseType.PERSOANAOFICIU_LOGGED_IN || response.type() == ResponseType.NEW_PARTICIPANT;
     }
 
     private class ReaderThread implements Runnable {
@@ -296,13 +289,6 @@ public class ClientServicesRpcProxy implements IServices {
             }
         }
     }
-
-
-
-
-
-
-
 
 
     //// TO BE IMPLEMENTED

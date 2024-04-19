@@ -12,4 +12,5 @@ public interface IServices {
     public StringBuilder GetTeam_Participants(String echipa);
 
     public void InscrieParticipant(String numeParticipant, String numeEchipa, String capMotor);
+    public void Logout(String numeParticipant);
 }

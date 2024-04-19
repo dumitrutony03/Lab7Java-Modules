@@ -82,4 +82,9 @@ public class IServiceImplementation implements IServices {
 
         ParticipantRepository.Add(p1);
     }
+
+    @Override
+    public synchronized void Logout(String numeParticipant) {
+        System.out.println(numeParticipant + " Logged Out!");
+    }
 }

@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.example.models.PersoanaOficiu;
 import org.example.services.IServices;
 
 import java.util.Map;
@@ -26,6 +27,7 @@ public class Form2Controller {
     private TextField txtCapMotor;
 
     private IServices service;
+    private PersoanaOficiu persoanaOficiu;
 
     // Constructor gol pentru FXML
     public Form2Controller() {
@@ -35,6 +37,9 @@ public class Form2Controller {
     // Metoda pentru a seta serviciul după inițializare
     public void setserver(IServices service) {
         this.service = service;
+    }
+    public void setPersoanaOficiu(PersoanaOficiu persoanaOficiu) {
+        this.persoanaOficiu = persoanaOficiu;
     }
 
     public void onShowClick(ActionEvent event) {
@@ -67,8 +72,19 @@ public class Form2Controller {
     }
 
     @FXML
-    protected void onLogoutClick(ActionEvent event) {
-        openNextWindow(event);
+    protected void onLogoutClick(ActionEvent actionEvent) {
+        logout();
+        ((Node) (actionEvent.getSource())).getScene().getWindow().hide();
+//        System.out.println(persoanaOficiu.getNume());
+//        openNextWindow(actionEvent);
+    }
+
+    void logout() {
+        try {
+            service.Logout(persoanaOficiu.getNume());
+        } catch (Exception e) {
+            System.out.println("Logout error " + e);
+        }
     }
 
     private void openNextWindow(ActionEvent event) {

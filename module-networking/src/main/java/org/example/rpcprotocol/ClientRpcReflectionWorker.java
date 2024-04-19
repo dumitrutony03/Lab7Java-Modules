@@ -7,6 +7,7 @@ import org.example.models.Participant;
 import org.example.models.PersoanaOficiu;
 import org.example.services.IServices;
 
+import java.io.EOFException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -23,25 +24,26 @@ public class ClientRpcReflectionWorker implements Runnable {
     private ObjectInputStream input;
     private ObjectOutputStream output;
     private volatile boolean connected;
+
     public ClientRpcReflectionWorker(IServices server, Socket connection) {
         this.server = server;
         this.connection = connection;
-        try{
-            output=new ObjectOutputStream(connection.getOutputStream());
+        try {
+            output = new ObjectOutputStream(connection.getOutputStream());
             output.flush();
-            input=new ObjectInputStream(connection.getInputStream());
-            connected=true;
+            input = new ObjectInputStream(connection.getInputStream());
+            connected = true;
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void run() {
-        while(connected){
+        while (connected) {
             try {
-                Object request=input.readObject();
-                Response response=handleRequest((Request)request);
-                if (response!=null){
+                Object request = input.readObject();
+                Response response = handleRequest((Request) request);
+                if (response != null) {
                     sendResponse(response);
                 }
             } catch (IOException | ClassNotFoundException e) {
@@ -58,7 +60,7 @@ public class ClientRpcReflectionWorker implements Runnable {
             output.close();
             connection.close();
         } catch (IOException e) {
-            System.out.println("Error "+e);
+            System.out.println("Error " + e);
         }
     }
 
@@ -95,16 +97,16 @@ public class ClientRpcReflectionWorker implements Runnable {
 //        }
 //    }
 
-    private static Response okResponse=new Response.Builder().type(ResponseType.OK).build();
+    private static Response okResponse = new Response.Builder().type(ResponseType.OK).build();
 
-    private Response handleRequest(Request request){
-        Response response=null;
-        String handlerName="handle"+(request).type();
-        System.out.println("HandlerName "+handlerName);
+    private Response handleRequest(Request request) {
+        Response response = null;
+        String handlerName = "handle" + (request).type();
+        System.out.println("HandlerName " + handlerName);
         try {
-            Method method=this.getClass().getDeclaredMethod(handlerName, Request.class);
-            response=(Response)method.invoke(this,request);
-            System.out.println("Method "+handlerName+ " invoked");
+            Method method = this.getClass().getDeclaredMethod(handlerName, Request.class);
+            response = (Response) method.invoke(this, request);
+            System.out.println("Method " + handlerName + " invoked");
         } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
             e.printStackTrace();
         }
@@ -112,23 +114,35 @@ public class ClientRpcReflectionWorker implements Runnable {
         return response;
     }
 
-    private Response handleLOGIN(Request request){
-        System.out.println("Login request ..."+request.type());
-        PersoanaOficiuDto udto=(PersoanaOficiuDto) request.data();
-        PersoanaOficiu user=DTOUtils.getFromDTO(udto);
+    private Response handleLOGIN(Request request) {
+        System.out.println("Login request ..." + request.type());
+        PersoanaOficiuDto udto = (PersoanaOficiuDto) request.data();
+        PersoanaOficiu user = DTOUtils.getFromDTO(udto);
         try {
             server.LoginPersoanaOficiu(user.getNume(), user.getParola());
             return okResponse;
         } catch (Exception e) {
-            connected=false;
+            connected = false;
             return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
         }
     }
 
-    private Response handleNEW_PARTICIPANT(Request request){
+    public Response handleLOGOUT(Request request) {
+        try {
+            server.Logout(request.data().toString());  // Assume this logs the user out
+            return new Response.Builder().type(ResponseType.OK).data("Logged out successfully").build();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
+        } finally {
+            connected = false;  // Update connection status after response
+        }
+    }
+
+    private Response handleNEW_PARTICIPANT(Request request) {
         System.out.println("SendMessageRequest ...");
-        ParticipantDto mdto=(ParticipantDto)request.data();
-        Participant participant=DTOUtils.getFromDTO(mdto);
+        ParticipantDto mdto = (ParticipantDto) request.data();
+        Participant participant = DTOUtils.getFromDTO(mdto);
         try {
             server.InscrieParticipant(participant.GetNumeParticipant(), participant.GetEchipa().name(), participant.GetCursa().GetCapMotor().name());
             return okResponse;
@@ -137,7 +151,7 @@ public class ClientRpcReflectionWorker implements Runnable {
         }
     }
 
-    private Response handleNR_PARTICIPANTS_BYRACE(Request request){
+    private Response handleNR_PARTICIPANTS_BYRACE(Request request) {
 
         System.out.println("Nr participants by race request ... " + request.type());
         try {
@@ -149,7 +163,7 @@ public class ClientRpcReflectionWorker implements Runnable {
         }
     }
 
-    private Response handlePARTICIPANTS_BYTEAM(Request request){
+    private Response handlePARTICIPANTS_BYTEAM(Request request) {
 
         System.out.println("Nr participants by race request ... " + request.type());
         try {
@@ -161,24 +175,8 @@ public class ClientRpcReflectionWorker implements Runnable {
         }
     }
 
-
-
-//    private Response handleLOGOUT(Request request){
-//        System.out.println("Logout request...");
-//        UserDTO udto=(UserDTO)request.data();
-//        User user=DTOUtils.getFromDTO(udto);
-//        try {
-//            server.logout(user, this);
-//            connected=false;
-//            return okResponse;
-//
-//        } catch (ChatException e) {
-//            return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
-//        }
-//    }
-
-    private void sendResponse(Response response) throws IOException{
-        System.out.println("sending response "+response);
+    private void sendResponse(Response response) throws IOException {
+        System.out.println("sending response " + response);
         synchronized (output) {
             output.writeObject(response);
             output.flush();

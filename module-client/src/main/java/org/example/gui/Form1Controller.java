@@ -18,7 +18,7 @@ public class Form1Controller {
 
     private IServices service;
     private Form2Controller form2Controller;
-    private PersoanaOficiu crtUser;
+    private PersoanaOficiu persoanaOficiu;
     Parent mainChatParent;
 
     @FXML
@@ -39,6 +39,14 @@ public class Form1Controller {
         this.service = service;
     }
 
+    public void setForm2Controller(Form2Controller form2Controller) {
+        this.form2Controller = form2Controller;
+    }
+
+    public void setParent(Parent p) {
+        mainChatParent = p;
+    }
+
     @FXML
     public void handleLoginButtonAction(ActionEvent actionEvent) {
 
@@ -50,25 +58,27 @@ public class Form1Controller {
             return;
         }
 
-        crtUser = new PersoanaOficiu(name, pass);
+        persoanaOficiu = new PersoanaOficiu(name, pass);
 
 
         try {
-            service.LoginPersoanaOficiu(crtUser.getNume(), crtUser.getParola());
+            service.LoginPersoanaOficiu(persoanaOficiu.getNume(), persoanaOficiu.getParola());
             // Util.writeLog("User succesfully logged in "+crtUser.getId());
             Stage stage = new Stage();
-            stage.setTitle("Chat Window for " + crtUser.getNume());
+            stage.setTitle("Chat Window for " + persoanaOficiu.getNume());
             stage.setScene(new Scene(mainChatParent));
 
             stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
                 @Override
                 public void handle(WindowEvent event) {
                     System.out.println("Persoana Oficiu LOGATA CU SUCCES");
+                    form2Controller.logout();
                     System.exit(0);
                 }
             });
 
             stage.show();
+            form2Controller.setPersoanaOficiu(persoanaOficiu);
             ((Node) (actionEvent.getSource())).getScene().getWindow().hide();
 
         } catch (Exception e) {
@@ -123,6 +133,7 @@ public class Form1Controller {
             // Optionally pass the service to Form2Controller
             Form2Controller form2Controller = loader.getController();
             form2Controller.setserver(service); // Assuming you have a setService method in Form2Controller
+            form2Controller.setPersoanaOficiu(persoanaOficiu);
 
             // Get the current stage (window) from the event, happening upon button click
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -134,17 +145,4 @@ public class Form1Controller {
             e.printStackTrace(); // Handle the exception as you see fit
         }
     }
-
-    public void setPersoanaOficiu(PersoanaOficiu persoanaOficiu) {
-        this.crtUser = persoanaOficiu;
-    }
-
-    public void setParent(Parent p) {
-        mainChatParent = p;
-    }
-
-    public void setForm2Controller(Form2Controller form2Controller) {
-        this.form2Controller = form2Controller;
-    }
-
 }

@@ -1,4 +1,5 @@
 package org.example.rpcprotocol;
+
 import org.example.dto.DTOUtils;
 import org.example.dto.ParticipantDto;
 import org.example.dto.PersoanaOficiuDto;
@@ -6,6 +7,7 @@ import org.example.models.Participant;
 import org.example.models.PersoanaOficiu;
 import org.example.services.IServices;
 
+import java.io.EOFException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -21,25 +23,26 @@ public class ClientRpcWorker implements Runnable {
     private ObjectInputStream input;
     private ObjectOutputStream output;
     private volatile boolean connected;
+
     public ClientRpcWorker(IServices services, Socket connection) {
         this.services = services;
         this.connection = connection;
-        try{
-            output=new ObjectOutputStream(connection.getOutputStream());
+        try {
+            output = new ObjectOutputStream(connection.getOutputStream());
             output.flush();
-            input=new ObjectInputStream(connection.getInputStream());
-            connected=true;
+            input = new ObjectInputStream(connection.getInputStream());
+            connected = true;
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void run() {
-        while(connected){
+        while (connected) {
             try {
-                Object request=input.readObject();
-                Response response=handleRequest((Request)request);
-                if (response!=null){
+                Object request = input.readObject();
+                Response response = handleRequest((Request) request);
+                if (response != null) {
                     sendResponse(response);
                 }
             } catch (IOException e) {
@@ -58,7 +61,7 @@ public class ClientRpcWorker implements Runnable {
             output.close();
             connection.close();
         } catch (IOException e) {
-            System.out.println("Error "+e);
+            System.out.println("Error " + e);
         }
     }
 
@@ -85,9 +88,9 @@ public class ClientRpcWorker implements Runnable {
 //    }
 
     public void LoginPersoanaOficiu(PersoanaOficiu persoanaOficiu) {
-        PersoanaOficiuDto udto= DTOUtils.getDTO(persoanaOficiu);
-        Response resp=new Response.Builder().type(ResponseType.PERSOANAOFICIU_LOGGED_IN).data(udto).build();
-        System.out.println("Friend logged in "+persoanaOficiu);
+        PersoanaOficiuDto udto = DTOUtils.getDTO(persoanaOficiu);
+        Response resp = new Response.Builder().type(ResponseType.PERSOANAOFICIU_LOGGED_IN).data(udto).build();
+        System.out.println("Friend logged in " + persoanaOficiu);
         try {
             sendResponse(resp);
         } catch (IOException e) {
@@ -106,19 +109,19 @@ public class ClientRpcWorker implements Runnable {
 //        }
 //    }
 
-    private static Response okResponse=new Response.Builder().type(ResponseType.OK).build();
+    private static Response okResponse = new Response.Builder().type(ResponseType.OK).build();
 
-    private Response handleRequest(Request request){
-        Response response=null;
-        if (request.type()== RequestType.LOGIN){
-            System.out.println("Login request ..."+request.type());
-            PersoanaOficiuDto udto=(PersoanaOficiuDto)request.data();
-            PersoanaOficiu persoanaOficiu= DTOUtils.getFromDTO(udto);
+    private Response handleRequest(Request request) {
+        Response response = null;
+        if (request.type() == RequestType.LOGIN) {
+            System.out.println("Login request ..." + request.type());
+            PersoanaOficiuDto udto = (PersoanaOficiuDto) request.data();
+            PersoanaOficiu persoanaOficiu = DTOUtils.getFromDTO(udto);
             try {
                 services.LoginPersoanaOficiu(persoanaOficiu.getNume(), persoanaOficiu.getParola());
                 return okResponse;
             } catch (Exception e) {
-                connected=false;
+                connected = false;
                 return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
             }
         }
@@ -136,10 +139,10 @@ public class ClientRpcWorker implements Runnable {
 //                return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
 //            }
 //        }
-        if (request.type()== RequestType.NEW_PARTICIPANT){
+        if (request.type() == RequestType.NEW_PARTICIPANT) {
             System.out.println("NEW PARTICIPANT ADDED ...");
-            ParticipantDto mdto=(ParticipantDto) request.data();
-            Participant participant= DTOUtils.getFromDTO(mdto);
+            ParticipantDto mdto = (ParticipantDto) request.data();
+            Participant participant = DTOUtils.getFromDTO(mdto);
             try {
                 services.InscrieParticipant(participant.GetNumeParticipant(), participant.GetEchipa().name(), participant.GetCursa().GetCapMotor().name());
                 return okResponse;
@@ -147,7 +150,7 @@ public class ClientRpcWorker implements Runnable {
                 return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
             }
         }
-        if (request.type()== RequestType.NR_PARTICIPANTS_BYRACE){
+        if (request.type() == RequestType.NR_PARTICIPANTS_BYRACE) {
             System.out.println("Nr participants by race request ... " + request.type());
             try {
                 Map<String, Integer> udto = services.GetNumberOfParticipantsByRace();
@@ -157,13 +160,23 @@ public class ClientRpcWorker implements Runnable {
                 return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
             }
         }
-        if (request.type()== RequestType.PARTICIPANTS_BYTEAM){
+        if (request.type() == RequestType.PARTICIPANTS_BYTEAM) {
             System.out.println("Nr participants by race request ... " + request.type());
             try {
                 StringBuilder udto = services.GetTeam_Participants(request.data().toString());
                 return new Response.Builder().type(ResponseType.OK).data(udto).build();
             } catch (Exception e) {
                 connected = false;
+                return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
+            }
+        }
+        if (request.type() == RequestType.LOGOUT) {
+            System.out.println("Logout request");
+            try {
+                services.Logout(request.data().toString());
+                connected = false;
+                return okResponse;
+            } catch (Exception e) {
                 return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
             }
         }
@@ -183,8 +196,8 @@ public class ClientRpcWorker implements Runnable {
         return response;
     }
 
-    private void sendResponse(Response response) throws IOException{
-        System.out.println("sending response "+response);
+    private void sendResponse(Response response) throws IOException {
+        System.out.println("sending response " + response);
         synchronized (output) {
             output.writeObject(response);
             output.flush();
