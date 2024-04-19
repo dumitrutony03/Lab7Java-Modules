@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -56,7 +57,7 @@ public class ClientServicesRpcProxy implements IServices {
 
     @Override
     public void InscrieParticipant(String numeParticipant, String numeEchipa, String capMotor) {
-        initializeConnection();
+//        initializeConnection();
 
         Echipa e1 = Echipa.valueOf(numeEchipa); // Conversie din String în enum Echipa
         Cursa c1 = new Cursa(CapacitateMotor.valueOf(capMotor));
@@ -69,6 +70,7 @@ public class ClientServicesRpcProxy implements IServices {
         Request req = new Request.Builder().type(RequestType.NEW_PARTICIPANT).data(participantDto).build();
         sendRequest(req);
         Response response = readResponse();
+
         if (response.type() == ResponseType.OK) {
             System.out.println("Raspuns OK pentru LOGIN - PersoanaOficiu");
         }
@@ -78,6 +80,50 @@ public class ClientServicesRpcProxy implements IServices {
 //            throw new ChatException(err);
             System.out.println("EROARE persoanaOficiuLoggedIn: " + err);
         }
+    }
+
+    @Override
+    public Map<String, Integer> GetNumberOfParticipantsByRace() {
+        Request req = new Request.Builder().type(RequestType.NR_PARTICIPANTS_BYRACE).build();
+        sendRequest(req);
+        Response response = readResponse();
+        if (response.type() == ResponseType.ERROR) {
+            String err = response.data().toString();
+            System.out.println("Ceva eroare la GetNumberOfParticipantsByRace: " + err);
+            return null;
+        }
+        if (response.type() == ResponseType.OK) {
+            try {
+                Map<String, Integer> result = (Map<String, Integer>) response.data();
+                return result;
+            } catch (ClassCastException e) {
+                System.out.println("Failed to cast response data to Map<String, Integer>");
+                return null;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public StringBuilder GetTeam_Participants(String echipa) {
+        Request req = new Request.Builder().type(RequestType.PARTICIPANTS_BYTEAM).data(echipa).build();
+        sendRequest(req);
+        Response response = readResponse();
+        if (response.type() == ResponseType.ERROR) {
+            String err = response.data().toString();
+            System.out.println("Ceva eroare la GetTeam_Participants: " + err);
+            return null;
+        }
+        if (response.type() == ResponseType.OK) {
+            try {
+                StringBuilder result = (StringBuilder) response.data();
+                return result;
+            } catch (ClassCastException e) {
+                System.out.println("Failed to cast response data to StringBuilder");
+                return null;
+            }
+        }
+        return null;
     }
 
 //    public void sendMessage(Message message) throws ChatException {
@@ -91,17 +137,17 @@ public class ClientServicesRpcProxy implements IServices {
 //        }
 //    }
 
-//    public void logout(User user, IChatObserver client) throws ChatException {
-//        UserDTO udto = DTOUtils.getDTO(user);
-//        Request req = new Request.Builder().type(RequestType.LOGOUT).data(udto).build();
-//        sendRequest(req);
-//        Response response = readResponse();
-//        closeConnection();
-//        if (response.type() == ResponseType.ERROR) {
-//            String err = response.data().toString();
-//            throw new ChatException(err);
-//        }
-//    }
+    public void logout(User user, IChatObserver client) {
+        UserDTO udto = DTOUtils.getDTO(user);
+        Request req = new Request.Builder().type(RequestType.LOGOUT).data(udto).build();
+        sendRequest(req);
+        Response response = readResponse();
+        closeConnection();
+        if (response.type() == ResponseType.ERROR) {
+            String err = response.data().toString();
+            throw new ChatException(err);
+        }
+    }
 
 
 //    public User[] getLoggedFriends(User user) throws ChatException {
@@ -207,6 +253,19 @@ public class ClientServicesRpcProxy implements IServices {
                 e.printStackTrace();
             }
         }
+        if (response.type() == ResponseType.NR_PARTICIPANTS_BYRACE) {
+            System.out.println("Suntem pe handleUpdate");
+
+            // N am trimis niciun fel de data la request
+//            Participant message = DTOUtils.getFromDTO((ParticipantDto) response.data());
+            try {
+                System.out.println("Afisam pentru fiecare cursa, numarul de participanti!");
+//                client.messageReceived(message);
+            } catch (Exception e) {
+                System.out.println("EROARE AFISAREA NRULUI DE PARTICIPANTI PT FIECARE CURSA");
+                e.printStackTrace();
+            }
+        }
     }
 
     private boolean isUpdate(Response response) {
@@ -250,15 +309,5 @@ public class ClientServicesRpcProxy implements IServices {
     @Override
     public void RegisterPersoanaOficiu(String nume, String parola) {
 
-    }
-
-    @Override
-    public Map<String, Integer> GetNumberOfParticipantsByRace() {
-        return null;
-    }
-
-    @Override
-    public StringBuilder GetTeam_Participants(String echipa) {
-        return null;
     }
 }

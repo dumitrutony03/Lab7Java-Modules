@@ -13,6 +13,7 @@ import java.io.ObjectOutputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.Socket;
+import java.util.Map;
 
 
 public class ClientRpcReflectionWorker implements Runnable {
@@ -70,18 +71,18 @@ public class ClientRpcReflectionWorker implements Runnable {
 //        } catch (IOException e) {
 //            throw new ChatException("Sending error: "+e);
 //        }
-//    }
 
-    public void LoginPersoanaOficiu(PersoanaOficiu persoanaOficiu) {
-        PersoanaOficiuDto udto= DTOUtils.getDTO(persoanaOficiu);
-        Response resp=new Response.Builder().type(ResponseType.PERSOANAOFICIU_LOGGED_IN).data(udto).build();
-        System.out.println("Friend logged in "+persoanaOficiu);
-        try {
-            sendResponse(resp);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//    }
+/*public void LoginPersoanaOficiu(PersoanaOficiu persoanaOficiu) {
+    PersoanaOficiuDto udto= DTOUtils.getDTO(persoanaOficiu);
+    Response resp=new Response.Builder().type(ResponseType.PERSOANAOFICIU_LOGGED_IN).data(udto).build();
+    System.out.println("Friend logged in "+persoanaOficiu);
+    try {
+        sendResponse(resp);
+    } catch (IOException e) {
+        e.printStackTrace();
     }
+}*/
 
 //    public void friendLoggedOut(User friend) throws ChatException {
 //        UserDTO udto=DTOUtils.getDTO(friend);
@@ -124,6 +125,44 @@ public class ClientRpcReflectionWorker implements Runnable {
         }
     }
 
+    private Response handleNEW_PARTICIPANT(Request request){
+        System.out.println("SendMessageRequest ...");
+        ParticipantDto mdto=(ParticipantDto)request.data();
+        Participant participant=DTOUtils.getFromDTO(mdto);
+        try {
+            server.InscrieParticipant(participant.GetNumeParticipant(), participant.GetEchipa().name(), participant.GetCursa().GetCapMotor().name());
+            return okResponse;
+        } catch (Exception e) {
+            return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
+        }
+    }
+
+    private Response handleNR_PARTICIPANTS_BYRACE(Request request){
+
+        System.out.println("Nr participants by race request ... " + request.type());
+        try {
+            Map<String, Integer> udto = server.GetNumberOfParticipantsByRace();
+            return new Response.Builder().type(ResponseType.OK).data(udto).build();
+        } catch (Exception e) {
+            connected = false;
+            return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
+        }
+    }
+
+    private Response handlePARTICIPANTS_BYTEAM(Request request){
+
+        System.out.println("Nr participants by race request ... " + request.type());
+        try {
+            StringBuilder udto = server.GetTeam_Participants(request.data().toString());
+            return new Response.Builder().type(ResponseType.OK).data(udto).build();
+        } catch (Exception e) {
+            connected = false;
+            return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
+        }
+    }
+
+
+
 //    private Response handleLOGOUT(Request request){
 //        System.out.println("Logout request...");
 //        UserDTO udto=(UserDTO)request.data();
@@ -137,17 +176,6 @@ public class ClientRpcReflectionWorker implements Runnable {
 //            return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
 //        }
 //    }
-    private Response handleNEW_PARTICIPANT(Request request){
-            System.out.println("SendMessageRequest ...");
-            ParticipantDto mdto=(ParticipantDto)request.data();
-            Participant participant=DTOUtils.getFromDTO(mdto);
-            try {
-                server.InscrieParticipant(participant.GetNumeParticipant(), participant.GetEchipa().name(), participant.GetCursa().GetCapMotor().name());
-                return okResponse;
-            } catch (Exception e) {
-                return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
-            }
-    }
 
     private void sendResponse(Response response) throws IOException{
         System.out.println("sending response "+response);

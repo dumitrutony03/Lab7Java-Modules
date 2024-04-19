@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.util.Map;
 
 
 public class ClientRpcWorker implements Runnable {
@@ -143,6 +144,26 @@ public class ClientRpcWorker implements Runnable {
                 services.InscrieParticipant(participant.GetNumeParticipant(), participant.GetEchipa().name(), participant.GetCursa().GetCapMotor().name());
                 return okResponse;
             } catch (Exception e) {
+                return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
+            }
+        }
+        if (request.type()== RequestType.NR_PARTICIPANTS_BYRACE){
+            System.out.println("Nr participants by race request ... " + request.type());
+            try {
+                Map<String, Integer> udto = services.GetNumberOfParticipantsByRace();
+                return new Response.Builder().type(ResponseType.OK).data(udto).build();
+            } catch (Exception e) {
+                connected = false;
+                return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
+            }
+        }
+        if (request.type()== RequestType.PARTICIPANTS_BYTEAM){
+            System.out.println("Nr participants by race request ... " + request.type());
+            try {
+                StringBuilder udto = services.GetTeam_Participants(request.data().toString());
+                return new Response.Builder().type(ResponseType.OK).data(udto).build();
+            } catch (Exception e) {
+                connected = false;
                 return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
             }
         }
