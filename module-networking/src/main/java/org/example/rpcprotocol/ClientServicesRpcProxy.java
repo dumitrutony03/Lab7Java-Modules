@@ -54,21 +54,6 @@ public class ClientServicesRpcProxy implements IServices {
         return false;
     }
 
-//    @Override
-//    public void Logout(String numeParticipant) {
-//        Request req = new Request.Builder().type(RequestType.LOGOUT).data(numeParticipant).build();
-//        sendRequest(req);
-//        Response response = readResponse();
-//        if (response.type() == ResponseType.OK) {
-//            System.out.println("Raspuns OK pentru LOGOUT - PersoanaOficiu");
-//        } else if (response.type() == ResponseType.ERROR) {
-//            String err = response.data().toString();
-//            closeConnection();
-//            System.out.println("EROARE persoanaOficiuLoggedIn: " + err);
-//            // Optionally rethrow the error as unchecked to handle upstream or log it.
-//        }
-//    }
-
     @Override
     public void Logout(String numeParticipant) {
         Request req = new Request.Builder().type(RequestType.LOGOUT).data(numeParticipant).build();
@@ -82,7 +67,6 @@ public class ClientServicesRpcProxy implements IServices {
             System.out.println("EROARE LOGOUT PERSOANA OFICIU: " + err);
         }
     }
-
 
     @Override
     public void InscrieParticipant(String numeParticipant, String numeEchipa, String capMotor) {
@@ -134,8 +118,8 @@ public class ClientServicesRpcProxy implements IServices {
     }
 
     @Override
-    public StringBuilder GetTeam_Participants(String echipa) {
-        Request req = new Request.Builder().type(RequestType.PARTICIPANTS_BYTEAM).data(echipa).build();
+    public StringBuilder GetTeam_Participants(String numeEchipa) {
+        Request req = new Request.Builder().type(RequestType.PARTICIPANTS_BYTEAM).data(numeEchipa).build();
         sendRequest(req);
         Response response = readResponse();
         if (response.type() == ResponseType.ERROR) {
