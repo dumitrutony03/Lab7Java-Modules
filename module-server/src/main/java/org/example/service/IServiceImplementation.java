@@ -23,7 +23,7 @@ public class IServiceImplementation implements IServices {
         PersoanaOficiuRepository = persoanaOficiuRepository;
     }
 
-    public synchronized boolean LoginPersoanaOficiu(String username, String password) {
+    public boolean LoginPersoanaOficiu(String username, String password) {
         return (PersoanaOficiuRepository.findByNumeAndParola(username, password) != null);
     }
 

@@ -32,7 +32,7 @@ public final class Protobufs {
      * <code>string name = 1;</code>
      * @return The name.
      */
-    java.lang.String getName();
+    String getName();
     /**
      * <code>string name = 1;</code>
      * @return The bytes for name.
@@ -44,7 +44,7 @@ public final class Protobufs {
      * <code>string password = 2;</code>
      * @return The password.
      */
-    java.lang.String getPassword();
+    String getPassword();
     /**
      * <code>string password = 2;</code>
      * @return The bytes for password.
@@ -80,33 +80,33 @@ public final class Protobufs {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.example.protobuffprotocol.Protobufs.internal_static_org_example_PersoanaOficiuDto_descriptor;
+      return Protobufs.internal_static_org_example_PersoanaOficiuDto_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.example.protobuffprotocol.Protobufs.internal_static_org_example_PersoanaOficiuDto_fieldAccessorTable
+      return Protobufs.internal_static_org_example_PersoanaOficiuDto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.class, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder.class);
+              PersoanaOficiuDto.class, Builder.class);
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private volatile Object name_ = "";
     /**
      * <code>string name = 1;</code>
      * @return The name.
      */
-    @java.lang.Override
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getName() {
+      Object ref = name_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         name_ = s;
         return s;
       }
@@ -115,14 +115,14 @@ public final class Protobufs {
      * <code>string name = 1;</code>
      * @return The bytes for name.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
+      Object ref = name_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         name_ = b;
         return b;
       } else {
@@ -132,20 +132,20 @@ public final class Protobufs {
 
     public static final int PASSWORD_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object password_ = "";
+    private volatile Object password_ = "";
     /**
      * <code>string password = 2;</code>
      * @return The password.
      */
-    @java.lang.Override
-    public java.lang.String getPassword() {
-      java.lang.Object ref = password_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getPassword() {
+      Object ref = password_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         password_ = s;
         return s;
       }
@@ -154,14 +154,14 @@ public final class Protobufs {
      * <code>string password = 2;</code>
      * @return The bytes for password.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
         getPasswordBytes() {
-      java.lang.Object ref = password_;
-      if (ref instanceof java.lang.String) {
+      Object ref = password_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         password_ = b;
         return b;
       } else {
@@ -170,7 +170,7 @@ public final class Protobufs {
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -180,7 +180,7 @@ public final class Protobufs {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
@@ -192,7 +192,7 @@ public final class Protobufs {
       getUnknownFields().writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -209,15 +209,15 @@ public final class Protobufs {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto)) {
+      if (!(obj instanceof PersoanaOficiuDto)) {
         return super.equals(obj);
       }
-      org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto other = (org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto) obj;
+      PersoanaOficiuDto other = (PersoanaOficiuDto) obj;
 
       if (!getName()
           .equals(other.getName())) return false;
@@ -227,7 +227,7 @@ public final class Protobufs {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -243,44 +243,44 @@ public final class Protobufs {
       return hash;
     }
 
-    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseFrom(
+    public static PersoanaOficiuDto parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseFrom(
+    public static PersoanaOficiuDto parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseFrom(
+    public static PersoanaOficiuDto parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseFrom(
+    public static PersoanaOficiuDto parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseFrom(byte[] data)
+    public static PersoanaOficiuDto parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseFrom(
+    public static PersoanaOficiuDto parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseFrom(java.io.InputStream input)
+    public static PersoanaOficiuDto parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseFrom(
+    public static PersoanaOficiuDto parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -288,26 +288,26 @@ public final class Protobufs {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseDelimitedFrom(java.io.InputStream input)
+    public static PersoanaOficiuDto parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseDelimitedFrom(
+    public static PersoanaOficiuDto parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseFrom(
+    public static PersoanaOficiuDto parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseFrom(
+    public static PersoanaOficiuDto parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -315,23 +315,23 @@ public final class Protobufs {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto prototype) {
+    public static Builder newBuilder(PersoanaOficiuDto prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -341,18 +341,18 @@ public final class Protobufs {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:org.example.PersoanaOficiuDto)
-        org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder {
+        PersoanaOficiuDtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_PersoanaOficiuDto_descriptor;
+        return Protobufs.internal_static_org_example_PersoanaOficiuDto_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_PersoanaOficiuDto_fieldAccessorTable
+        return Protobufs.internal_static_org_example_PersoanaOficiuDto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.class, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder.class);
+                PersoanaOficiuDto.class, Builder.class);
       }
 
       // Construct using org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.newBuilder()
@@ -361,11 +361,11 @@ public final class Protobufs {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
 
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
@@ -374,35 +374,35 @@ public final class Protobufs {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_PersoanaOficiuDto_descriptor;
+        return Protobufs.internal_static_org_example_PersoanaOficiuDto_descriptor;
       }
 
-      @java.lang.Override
-      public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto getDefaultInstanceForType() {
-        return org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance();
+      @Override
+      public PersoanaOficiuDto getDefaultInstanceForType() {
+        return PersoanaOficiuDto.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto build() {
-        org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto result = buildPartial();
+      @Override
+      public PersoanaOficiuDto build() {
+        PersoanaOficiuDto result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto buildPartial() {
-        org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto result = new org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto(this);
+      @Override
+      public PersoanaOficiuDto buildPartial() {
+        PersoanaOficiuDto result = new PersoanaOficiuDto(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto result) {
+      private void buildPartial0(PersoanaOficiuDto result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.name_ = name_;
@@ -412,18 +412,18 @@ public final class Protobufs {
         }
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto) {
-          return mergeFrom((org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto)other);
+        if (other instanceof PersoanaOficiuDto) {
+          return mergeFrom((PersoanaOficiuDto)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto other) {
-        if (other == org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance()) return this;
+      public Builder mergeFrom(PersoanaOficiuDto other) {
+        if (other == PersoanaOficiuDto.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           bitField0_ |= 0x00000001;
@@ -439,18 +439,18 @@ public final class Protobufs {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException();
         }
         try {
           boolean done = false;
@@ -487,21 +487,21 @@ public final class Protobufs {
       }
       private int bitField0_;
 
-      private java.lang.Object name_ = "";
+      private Object name_ = "";
       /**
        * <code>string name = 1;</code>
        * @return The name.
        */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getName() {
+        Object ref = name_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           name_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -510,11 +510,11 @@ public final class Protobufs {
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
+        Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           name_ = b;
           return b;
         } else {
@@ -527,7 +527,7 @@ public final class Protobufs {
        * @return This builder for chaining.
        */
       public Builder setName(
-          java.lang.String value) {
+          String value) {
         if (value == null) { throw new NullPointerException(); }
         name_ = value;
         bitField0_ |= 0x00000001;
@@ -559,21 +559,21 @@ public final class Protobufs {
         return this;
       }
 
-      private java.lang.Object password_ = "";
+      private Object password_ = "";
       /**
        * <code>string password = 2;</code>
        * @return The password.
        */
-      public java.lang.String getPassword() {
-        java.lang.Object ref = password_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getPassword() {
+        Object ref = password_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           password_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -582,11 +582,11 @@ public final class Protobufs {
        */
       public com.google.protobuf.ByteString
           getPasswordBytes() {
-        java.lang.Object ref = password_;
+        Object ref = password_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           password_ = b;
           return b;
         } else {
@@ -599,7 +599,7 @@ public final class Protobufs {
        * @return This builder for chaining.
        */
       public Builder setPassword(
-          java.lang.String value) {
+          String value) {
         if (value == null) { throw new NullPointerException(); }
         password_ = value;
         bitField0_ |= 0x00000002;
@@ -635,18 +635,18 @@ public final class Protobufs {
     }
 
     // @@protoc_insertion_point(class_scope:org.example.PersoanaOficiuDto)
-    private static final org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto DEFAULT_INSTANCE;
+    private static final PersoanaOficiuDto DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto();
+      DEFAULT_INSTANCE = new PersoanaOficiuDto();
     }
 
-    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto getDefaultInstance() {
+    public static PersoanaOficiuDto getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<PersoanaOficiuDto>
         PARSER = new com.google.protobuf.AbstractParser<PersoanaOficiuDto>() {
-      @java.lang.Override
+      @Override
       public PersoanaOficiuDto parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -670,13 +670,13 @@ public final class Protobufs {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<PersoanaOficiuDto> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto getDefaultInstanceForType() {
+    @Override
+    public PersoanaOficiuDto getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -703,7 +703,7 @@ public final class Protobufs {
      * <code>.org.example.ClientRequest.Type type = 1;</code>
      * @return The type.
      */
-    org.example.protobuffprotocol.Protobufs.ClientRequest.Type getType();
+    ClientRequest.Type getType();
 
     /**
      * <code>.org.example.PersoanaOficiuDto user = 2;</code>
@@ -714,13 +714,13 @@ public final class Protobufs {
      * <code>.org.example.PersoanaOficiuDto user = 2;</code>
      * @return The user.
      */
-    org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto getUser();
+    PersoanaOficiuDto getUser();
     /**
      * <code>.org.example.PersoanaOficiuDto user = 2;</code>
      */
-    org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder getUserOrBuilder();
+    PersoanaOficiuDtoOrBuilder getUserOrBuilder();
 
-    org.example.protobuffprotocol.Protobufs.ClientRequest.PayloadCase getPayloadCase();
+    ClientRequest.PayloadCase getPayloadCase();
   }
   /**
    * Protobuf type {@code org.example.ClientRequest}
@@ -749,15 +749,15 @@ public final class Protobufs {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ClientRequest_descriptor;
+      return Protobufs.internal_static_org_example_ClientRequest_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ClientRequest_fieldAccessorTable
+      return Protobufs.internal_static_org_example_ClientRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.example.protobuffprotocol.Protobufs.ClientRequest.class, org.example.protobuffprotocol.Protobufs.ClientRequest.Builder.class);
+              ClientRequest.class, Builder.class);
     }
 
     /**
@@ -797,7 +797,7 @@ public final class Protobufs {
 
       public final int getNumber() {
         if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
+          throw new IllegalArgumentException(
               "Can't get the number of an unknown enum value.");
         }
         return value;
@@ -808,7 +808,7 @@ public final class Protobufs {
        * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
-      @java.lang.Deprecated
+      @Deprecated
       public static Type valueOf(int value) {
         return forNumber(value);
       }
@@ -840,7 +840,7 @@ public final class Protobufs {
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
         if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalStateException(
+          throw new IllegalStateException(
               "Can't get the descriptor of an unrecognized enum value.");
         }
         return getDescriptor().getValues().get(ordinal());
@@ -851,7 +851,7 @@ public final class Protobufs {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return org.example.protobuffprotocol.Protobufs.ClientRequest.getDescriptor().getEnumTypes().get(0);
+        return ClientRequest.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final Type[] VALUES = values();
@@ -859,7 +859,7 @@ public final class Protobufs {
       public static Type valueOf(
           com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
+          throw new IllegalArgumentException(
             "EnumValueDescriptor is not for this type.");
         }
         if (desc.getIndex() == -1) {
@@ -879,10 +879,10 @@ public final class Protobufs {
 
     private int payloadCase_ = 0;
     @SuppressWarnings("serial")
-    private java.lang.Object payload_;
+    private Object payload_;
     public enum PayloadCase
         implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+            InternalOneOfEnum {
       USER(2),
       PAYLOAD_NOT_SET(0);
       private final int value;
@@ -894,7 +894,7 @@ public final class Protobufs {
        * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
-      @java.lang.Deprecated
+      @Deprecated
       public static PayloadCase valueOf(int value) {
         return forNumber(value);
       }
@@ -927,7 +927,7 @@ public final class Protobufs {
      * <code>.org.example.ClientRequest.Type type = 1;</code>
      * @return The enum numeric value on the wire for type.
      */
-    @java.lang.Override public int getTypeValue() {
+    @Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -938,9 +938,9 @@ public final class Protobufs {
      * <code>.org.example.ClientRequest.Type type = 1;</code>
      * @return The type.
      */
-    @java.lang.Override public org.example.protobuffprotocol.Protobufs.ClientRequest.Type getType() {
-      org.example.protobuffprotocol.Protobufs.ClientRequest.Type result = org.example.protobuffprotocol.Protobufs.ClientRequest.Type.forNumber(type_);
-      return result == null ? org.example.protobuffprotocol.Protobufs.ClientRequest.Type.UNRECOGNIZED : result;
+    @Override public Type getType() {
+      Type result = Type.forNumber(type_);
+      return result == null ? Type.UNRECOGNIZED : result;
     }
 
     public static final int USER_FIELD_NUMBER = 2;
@@ -948,7 +948,7 @@ public final class Protobufs {
      * <code>.org.example.PersoanaOficiuDto user = 2;</code>
      * @return Whether the user field is set.
      */
-    @java.lang.Override
+    @Override
     public boolean hasUser() {
       return payloadCase_ == 2;
     }
@@ -956,26 +956,26 @@ public final class Protobufs {
      * <code>.org.example.PersoanaOficiuDto user = 2;</code>
      * @return The user.
      */
-    @java.lang.Override
-    public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto getUser() {
+    @Override
+    public PersoanaOficiuDto getUser() {
       if (payloadCase_ == 2) {
-         return (org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto) payload_;
+         return (PersoanaOficiuDto) payload_;
       }
-      return org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance();
+      return PersoanaOficiuDto.getDefaultInstance();
     }
     /**
      * <code>.org.example.PersoanaOficiuDto user = 2;</code>
      */
-    @java.lang.Override
-    public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder getUserOrBuilder() {
+    @Override
+    public PersoanaOficiuDtoOrBuilder getUserOrBuilder() {
       if (payloadCase_ == 2) {
-         return (org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto) payload_;
+         return (PersoanaOficiuDto) payload_;
       }
-      return org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance();
+      return PersoanaOficiuDto.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -985,46 +985,46 @@ public final class Protobufs {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (type_ != org.example.protobuffprotocol.Protobufs.ClientRequest.Type.Unkown.getNumber()) {
+      if (type_ != Type.Unkown.getNumber()) {
         output.writeEnum(1, type_);
       }
       if (payloadCase_ == 2) {
-        output.writeMessage(2, (org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto) payload_);
+        output.writeMessage(2, (PersoanaOficiuDto) payload_);
       }
       getUnknownFields().writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
-      if (type_ != org.example.protobuffprotocol.Protobufs.ClientRequest.Type.Unkown.getNumber()) {
+      if (type_ != Type.Unkown.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, type_);
       }
       if (payloadCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto) payload_);
+          .computeMessageSize(2, (PersoanaOficiuDto) payload_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.example.protobuffprotocol.Protobufs.ClientRequest)) {
+      if (!(obj instanceof ClientRequest)) {
         return super.equals(obj);
       }
-      org.example.protobuffprotocol.Protobufs.ClientRequest other = (org.example.protobuffprotocol.Protobufs.ClientRequest) obj;
+      ClientRequest other = (ClientRequest) obj;
 
       if (type_ != other.type_) return false;
       if (!getPayloadCase().equals(other.getPayloadCase())) return false;
@@ -1040,7 +1040,7 @@ public final class Protobufs {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -1062,44 +1062,44 @@ public final class Protobufs {
       return hash;
     }
 
-    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseFrom(
+    public static ClientRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseFrom(
+    public static ClientRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseFrom(
+    public static ClientRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseFrom(
+    public static ClientRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseFrom(byte[] data)
+    public static ClientRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseFrom(
+    public static ClientRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseFrom(java.io.InputStream input)
+    public static ClientRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseFrom(
+    public static ClientRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1107,26 +1107,26 @@ public final class Protobufs {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseDelimitedFrom(java.io.InputStream input)
+    public static ClientRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseDelimitedFrom(
+    public static ClientRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseFrom(
+    public static ClientRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseFrom(
+    public static ClientRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1134,23 +1134,23 @@ public final class Protobufs {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.example.protobuffprotocol.Protobufs.ClientRequest prototype) {
+    public static Builder newBuilder(ClientRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1160,18 +1160,18 @@ public final class Protobufs {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:org.example.ClientRequest)
-        org.example.protobuffprotocol.Protobufs.ClientRequestOrBuilder {
+        ClientRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ClientRequest_descriptor;
+        return Protobufs.internal_static_org_example_ClientRequest_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ClientRequest_fieldAccessorTable
+        return Protobufs.internal_static_org_example_ClientRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.example.protobuffprotocol.Protobufs.ClientRequest.class, org.example.protobuffprotocol.Protobufs.ClientRequest.Builder.class);
+                ClientRequest.class, Builder.class);
       }
 
       // Construct using org.example.protobuffprotocol.Protobufs.ClientRequest.newBuilder()
@@ -1180,11 +1180,11 @@ public final class Protobufs {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
 
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
@@ -1197,43 +1197,43 @@ public final class Protobufs {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ClientRequest_descriptor;
+        return Protobufs.internal_static_org_example_ClientRequest_descriptor;
       }
 
-      @java.lang.Override
-      public org.example.protobuffprotocol.Protobufs.ClientRequest getDefaultInstanceForType() {
-        return org.example.protobuffprotocol.Protobufs.ClientRequest.getDefaultInstance();
+      @Override
+      public ClientRequest getDefaultInstanceForType() {
+        return ClientRequest.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public org.example.protobuffprotocol.Protobufs.ClientRequest build() {
-        org.example.protobuffprotocol.Protobufs.ClientRequest result = buildPartial();
+      @Override
+      public ClientRequest build() {
+        ClientRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public org.example.protobuffprotocol.Protobufs.ClientRequest buildPartial() {
-        org.example.protobuffprotocol.Protobufs.ClientRequest result = new org.example.protobuffprotocol.Protobufs.ClientRequest(this);
+      @Override
+      public ClientRequest buildPartial() {
+        ClientRequest result = new ClientRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         buildPartialOneofs(result);
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(org.example.protobuffprotocol.Protobufs.ClientRequest result) {
+      private void buildPartial0(ClientRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.type_ = type_;
         }
       }
 
-      private void buildPartialOneofs(org.example.protobuffprotocol.Protobufs.ClientRequest result) {
+      private void buildPartialOneofs(ClientRequest result) {
         result.payloadCase_ = payloadCase_;
         result.payload_ = this.payload_;
         if (payloadCase_ == 2 &&
@@ -1242,18 +1242,18 @@ public final class Protobufs {
         }
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.example.protobuffprotocol.Protobufs.ClientRequest) {
-          return mergeFrom((org.example.protobuffprotocol.Protobufs.ClientRequest)other);
+        if (other instanceof ClientRequest) {
+          return mergeFrom((ClientRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.example.protobuffprotocol.Protobufs.ClientRequest other) {
-        if (other == org.example.protobuffprotocol.Protobufs.ClientRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(ClientRequest other) {
+        if (other == ClientRequest.getDefaultInstance()) return this;
         if (other.type_ != 0) {
           setTypeValue(other.getTypeValue());
         }
@@ -1271,18 +1271,18 @@ public final class Protobufs {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException();
         }
         try {
           boolean done = false;
@@ -1320,7 +1320,7 @@ public final class Protobufs {
         return this;
       }
       private int payloadCase_ = 0;
-      private java.lang.Object payload_;
+      private Object payload_;
       public PayloadCase
           getPayloadCase() {
         return PayloadCase.forNumber(
@@ -1345,7 +1345,7 @@ public final class Protobufs {
        * <code>.org.example.ClientRequest.Type type = 1;</code>
        * @return The enum numeric value on the wire for type.
        */
-      @java.lang.Override public int getTypeValue() {
+      @Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -1371,10 +1371,10 @@ public final class Protobufs {
        * <code>.org.example.ClientRequest.Type type = 1;</code>
        * @return The type.
        */
-      @java.lang.Override
-      public org.example.protobuffprotocol.Protobufs.ClientRequest.Type getType() {
-        org.example.protobuffprotocol.Protobufs.ClientRequest.Type result = org.example.protobuffprotocol.Protobufs.ClientRequest.Type.forNumber(type_);
-        return result == null ? org.example.protobuffprotocol.Protobufs.ClientRequest.Type.UNRECOGNIZED : result;
+      @Override
+      public Type getType() {
+        Type result = Type.forNumber(type_);
+        return result == null ? Type.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -1385,7 +1385,7 @@ public final class Protobufs {
        * @param value The type to set.
        * @return This builder for chaining.
        */
-      public Builder setType(org.example.protobuffprotocol.Protobufs.ClientRequest.Type value) {
+      public Builder setType(Type value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -1410,12 +1410,12 @@ public final class Protobufs {
       }
 
       private com.google.protobuf.SingleFieldBuilder<
-          org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder> userBuilder_;
+          PersoanaOficiuDto, PersoanaOficiuDto.Builder, PersoanaOficiuDtoOrBuilder> userBuilder_;
       /**
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        * @return Whether the user field is set.
        */
-      @java.lang.Override
+      @Override
       public boolean hasUser() {
         return payloadCase_ == 2;
       }
@@ -1423,24 +1423,24 @@ public final class Protobufs {
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        * @return The user.
        */
-      @java.lang.Override
-      public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto getUser() {
+      @Override
+      public PersoanaOficiuDto getUser() {
         if (userBuilder_ == null) {
           if (payloadCase_ == 2) {
-            return (org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto) payload_;
+            return (PersoanaOficiuDto) payload_;
           }
-          return org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance();
+          return PersoanaOficiuDto.getDefaultInstance();
         } else {
           if (payloadCase_ == 2) {
             return userBuilder_.getMessage();
           }
-          return org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance();
+          return PersoanaOficiuDto.getDefaultInstance();
         }
       }
       /**
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        */
-      public Builder setUser(org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto value) {
+      public Builder setUser(PersoanaOficiuDto value) {
         if (userBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1457,7 +1457,7 @@ public final class Protobufs {
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        */
       public Builder setUser(
-          org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder builderForValue) {
+          PersoanaOficiuDto.Builder builderForValue) {
         if (userBuilder_ == null) {
           payload_ = builderForValue.build();
           onChanged();
@@ -1470,11 +1470,11 @@ public final class Protobufs {
       /**
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        */
-      public Builder mergeUser(org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto value) {
+      public Builder mergeUser(PersoanaOficiuDto value) {
         if (userBuilder_ == null) {
           if (payloadCase_ == 2 &&
-              payload_ != org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance()) {
-            payload_ = org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.newBuilder((org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto) payload_)
+              payload_ != PersoanaOficiuDto.getDefaultInstance()) {
+            payload_ = PersoanaOficiuDto.newBuilder((PersoanaOficiuDto) payload_)
                 .mergeFrom(value).buildPartial();
           } else {
             payload_ = value;
@@ -1512,36 +1512,36 @@ public final class Protobufs {
       /**
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        */
-      public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder getUserBuilder() {
+      public PersoanaOficiuDto.Builder getUserBuilder() {
         return getUserFieldBuilder().getBuilder();
       }
       /**
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        */
-      @java.lang.Override
-      public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder getUserOrBuilder() {
+      @Override
+      public PersoanaOficiuDtoOrBuilder getUserOrBuilder() {
         if ((payloadCase_ == 2) && (userBuilder_ != null)) {
           return userBuilder_.getMessageOrBuilder();
         } else {
           if (payloadCase_ == 2) {
-            return (org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto) payload_;
+            return (PersoanaOficiuDto) payload_;
           }
-          return org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance();
+          return PersoanaOficiuDto.getDefaultInstance();
         }
       }
       /**
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder> 
+          PersoanaOficiuDto, PersoanaOficiuDto.Builder, PersoanaOficiuDtoOrBuilder>
           getUserFieldBuilder() {
         if (userBuilder_ == null) {
           if (!(payloadCase_ == 2)) {
-            payload_ = org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance();
+            payload_ = PersoanaOficiuDto.getDefaultInstance();
           }
           userBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder>(
-                  (org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto) payload_,
+              PersoanaOficiuDto, PersoanaOficiuDto.Builder, PersoanaOficiuDtoOrBuilder>(
+                  (PersoanaOficiuDto) payload_,
                   getParentForChildren(),
                   isClean());
           payload_ = null;
@@ -1555,18 +1555,18 @@ public final class Protobufs {
     }
 
     // @@protoc_insertion_point(class_scope:org.example.ClientRequest)
-    private static final org.example.protobuffprotocol.Protobufs.ClientRequest DEFAULT_INSTANCE;
+    private static final ClientRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.example.protobuffprotocol.Protobufs.ClientRequest();
+      DEFAULT_INSTANCE = new ClientRequest();
     }
 
-    public static org.example.protobuffprotocol.Protobufs.ClientRequest getDefaultInstance() {
+    public static ClientRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<ClientRequest>
         PARSER = new com.google.protobuf.AbstractParser<ClientRequest>() {
-      @java.lang.Override
+      @Override
       public ClientRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1590,13 +1590,13 @@ public final class Protobufs {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<ClientRequest> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public org.example.protobuffprotocol.Protobufs.ClientRequest getDefaultInstanceForType() {
+    @Override
+    public ClientRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1623,7 +1623,7 @@ public final class Protobufs {
      * <code>.org.example.ClientResponse.Type type = 1;</code>
      * @return The type.
      */
-    org.example.protobuffprotocol.Protobufs.ClientResponse.Type getType();
+    ClientResponse.Type getType();
 
     /**
      * <pre>
@@ -1633,7 +1633,7 @@ public final class Protobufs {
      * <code>string error = 2;</code>
      * @return The error.
      */
-    java.lang.String getError();
+    String getError();
     /**
      * <pre>
      * One of the following will be filled in, depending on the type.
@@ -1648,12 +1648,12 @@ public final class Protobufs {
     /**
      * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
      */
-    java.util.List<org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto> 
+    java.util.List<PersoanaOficiuDto>
         getPersoanaOficiuDtosList();
     /**
      * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
      */
-    org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto getPersoanaOficiuDtos(int index);
+    PersoanaOficiuDto getPersoanaOficiuDtos(int index);
     /**
      * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
      */
@@ -1661,12 +1661,12 @@ public final class Protobufs {
     /**
      * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
      */
-    java.util.List<? extends org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder> 
+    java.util.List<? extends PersoanaOficiuDtoOrBuilder>
         getPersoanaOficiuDtosOrBuilderList();
     /**
      * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
      */
-    org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder getPersoanaOficiuDtosOrBuilder(
+    PersoanaOficiuDtoOrBuilder getPersoanaOficiuDtosOrBuilder(
         int index);
 
     /**
@@ -1678,11 +1678,11 @@ public final class Protobufs {
      * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
      * @return The persoanaOficiuDto.
      */
-    org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto getPersoanaOficiuDto();
+    PersoanaOficiuDto getPersoanaOficiuDto();
     /**
      * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
      */
-    org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder getPersoanaOficiuDtoOrBuilder();
+    PersoanaOficiuDtoOrBuilder getPersoanaOficiuDtoOrBuilder();
   }
   /**
    * Protobuf type {@code org.example.ClientResponse}
@@ -1713,15 +1713,15 @@ public final class Protobufs {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ClientResponse_descriptor;
+      return Protobufs.internal_static_org_example_ClientResponse_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ClientResponse_fieldAccessorTable
+      return Protobufs.internal_static_org_example_ClientResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.example.protobuffprotocol.Protobufs.ClientResponse.class, org.example.protobuffprotocol.Protobufs.ClientResponse.Builder.class);
+              ClientResponse.class, Builder.class);
     }
 
     /**
@@ -1777,7 +1777,7 @@ public final class Protobufs {
 
       public final int getNumber() {
         if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
+          throw new IllegalArgumentException(
               "Can't get the number of an unknown enum value.");
         }
         return value;
@@ -1788,7 +1788,7 @@ public final class Protobufs {
        * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
-      @java.lang.Deprecated
+      @Deprecated
       public static Type valueOf(int value) {
         return forNumber(value);
       }
@@ -1822,7 +1822,7 @@ public final class Protobufs {
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
         if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalStateException(
+          throw new IllegalStateException(
               "Can't get the descriptor of an unrecognized enum value.");
         }
         return getDescriptor().getValues().get(ordinal());
@@ -1833,7 +1833,7 @@ public final class Protobufs {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return org.example.protobuffprotocol.Protobufs.ClientResponse.getDescriptor().getEnumTypes().get(0);
+        return ClientResponse.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final Type[] VALUES = values();
@@ -1841,7 +1841,7 @@ public final class Protobufs {
       public static Type valueOf(
           com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
+          throw new IllegalArgumentException(
             "EnumValueDescriptor is not for this type.");
         }
         if (desc.getIndex() == -1) {
@@ -1870,7 +1870,7 @@ public final class Protobufs {
      * <code>.org.example.ClientResponse.Type type = 1;</code>
      * @return The enum numeric value on the wire for type.
      */
-    @java.lang.Override public int getTypeValue() {
+    @Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -1881,14 +1881,14 @@ public final class Protobufs {
      * <code>.org.example.ClientResponse.Type type = 1;</code>
      * @return The type.
      */
-    @java.lang.Override public org.example.protobuffprotocol.Protobufs.ClientResponse.Type getType() {
-      org.example.protobuffprotocol.Protobufs.ClientResponse.Type result = org.example.protobuffprotocol.Protobufs.ClientResponse.Type.forNumber(type_);
-      return result == null ? org.example.protobuffprotocol.Protobufs.ClientResponse.Type.UNRECOGNIZED : result;
+    @Override public Type getType() {
+      Type result = Type.forNumber(type_);
+      return result == null ? Type.UNRECOGNIZED : result;
     }
 
     public static final int ERROR_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object error_ = "";
+    private volatile Object error_ = "";
     /**
      * <pre>
      * One of the following will be filled in, depending on the type.
@@ -1897,15 +1897,15 @@ public final class Protobufs {
      * <code>string error = 2;</code>
      * @return The error.
      */
-    @java.lang.Override
-    public java.lang.String getError() {
-      java.lang.Object ref = error_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getError() {
+      Object ref = error_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         error_ = s;
         return s;
       }
@@ -1918,14 +1918,14 @@ public final class Protobufs {
      * <code>string error = 2;</code>
      * @return The bytes for error.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
         getErrorBytes() {
-      java.lang.Object ref = error_;
-      if (ref instanceof java.lang.String) {
+      Object ref = error_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         error_ = b;
         return b;
       } else {
@@ -1935,52 +1935,52 @@ public final class Protobufs {
 
     public static final int PERSOANAOFICIUDTOS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private java.util.List<org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto> persoanaOficiuDtos_;
+    private java.util.List<PersoanaOficiuDto> persoanaOficiuDtos_;
     /**
      * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
      */
-    @java.lang.Override
-    public java.util.List<org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto> getPersoanaOficiuDtosList() {
+    @Override
+    public java.util.List<PersoanaOficiuDto> getPersoanaOficiuDtosList() {
       return persoanaOficiuDtos_;
     }
     /**
      * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
      */
-    @java.lang.Override
-    public java.util.List<? extends org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder> 
+    @Override
+    public java.util.List<? extends PersoanaOficiuDtoOrBuilder>
         getPersoanaOficiuDtosOrBuilderList() {
       return persoanaOficiuDtos_;
     }
     /**
      * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
      */
-    @java.lang.Override
+    @Override
     public int getPersoanaOficiuDtosCount() {
       return persoanaOficiuDtos_.size();
     }
     /**
      * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
      */
-    @java.lang.Override
-    public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto getPersoanaOficiuDtos(int index) {
+    @Override
+    public PersoanaOficiuDto getPersoanaOficiuDtos(int index) {
       return persoanaOficiuDtos_.get(index);
     }
     /**
      * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
      */
-    @java.lang.Override
-    public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder getPersoanaOficiuDtosOrBuilder(
+    @Override
+    public PersoanaOficiuDtoOrBuilder getPersoanaOficiuDtosOrBuilder(
         int index) {
       return persoanaOficiuDtos_.get(index);
     }
 
     public static final int PERSOANAOFICIUDTO_FIELD_NUMBER = 4;
-    private org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto persoanaOficiuDto_;
+    private PersoanaOficiuDto persoanaOficiuDto_;
     /**
      * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
      * @return Whether the persoanaOficiuDto field is set.
      */
-    @java.lang.Override
+    @Override
     public boolean hasPersoanaOficiuDto() {
       return ((bitField0_ & 0x00000001) != 0);
     }
@@ -1988,20 +1988,20 @@ public final class Protobufs {
      * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
      * @return The persoanaOficiuDto.
      */
-    @java.lang.Override
-    public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto getPersoanaOficiuDto() {
-      return persoanaOficiuDto_ == null ? org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance() : persoanaOficiuDto_;
+    @Override
+    public PersoanaOficiuDto getPersoanaOficiuDto() {
+      return persoanaOficiuDto_ == null ? PersoanaOficiuDto.getDefaultInstance() : persoanaOficiuDto_;
     }
     /**
      * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
      */
-    @java.lang.Override
-    public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder getPersoanaOficiuDtoOrBuilder() {
-      return persoanaOficiuDto_ == null ? org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance() : persoanaOficiuDto_;
+    @Override
+    public PersoanaOficiuDtoOrBuilder getPersoanaOficiuDtoOrBuilder() {
+      return persoanaOficiuDto_ == null ? PersoanaOficiuDto.getDefaultInstance() : persoanaOficiuDto_;
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2011,10 +2011,10 @@ public final class Protobufs {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (type_ != org.example.protobuffprotocol.Protobufs.ClientResponse.Type.Unknown.getNumber()) {
+      if (type_ != Type.Unknown.getNumber()) {
         output.writeEnum(1, type_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(error_)) {
@@ -2029,13 +2029,13 @@ public final class Protobufs {
       getUnknownFields().writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
-      if (type_ != org.example.protobuffprotocol.Protobufs.ClientResponse.Type.Unknown.getNumber()) {
+      if (type_ != Type.Unknown.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, type_);
       }
@@ -2055,15 +2055,15 @@ public final class Protobufs {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.example.protobuffprotocol.Protobufs.ClientResponse)) {
+      if (!(obj instanceof ClientResponse)) {
         return super.equals(obj);
       }
-      org.example.protobuffprotocol.Protobufs.ClientResponse other = (org.example.protobuffprotocol.Protobufs.ClientResponse) obj;
+      ClientResponse other = (ClientResponse) obj;
 
       if (type_ != other.type_) return false;
       if (!getError()
@@ -2079,7 +2079,7 @@ public final class Protobufs {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -2103,44 +2103,44 @@ public final class Protobufs {
       return hash;
     }
 
-    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseFrom(
+    public static ClientResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseFrom(
+    public static ClientResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseFrom(
+    public static ClientResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseFrom(
+    public static ClientResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseFrom(byte[] data)
+    public static ClientResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseFrom(
+    public static ClientResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseFrom(java.io.InputStream input)
+    public static ClientResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseFrom(
+    public static ClientResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2148,26 +2148,26 @@ public final class Protobufs {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseDelimitedFrom(java.io.InputStream input)
+    public static ClientResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseDelimitedFrom(
+    public static ClientResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseFrom(
+    public static ClientResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseFrom(
+    public static ClientResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2175,23 +2175,23 @@ public final class Protobufs {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.example.protobuffprotocol.Protobufs.ClientResponse prototype) {
+    public static Builder newBuilder(ClientResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2201,18 +2201,18 @@ public final class Protobufs {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:org.example.ClientResponse)
-        org.example.protobuffprotocol.Protobufs.ClientResponseOrBuilder {
+        ClientResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ClientResponse_descriptor;
+        return Protobufs.internal_static_org_example_ClientResponse_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ClientResponse_fieldAccessorTable
+        return Protobufs.internal_static_org_example_ClientResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.example.protobuffprotocol.Protobufs.ClientResponse.class, org.example.protobuffprotocol.Protobufs.ClientResponse.Builder.class);
+                ClientResponse.class, Builder.class);
       }
 
       // Construct using org.example.protobuffprotocol.Protobufs.ClientResponse.newBuilder()
@@ -2221,7 +2221,7 @@ public final class Protobufs {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2232,7 +2232,7 @@ public final class Protobufs {
           getPersoanaOficiuDtoFieldBuilder();
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
@@ -2253,36 +2253,36 @@ public final class Protobufs {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ClientResponse_descriptor;
+        return Protobufs.internal_static_org_example_ClientResponse_descriptor;
       }
 
-      @java.lang.Override
-      public org.example.protobuffprotocol.Protobufs.ClientResponse getDefaultInstanceForType() {
-        return org.example.protobuffprotocol.Protobufs.ClientResponse.getDefaultInstance();
+      @Override
+      public ClientResponse getDefaultInstanceForType() {
+        return ClientResponse.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public org.example.protobuffprotocol.Protobufs.ClientResponse build() {
-        org.example.protobuffprotocol.Protobufs.ClientResponse result = buildPartial();
+      @Override
+      public ClientResponse build() {
+        ClientResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public org.example.protobuffprotocol.Protobufs.ClientResponse buildPartial() {
-        org.example.protobuffprotocol.Protobufs.ClientResponse result = new org.example.protobuffprotocol.Protobufs.ClientResponse(this);
+      @Override
+      public ClientResponse buildPartial() {
+        ClientResponse result = new ClientResponse(this);
         buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(org.example.protobuffprotocol.Protobufs.ClientResponse result) {
+      private void buildPartialRepeatedFields(ClientResponse result) {
         if (persoanaOficiuDtosBuilder_ == null) {
           if (((bitField0_ & 0x00000004) != 0)) {
             persoanaOficiuDtos_ = java.util.Collections.unmodifiableList(persoanaOficiuDtos_);
@@ -2294,7 +2294,7 @@ public final class Protobufs {
         }
       }
 
-      private void buildPartial0(org.example.protobuffprotocol.Protobufs.ClientResponse result) {
+      private void buildPartial0(ClientResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.type_ = type_;
@@ -2312,18 +2312,18 @@ public final class Protobufs {
         result.bitField0_ |= to_bitField0_;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.example.protobuffprotocol.Protobufs.ClientResponse) {
-          return mergeFrom((org.example.protobuffprotocol.Protobufs.ClientResponse)other);
+        if (other instanceof ClientResponse) {
+          return mergeFrom((ClientResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.example.protobuffprotocol.Protobufs.ClientResponse other) {
-        if (other == org.example.protobuffprotocol.Protobufs.ClientResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(ClientResponse other) {
+        if (other == ClientResponse.getDefaultInstance()) return this;
         if (other.type_ != 0) {
           setTypeValue(other.getTypeValue());
         }
@@ -2366,18 +2366,18 @@ public final class Protobufs {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException();
         }
         try {
           boolean done = false;
@@ -2398,9 +2398,9 @@ public final class Protobufs {
                 break;
               } // case 18
               case 26: {
-                org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto m =
+                PersoanaOficiuDto m =
                     input.readMessage(
-                        org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.parser(),
+                        PersoanaOficiuDto.parser(),
                         extensionRegistry);
                 if (persoanaOficiuDtosBuilder_ == null) {
                   ensurePersoanaOficiuDtosIsMutable();
@@ -2443,7 +2443,7 @@ public final class Protobufs {
        * <code>.org.example.ClientResponse.Type type = 1;</code>
        * @return The enum numeric value on the wire for type.
        */
-      @java.lang.Override public int getTypeValue() {
+      @Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -2469,10 +2469,10 @@ public final class Protobufs {
        * <code>.org.example.ClientResponse.Type type = 1;</code>
        * @return The type.
        */
-      @java.lang.Override
-      public org.example.protobuffprotocol.Protobufs.ClientResponse.Type getType() {
-        org.example.protobuffprotocol.Protobufs.ClientResponse.Type result = org.example.protobuffprotocol.Protobufs.ClientResponse.Type.forNumber(type_);
-        return result == null ? org.example.protobuffprotocol.Protobufs.ClientResponse.Type.UNRECOGNIZED : result;
+      @Override
+      public Type getType() {
+        Type result = Type.forNumber(type_);
+        return result == null ? Type.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -2483,7 +2483,7 @@ public final class Protobufs {
        * @param value The type to set.
        * @return This builder for chaining.
        */
-      public Builder setType(org.example.protobuffprotocol.Protobufs.ClientResponse.Type value) {
+      public Builder setType(Type value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -2507,7 +2507,7 @@ public final class Protobufs {
         return this;
       }
 
-      private java.lang.Object error_ = "";
+      private Object error_ = "";
       /**
        * <pre>
        * One of the following will be filled in, depending on the type.
@@ -2516,16 +2516,16 @@ public final class Protobufs {
        * <code>string error = 2;</code>
        * @return The error.
        */
-      public java.lang.String getError() {
-        java.lang.Object ref = error_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getError() {
+        Object ref = error_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           error_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -2538,11 +2538,11 @@ public final class Protobufs {
        */
       public com.google.protobuf.ByteString
           getErrorBytes() {
-        java.lang.Object ref = error_;
+        Object ref = error_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           error_ = b;
           return b;
         } else {
@@ -2559,7 +2559,7 @@ public final class Protobufs {
        * @return This builder for chaining.
        */
       public Builder setError(
-          java.lang.String value) {
+          String value) {
         if (value == null) { throw new NullPointerException(); }
         error_ = value;
         bitField0_ |= 0x00000002;
@@ -2599,22 +2599,22 @@ public final class Protobufs {
         return this;
       }
 
-      private java.util.List<org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto> persoanaOficiuDtos_ =
+      private java.util.List<PersoanaOficiuDto> persoanaOficiuDtos_ =
         java.util.Collections.emptyList();
       private void ensurePersoanaOficiuDtosIsMutable() {
         if (!((bitField0_ & 0x00000004) != 0)) {
-          persoanaOficiuDtos_ = new java.util.ArrayList<org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto>(persoanaOficiuDtos_);
+          persoanaOficiuDtos_ = new java.util.ArrayList<PersoanaOficiuDto>(persoanaOficiuDtos_);
           bitField0_ |= 0x00000004;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder> persoanaOficiuDtosBuilder_;
+          PersoanaOficiuDto, PersoanaOficiuDto.Builder, PersoanaOficiuDtoOrBuilder> persoanaOficiuDtosBuilder_;
 
       /**
        * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
        */
-      public java.util.List<org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto> getPersoanaOficiuDtosList() {
+      public java.util.List<PersoanaOficiuDto> getPersoanaOficiuDtosList() {
         if (persoanaOficiuDtosBuilder_ == null) {
           return java.util.Collections.unmodifiableList(persoanaOficiuDtos_);
         } else {
@@ -2634,7 +2634,7 @@ public final class Protobufs {
       /**
        * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
        */
-      public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto getPersoanaOficiuDtos(int index) {
+      public PersoanaOficiuDto getPersoanaOficiuDtos(int index) {
         if (persoanaOficiuDtosBuilder_ == null) {
           return persoanaOficiuDtos_.get(index);
         } else {
@@ -2645,7 +2645,7 @@ public final class Protobufs {
        * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
        */
       public Builder setPersoanaOficiuDtos(
-          int index, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto value) {
+          int index, PersoanaOficiuDto value) {
         if (persoanaOficiuDtosBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2662,7 +2662,7 @@ public final class Protobufs {
        * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
        */
       public Builder setPersoanaOficiuDtos(
-          int index, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder builderForValue) {
+          int index, PersoanaOficiuDto.Builder builderForValue) {
         if (persoanaOficiuDtosBuilder_ == null) {
           ensurePersoanaOficiuDtosIsMutable();
           persoanaOficiuDtos_.set(index, builderForValue.build());
@@ -2675,7 +2675,7 @@ public final class Protobufs {
       /**
        * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
        */
-      public Builder addPersoanaOficiuDtos(org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto value) {
+      public Builder addPersoanaOficiuDtos(PersoanaOficiuDto value) {
         if (persoanaOficiuDtosBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2692,7 +2692,7 @@ public final class Protobufs {
        * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
        */
       public Builder addPersoanaOficiuDtos(
-          int index, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto value) {
+          int index, PersoanaOficiuDto value) {
         if (persoanaOficiuDtosBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2709,7 +2709,7 @@ public final class Protobufs {
        * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
        */
       public Builder addPersoanaOficiuDtos(
-          org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder builderForValue) {
+          PersoanaOficiuDto.Builder builderForValue) {
         if (persoanaOficiuDtosBuilder_ == null) {
           ensurePersoanaOficiuDtosIsMutable();
           persoanaOficiuDtos_.add(builderForValue.build());
@@ -2723,7 +2723,7 @@ public final class Protobufs {
        * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
        */
       public Builder addPersoanaOficiuDtos(
-          int index, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder builderForValue) {
+          int index, PersoanaOficiuDto.Builder builderForValue) {
         if (persoanaOficiuDtosBuilder_ == null) {
           ensurePersoanaOficiuDtosIsMutable();
           persoanaOficiuDtos_.add(index, builderForValue.build());
@@ -2737,7 +2737,7 @@ public final class Protobufs {
        * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
        */
       public Builder addAllPersoanaOficiuDtos(
-          java.lang.Iterable<? extends org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto> values) {
+          Iterable<? extends PersoanaOficiuDto> values) {
         if (persoanaOficiuDtosBuilder_ == null) {
           ensurePersoanaOficiuDtosIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -2777,14 +2777,14 @@ public final class Protobufs {
       /**
        * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
        */
-      public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder getPersoanaOficiuDtosBuilder(
+      public PersoanaOficiuDto.Builder getPersoanaOficiuDtosBuilder(
           int index) {
         return getPersoanaOficiuDtosFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
        */
-      public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder getPersoanaOficiuDtosOrBuilder(
+      public PersoanaOficiuDtoOrBuilder getPersoanaOficiuDtosOrBuilder(
           int index) {
         if (persoanaOficiuDtosBuilder_ == null) {
           return persoanaOficiuDtos_.get(index);  } else {
@@ -2794,7 +2794,7 @@ public final class Protobufs {
       /**
        * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
        */
-      public java.util.List<? extends org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder> 
+      public java.util.List<? extends PersoanaOficiuDtoOrBuilder>
            getPersoanaOficiuDtosOrBuilderList() {
         if (persoanaOficiuDtosBuilder_ != null) {
           return persoanaOficiuDtosBuilder_.getMessageOrBuilderList();
@@ -2805,31 +2805,31 @@ public final class Protobufs {
       /**
        * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
        */
-      public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder addPersoanaOficiuDtosBuilder() {
+      public PersoanaOficiuDto.Builder addPersoanaOficiuDtosBuilder() {
         return getPersoanaOficiuDtosFieldBuilder().addBuilder(
-            org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance());
+            PersoanaOficiuDto.getDefaultInstance());
       }
       /**
        * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
        */
-      public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder addPersoanaOficiuDtosBuilder(
+      public PersoanaOficiuDto.Builder addPersoanaOficiuDtosBuilder(
           int index) {
         return getPersoanaOficiuDtosFieldBuilder().addBuilder(
-            index, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance());
+            index, PersoanaOficiuDto.getDefaultInstance());
       }
       /**
        * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
        */
-      public java.util.List<org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder> 
+      public java.util.List<PersoanaOficiuDto.Builder>
            getPersoanaOficiuDtosBuilderList() {
         return getPersoanaOficiuDtosFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder> 
+          PersoanaOficiuDto, PersoanaOficiuDto.Builder, PersoanaOficiuDtoOrBuilder>
           getPersoanaOficiuDtosFieldBuilder() {
         if (persoanaOficiuDtosBuilder_ == null) {
           persoanaOficiuDtosBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder>(
+              PersoanaOficiuDto, PersoanaOficiuDto.Builder, PersoanaOficiuDtoOrBuilder>(
                   persoanaOficiuDtos_,
                   ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
@@ -2839,9 +2839,9 @@ public final class Protobufs {
         return persoanaOficiuDtosBuilder_;
       }
 
-      private org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto persoanaOficiuDto_;
+      private PersoanaOficiuDto persoanaOficiuDto_;
       private com.google.protobuf.SingleFieldBuilder<
-          org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder> persoanaOficiuDtoBuilder_;
+          PersoanaOficiuDto, PersoanaOficiuDto.Builder, PersoanaOficiuDtoOrBuilder> persoanaOficiuDtoBuilder_;
       /**
        * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
        * @return Whether the persoanaOficiuDto field is set.
@@ -2853,9 +2853,9 @@ public final class Protobufs {
        * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
        * @return The persoanaOficiuDto.
        */
-      public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto getPersoanaOficiuDto() {
+      public PersoanaOficiuDto getPersoanaOficiuDto() {
         if (persoanaOficiuDtoBuilder_ == null) {
-          return persoanaOficiuDto_ == null ? org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance() : persoanaOficiuDto_;
+          return persoanaOficiuDto_ == null ? PersoanaOficiuDto.getDefaultInstance() : persoanaOficiuDto_;
         } else {
           return persoanaOficiuDtoBuilder_.getMessage();
         }
@@ -2863,7 +2863,7 @@ public final class Protobufs {
       /**
        * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
        */
-      public Builder setPersoanaOficiuDto(org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto value) {
+      public Builder setPersoanaOficiuDto(PersoanaOficiuDto value) {
         if (persoanaOficiuDtoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2880,7 +2880,7 @@ public final class Protobufs {
        * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
        */
       public Builder setPersoanaOficiuDto(
-          org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder builderForValue) {
+          PersoanaOficiuDto.Builder builderForValue) {
         if (persoanaOficiuDtoBuilder_ == null) {
           persoanaOficiuDto_ = builderForValue.build();
         } else {
@@ -2893,11 +2893,11 @@ public final class Protobufs {
       /**
        * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
        */
-      public Builder mergePersoanaOficiuDto(org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto value) {
+      public Builder mergePersoanaOficiuDto(PersoanaOficiuDto value) {
         if (persoanaOficiuDtoBuilder_ == null) {
           if (((bitField0_ & 0x00000008) != 0) &&
             persoanaOficiuDto_ != null &&
-            persoanaOficiuDto_ != org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance()) {
+            persoanaOficiuDto_ != PersoanaOficiuDto.getDefaultInstance()) {
             getPersoanaOficiuDtoBuilder().mergeFrom(value);
           } else {
             persoanaOficiuDto_ = value;
@@ -2927,7 +2927,7 @@ public final class Protobufs {
       /**
        * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
        */
-      public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder getPersoanaOficiuDtoBuilder() {
+      public PersoanaOficiuDto.Builder getPersoanaOficiuDtoBuilder() {
         bitField0_ |= 0x00000008;
         onChanged();
         return getPersoanaOficiuDtoFieldBuilder().getBuilder();
@@ -2935,23 +2935,23 @@ public final class Protobufs {
       /**
        * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
        */
-      public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder getPersoanaOficiuDtoOrBuilder() {
+      public PersoanaOficiuDtoOrBuilder getPersoanaOficiuDtoOrBuilder() {
         if (persoanaOficiuDtoBuilder_ != null) {
           return persoanaOficiuDtoBuilder_.getMessageOrBuilder();
         } else {
           return persoanaOficiuDto_ == null ?
-              org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance() : persoanaOficiuDto_;
+              PersoanaOficiuDto.getDefaultInstance() : persoanaOficiuDto_;
         }
       }
       /**
        * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder> 
+          PersoanaOficiuDto, PersoanaOficiuDto.Builder, PersoanaOficiuDtoOrBuilder>
           getPersoanaOficiuDtoFieldBuilder() {
         if (persoanaOficiuDtoBuilder_ == null) {
           persoanaOficiuDtoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder>(
+              PersoanaOficiuDto, PersoanaOficiuDto.Builder, PersoanaOficiuDtoOrBuilder>(
                   getPersoanaOficiuDto(),
                   getParentForChildren(),
                   isClean());
@@ -2964,18 +2964,18 @@ public final class Protobufs {
     }
 
     // @@protoc_insertion_point(class_scope:org.example.ClientResponse)
-    private static final org.example.protobuffprotocol.Protobufs.ClientResponse DEFAULT_INSTANCE;
+    private static final ClientResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.example.protobuffprotocol.Protobufs.ClientResponse();
+      DEFAULT_INSTANCE = new ClientResponse();
     }
 
-    public static org.example.protobuffprotocol.Protobufs.ClientResponse getDefaultInstance() {
+    public static ClientResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<ClientResponse>
         PARSER = new com.google.protobuf.AbstractParser<ClientResponse>() {
-      @java.lang.Override
+      @Override
       public ClientResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2999,13 +2999,13 @@ public final class Protobufs {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<ClientResponse> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public org.example.protobuffprotocol.Protobufs.ClientResponse getDefaultInstanceForType() {
+    @Override
+    public ClientResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3034,7 +3034,7 @@ public final class Protobufs {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    java.lang.String[] descriptorData = {
+    String[] descriptorData = {
       "\n\021Protocol_v3.proto\022\013org.example\"3\n\021Pers" +
       "oanaOficiuDto\022\014\n\004name\030\001 \001(\t\022\020\n\010password\030" +
       "\002 \001(\t\"\230\001\n\rClientRequest\022-\n\004type\030\001 \001(\0162\037." +
@@ -3060,19 +3060,19 @@ public final class Protobufs {
     internal_static_org_example_PersoanaOficiuDto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_org_example_PersoanaOficiuDto_descriptor,
-        new java.lang.String[] { "Name", "Password", });
+        new String[] { "Name", "Password", });
     internal_static_org_example_ClientRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_org_example_ClientRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_org_example_ClientRequest_descriptor,
-        new java.lang.String[] { "Type", "User", "Payload", });
+        new String[] { "Type", "User", "Payload", });
     internal_static_org_example_ClientResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_org_example_ClientResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_org_example_ClientResponse_descriptor,
-        new java.lang.String[] { "Type", "Error", "PersoanaOficiuDtos", "PersoanaOficiuDto", });
+        new String[] { "Type", "Error", "PersoanaOficiuDtos", "PersoanaOficiuDto", });
     descriptor.resolveAllFeaturesImmutable();
   }
 

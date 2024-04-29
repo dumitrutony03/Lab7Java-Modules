@@ -3,7 +3,7 @@ package org.example.services;
 import java.util.Map;
 
 public interface IServices {
-    public boolean LoginPersoanaOficiu(String username, String password);
+    public boolean LoginPersoanaOficiu(String username, String password) throws ServiceException;
 
     public void RegisterPersoanaOficiu(String nume, String parola);
 

@@ -10,6 +10,7 @@ import org.example.utils.AbstractServer;
 import org.example.service.IServiceImplementation;
 import org.example.services.IServices;
 import org.example.utils.ClientJsonConcurrentServer;
+import org.example.utils.ClientProtobuffConcurrentServer;
 import org.example.utils.ClientRpcConcurrentServer;
 
 import java.io.IOException;
@@ -45,6 +46,7 @@ public class Main {
 
 //        AbstractServer server = new ClientJsonConcurrentServer(serverPort, mainService);
         AbstractServer server = new ClientRpcConcurrentServer(serverPort, mainService);
+//        AbstractServer server = new ClientProtobuffConcurrentServer(serverPort, mainService);
 
         try {
             server.start();

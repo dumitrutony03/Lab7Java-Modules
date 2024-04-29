@@ -1,59 +1,81 @@
-syntax="proto3";
+syntax = "proto3";
+package org.example;
 
 option java_package = "org.example.protobuffprotocol";
 option java_outer_classname = "Protobufs";
+//
+//message PersoanaOficiuDto{
+//  string name = 1;
+//  string password = 2;
+//}
+//
+//message ClientRequest {
+//  enum Type
+//  {
+//    Unknown = 0;
+//    LOGIN = 1;
+//    LOGOUT = 2;
+//    NEW_PARTICIPANT = 3;
+//    NR_PARTICIPANTS_BYRACE = 4;
+//    PARTICIPANTS_BYTEAM = 5;
+//  }
+//
+//  // Identifies which request is filled in.
+//  Type type = 1;
+//
+//  // One of the following will be filled in, depending on the type.
+//  PersoanaOficiuDto persoanaOficiuDto = 2;
+////  oneof payload{
+////  }
+//
+//}
+//
+//message ClientResponse{
+//  enum Type {
+//    Unknown = 0;
+//    OK = 1;
+//    ERROR = 2;
+//    NEW_PARTICIPANT = 3;
+//    NR_PARTICIPANTS_BYRACE = 4;
+//    PARTICIPANTS_BYTEAM = 5;
+//    PERSOANAOFICIU_LOGGED_IN = 6;
+//    PERSOANAOFICIU_LOGGED_OUT = 7;
+//  }
+//  // Identifies which request is filled in.
+//  Type type = 1;
+//
+//  // One of the following will be filled in, depending on the type.
+//  string error = 2;
+//  PersoanaOficiuDto persoanaOficiuDto = 3;
 
-message PersoanaOficiu{
-  int32 id=1;
-  string name=2;
-  string password=3;
+
+message PersoanaOficiuDto{
+  string name = 1;
+  string password = 2;
 }
 
-message numeParticipant{
-  string numeParticipant=1;
-}
 
-message numeEchipa{
-  string numeEchipa=1;
-}
-
-message Echipa{
-  string numeEchipa=1;
-}
-
-message Cursa{
-  int32 idCursa=1;
-  string capMotor=2;
-}
-
-message Participant{
-  int32 id=1;
-  string nume=2;
-  Echipa echipa=3;
-  Cursa cursa=4;
-}
-
-
-message Request {
-  enum Type {LOGIN=0; LOGOUT = 1; NEW_PARTICIPANT = 2; NR_PARTICIPANTS_BYRACE = 3; PARTICIPANTS_BYTEAM=4 ;}
+message ClientRequest {
+  enum Type {Unkown = 0; LOGIN = 1;}
 
   // Identifies which request is filled in.
   Type type = 1;
-  PersoanaOficiu persoanaOficiu = 2;
+
+  // One of the following will be filled in, depending on the type.
+  oneof payload{
+    PersoanaOficiuDto user = 2;
+  }
 }
 
-message Response{
-  enum Type { OK=0; ERROR = 1; NEW_PARTICIPANT = 2; NR_PARTICIPANTS_BYRACE=3; PARTICIPANTS_BYTEAM = 4; PERSOANAOFICIU_LOGGED_IN=5; PERSOANAOFICIU_LOGGED_OUT=6;  }
+message ClientResponse{
+  enum Type {Unknown = 0; OK = 1; ERROR = 2; PERSOANAOFICIU_LOGGED_IN = 3;}
 
   // Identifies which request is filled in.
   Type type = 1;
 
   // One of the following will be filled in, depending on the type.
   string error = 2;
-  PersoanaOficiu persoanaOficiu=3;
-  string numeParticipant = 4;
-  string numeEchipa=5;
-  Echipa echipa=6;
-  Cursa cursa=7;
-  Participant participant=8;
+  repeated PersoanaOficiuDto persoanaOficiuDtos = 3;
+  PersoanaOficiuDto persoanaOficiuDto = 4 ;
 }
+

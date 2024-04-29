@@ -6,6 +6,9 @@ public class PersoanaOficiu implements Entitate<Integer> // Use 'int' for intege
     private String nume; // Use lowercase 's' for string type in C#
     private String parola;
 
+    public PersoanaOficiu() {
+    }
+
     public PersoanaOficiu(String numeUtilizator, String parola) {
         this.nume = numeUtilizator;
         this.parola = parola;

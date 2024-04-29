@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import org.example.gui.Form1Controller;
 import org.example.gui.Form2Controller;
 import org.example.jsonprotocol.ClientServicesJsonProxy;
+import org.example.protobuffprotocol.ClientServicesProtoProxy;
 import org.example.rpcprotocol.ClientServicesRpcProxy;
 import org.example.services.IServices;
 
@@ -45,7 +46,8 @@ public class Main extends Application {
         System.out.println("Using server port " + serverPort);
 
 //        IServices server = new ClientServicesJsonProxy(serverIP, serverPort);
-        IServices server = new ClientServicesRpcProxy(serverIP, serverPort);
+//        IServices server = new ClientServicesRpcProxy(serverIP, serverPort);
+        IServices server = new ClientServicesProtoProxy(serverIP, serverPort);
 
 
         FXMLLoader loader = new FXMLLoader(

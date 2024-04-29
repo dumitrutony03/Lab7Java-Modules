@@ -39,8 +39,11 @@ public class ClientServicesRpcProxy implements IServices {
 
         PersoanaOficiuDto udto = DTOUtils.getDTO(persoanaOficiu);
         Request req = new Request.Builder().type(RequestType.LOGIN).data(udto).build();
+        System.out.println("Urmeaza sa trimitem un request RPC PROXY");
         sendRequest(req);
+        System.out.println("Request trimis din UI PROXY");
         Response response = readResponse();
+        System.out.println("Raspuns primit din SERVER PROXY");
         if (response.type() == ResponseType.OK) {
             System.out.println("Raspuns OK pentru LOGIN - PersoanaOficiu");
             return true;
