@@ -3,57 +3,11 @@ package org.example;
 
 option java_package = "org.example.protobuffprotocol";
 option java_outer_classname = "Protobufs";
-//
-//message PersoanaOficiuDto{
-//  string name = 1;
-//  string password = 2;
-//}
-//
-//message ClientRequest {
-//  enum Type
-//  {
-//    Unknown = 0;
-//    LOGIN = 1;
-//    LOGOUT = 2;
-//    NEW_PARTICIPANT = 3;
-//    NR_PARTICIPANTS_BYRACE = 4;
-//    PARTICIPANTS_BYTEAM = 5;
-//  }
-//
-//  // Identifies which request is filled in.
-//  Type type = 1;
-//
-//  // One of the following will be filled in, depending on the type.
-//  PersoanaOficiuDto persoanaOficiuDto = 2;
-////  oneof payload{
-////  }
-//
-//}
-//
-//message ClientResponse{
-//  enum Type {
-//    Unknown = 0;
-//    OK = 1;
-//    ERROR = 2;
-//    NEW_PARTICIPANT = 3;
-//    NR_PARTICIPANTS_BYRACE = 4;
-//    PARTICIPANTS_BYTEAM = 5;
-//    PERSOANAOFICIU_LOGGED_IN = 6;
-//    PERSOANAOFICIU_LOGGED_OUT = 7;
-//  }
-//  // Identifies which request is filled in.
-//  Type type = 1;
-//
-//  // One of the following will be filled in, depending on the type.
-//  string error = 2;
-//  PersoanaOficiuDto persoanaOficiuDto = 3;
-
 
 message PersoanaOficiuDto{
   string name = 1;
   string password = 2;
 }
-
 
 message ClientRequest {
   enum Type {Unkown = 0; LOGIN = 1; NEW_PARTICIPANT = 2; NR_PARTICIPANTS_BYRACE = 3; PARTICIPANTS_BYTEAM = 4; LOGOUT = 5;}
@@ -61,19 +15,19 @@ message ClientRequest {
   // Identifies which request is filled in.
   Type type = 1;
 
-    // One of the following will be filled in, depending on the type.
+  // One of the following will be filled in, depending on the type.
+    PersoanaOficiuDto user = 2;
 
-  PersoanaOficiuDto user = 2;
+    // pentru LOGOUT persoanaOficiu
+    string persoanaOficiuName = 3;
 
-  // pentru LOGOUT persoanaOficiu
-  string persoanaOficiuName = 3;
+    // pentru FILTRARE PARTICIPANTI DUPA ECHIPA
+    string numeEchipa = 4;
 
-  // pentru FILTRARE PARTICIPANTI DUPA ECHIPA
-  string numeEchipa = 4;
-
-  // pentru inscriere PARTICIPANT
-  string numeParticipant = 5;
-  string capMotor = 6;
+    // adaugare nou participant
+    string numeParticipant = 5;
+//    string numeEchipa = 6;
+    string numeCursa = 7;
 }
 
 message ClientResponse{

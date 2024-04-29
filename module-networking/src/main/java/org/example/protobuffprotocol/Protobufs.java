@@ -706,16 +706,28 @@ public final class Protobufs {
     ClientRequest.Type getType();
 
     /**
+     * <pre>
+     * One of the following will be filled in, depending on the type.
+     * </pre>
+     *
      * <code>.org.example.PersoanaOficiuDto user = 2;</code>
      * @return Whether the user field is set.
      */
     boolean hasUser();
     /**
+     * <pre>
+     * One of the following will be filled in, depending on the type.
+     * </pre>
+     *
      * <code>.org.example.PersoanaOficiuDto user = 2;</code>
      * @return The user.
      */
     PersoanaOficiuDto getUser();
     /**
+     * <pre>
+     * One of the following will be filled in, depending on the type.
+     * </pre>
+     *
      * <code>.org.example.PersoanaOficiuDto user = 2;</code>
      */
     PersoanaOficiuDtoOrBuilder getUserOrBuilder();
@@ -762,7 +774,7 @@ public final class Protobufs {
 
     /**
      * <pre>
-     * pentru inscriere PARTICIPANT
+     * adaugare nou participant
      * </pre>
      *
      * <code>string numeParticipant = 5;</code>
@@ -771,7 +783,7 @@ public final class Protobufs {
     String getNumeParticipant();
     /**
      * <pre>
-     * pentru inscriere PARTICIPANT
+     * adaugare nou participant
      * </pre>
      *
      * <code>string numeParticipant = 5;</code>
@@ -781,16 +793,24 @@ public final class Protobufs {
         getNumeParticipantBytes();
 
     /**
-     * <code>string capMotor = 6;</code>
-     * @return The capMotor.
+     * <pre>
+     * string numeEchipa = 6;
+     * </pre>
+     *
+     * <code>string numeCursa = 7;</code>
+     * @return The numeCursa.
      */
-    String getCapMotor();
+    String getNumeCursa();
     /**
-     * <code>string capMotor = 6;</code>
-     * @return The bytes for capMotor.
+     * <pre>
+     * string numeEchipa = 6;
+     * </pre>
+     *
+     * <code>string numeCursa = 7;</code>
+     * @return The bytes for numeCursa.
      */
     com.google.protobuf.ByteString
-        getCapMotorBytes();
+        getNumeCursaBytes();
   }
   /**
    * Protobuf type {@code org.example.ClientRequest}
@@ -818,7 +838,7 @@ public final class Protobufs {
       persoanaOficiuName_ = "";
       numeEchipa_ = "";
       numeParticipant_ = "";
-      capMotor_ = "";
+      numeCursa_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -1017,6 +1037,10 @@ public final class Protobufs {
     public static final int USER_FIELD_NUMBER = 2;
     private PersoanaOficiuDto user_;
     /**
+     * <pre>
+     * One of the following will be filled in, depending on the type.
+     * </pre>
+     *
      * <code>.org.example.PersoanaOficiuDto user = 2;</code>
      * @return Whether the user field is set.
      */
@@ -1025,6 +1049,10 @@ public final class Protobufs {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * One of the following will be filled in, depending on the type.
+     * </pre>
+     *
      * <code>.org.example.PersoanaOficiuDto user = 2;</code>
      * @return The user.
      */
@@ -1033,6 +1061,10 @@ public final class Protobufs {
       return user_ == null ? PersoanaOficiuDto.getDefaultInstance() : user_;
     }
     /**
+     * <pre>
+     * One of the following will be filled in, depending on the type.
+     * </pre>
+     *
      * <code>.org.example.PersoanaOficiuDto user = 2;</code>
      */
     @Override
@@ -1139,7 +1171,7 @@ public final class Protobufs {
     private volatile Object numeParticipant_ = "";
     /**
      * <pre>
-     * pentru inscriere PARTICIPANT
+     * adaugare nou participant
      * </pre>
      *
      * <code>string numeParticipant = 5;</code>
@@ -1160,7 +1192,7 @@ public final class Protobufs {
     }
     /**
      * <pre>
-     * pentru inscriere PARTICIPANT
+     * adaugare nou participant
      * </pre>
      *
      * <code>string numeParticipant = 5;</code>
@@ -1181,39 +1213,47 @@ public final class Protobufs {
       }
     }
 
-    public static final int CAPMOTOR_FIELD_NUMBER = 6;
+    public static final int NUMECURSA_FIELD_NUMBER = 7;
     @SuppressWarnings("serial")
-    private volatile Object capMotor_ = "";
+    private volatile Object numeCursa_ = "";
     /**
-     * <code>string capMotor = 6;</code>
-     * @return The capMotor.
+     * <pre>
+     * string numeEchipa = 6;
+     * </pre>
+     *
+     * <code>string numeCursa = 7;</code>
+     * @return The numeCursa.
      */
     @Override
-    public String getCapMotor() {
-      Object ref = capMotor_;
+    public String getNumeCursa() {
+      Object ref = numeCursa_;
       if (ref instanceof String) {
         return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         String s = bs.toStringUtf8();
-        capMotor_ = s;
+        numeCursa_ = s;
         return s;
       }
     }
     /**
-     * <code>string capMotor = 6;</code>
-     * @return The bytes for capMotor.
+     * <pre>
+     * string numeEchipa = 6;
+     * </pre>
+     *
+     * <code>string numeCursa = 7;</code>
+     * @return The bytes for numeCursa.
      */
     @Override
     public com.google.protobuf.ByteString
-        getCapMotorBytes() {
-      Object ref = capMotor_;
+        getNumeCursaBytes() {
+      Object ref = numeCursa_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (String) ref);
-        capMotor_ = b;
+        numeCursa_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1249,8 +1289,8 @@ public final class Protobufs {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(numeParticipant_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 5, numeParticipant_);
       }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(capMotor_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 6, capMotor_);
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(numeCursa_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, numeCursa_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1278,8 +1318,8 @@ public final class Protobufs {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(numeParticipant_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(5, numeParticipant_);
       }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(capMotor_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, capMotor_);
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(numeCursa_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, numeCursa_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1308,8 +1348,8 @@ public final class Protobufs {
           .equals(other.getNumeEchipa())) return false;
       if (!getNumeParticipant()
           .equals(other.getNumeParticipant())) return false;
-      if (!getCapMotor()
-          .equals(other.getCapMotor())) return false;
+      if (!getNumeCursa()
+          .equals(other.getNumeCursa())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1333,8 +1373,8 @@ public final class Protobufs {
       hash = (53 * hash) + getNumeEchipa().hashCode();
       hash = (37 * hash) + NUMEPARTICIPANT_FIELD_NUMBER;
       hash = (53 * hash) + getNumeParticipant().hashCode();
-      hash = (37 * hash) + CAPMOTOR_FIELD_NUMBER;
-      hash = (53 * hash) + getCapMotor().hashCode();
+      hash = (37 * hash) + NUMECURSA_FIELD_NUMBER;
+      hash = (53 * hash) + getNumeCursa().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1481,7 +1521,7 @@ public final class Protobufs {
         persoanaOficiuName_ = "";
         numeEchipa_ = "";
         numeParticipant_ = "";
-        capMotor_ = "";
+        numeCursa_ = "";
         return this;
       }
 
@@ -1535,7 +1575,7 @@ public final class Protobufs {
           result.numeParticipant_ = numeParticipant_;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.capMotor_ = capMotor_;
+          result.numeCursa_ = numeCursa_;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -1573,8 +1613,8 @@ public final class Protobufs {
           bitField0_ |= 0x00000010;
           onChanged();
         }
-        if (!other.getCapMotor().isEmpty()) {
-          capMotor_ = other.capMotor_;
+        if (!other.getNumeCursa().isEmpty()) {
+          numeCursa_ = other.numeCursa_;
           bitField0_ |= 0x00000020;
           onChanged();
         }
@@ -1631,11 +1671,11 @@ public final class Protobufs {
                 bitField0_ |= 0x00000010;
                 break;
               } // case 42
-              case 50: {
-                capMotor_ = input.readStringRequireUtf8();
+              case 58: {
+                numeCursa_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000020;
                 break;
-              } // case 50
+              } // case 58
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1730,6 +1770,10 @@ public final class Protobufs {
       private com.google.protobuf.SingleFieldBuilder<
           PersoanaOficiuDto, PersoanaOficiuDto.Builder, PersoanaOficiuDtoOrBuilder> userBuilder_;
       /**
+       * <pre>
+       * One of the following will be filled in, depending on the type.
+       * </pre>
+       *
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        * @return Whether the user field is set.
        */
@@ -1737,6 +1781,10 @@ public final class Protobufs {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
+       * <pre>
+       * One of the following will be filled in, depending on the type.
+       * </pre>
+       *
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        * @return The user.
        */
@@ -1748,6 +1796,10 @@ public final class Protobufs {
         }
       }
       /**
+       * <pre>
+       * One of the following will be filled in, depending on the type.
+       * </pre>
+       *
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        */
       public Builder setUser(PersoanaOficiuDto value) {
@@ -1764,6 +1816,10 @@ public final class Protobufs {
         return this;
       }
       /**
+       * <pre>
+       * One of the following will be filled in, depending on the type.
+       * </pre>
+       *
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        */
       public Builder setUser(
@@ -1778,6 +1834,10 @@ public final class Protobufs {
         return this;
       }
       /**
+       * <pre>
+       * One of the following will be filled in, depending on the type.
+       * </pre>
+       *
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        */
       public Builder mergeUser(PersoanaOficiuDto value) {
@@ -1799,6 +1859,10 @@ public final class Protobufs {
         return this;
       }
       /**
+       * <pre>
+       * One of the following will be filled in, depending on the type.
+       * </pre>
+       *
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        */
       public Builder clearUser() {
@@ -1812,6 +1876,10 @@ public final class Protobufs {
         return this;
       }
       /**
+       * <pre>
+       * One of the following will be filled in, depending on the type.
+       * </pre>
+       *
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        */
       public PersoanaOficiuDto.Builder getUserBuilder() {
@@ -1820,6 +1888,10 @@ public final class Protobufs {
         return getUserFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * One of the following will be filled in, depending on the type.
+       * </pre>
+       *
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        */
       public PersoanaOficiuDtoOrBuilder getUserOrBuilder() {
@@ -1831,6 +1903,10 @@ public final class Protobufs {
         }
       }
       /**
+       * <pre>
+       * One of the following will be filled in, depending on the type.
+       * </pre>
+       *
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -2034,7 +2110,7 @@ public final class Protobufs {
       private Object numeParticipant_ = "";
       /**
        * <pre>
-       * pentru inscriere PARTICIPANT
+       * adaugare nou participant
        * </pre>
        *
        * <code>string numeParticipant = 5;</code>
@@ -2054,7 +2130,7 @@ public final class Protobufs {
       }
       /**
        * <pre>
-       * pentru inscriere PARTICIPANT
+       * adaugare nou participant
        * </pre>
        *
        * <code>string numeParticipant = 5;</code>
@@ -2075,7 +2151,7 @@ public final class Protobufs {
       }
       /**
        * <pre>
-       * pentru inscriere PARTICIPANT
+       * adaugare nou participant
        * </pre>
        *
        * <code>string numeParticipant = 5;</code>
@@ -2092,7 +2168,7 @@ public final class Protobufs {
       }
       /**
        * <pre>
-       * pentru inscriere PARTICIPANT
+       * adaugare nou participant
        * </pre>
        *
        * <code>string numeParticipant = 5;</code>
@@ -2106,7 +2182,7 @@ public final class Protobufs {
       }
       /**
        * <pre>
-       * pentru inscriere PARTICIPANT
+       * adaugare nou participant
        * </pre>
        *
        * <code>string numeParticipant = 5;</code>
@@ -2123,73 +2199,93 @@ public final class Protobufs {
         return this;
       }
 
-      private Object capMotor_ = "";
+      private Object numeCursa_ = "";
       /**
-       * <code>string capMotor = 6;</code>
-       * @return The capMotor.
+       * <pre>
+       * string numeEchipa = 6;
+       * </pre>
+       *
+       * <code>string numeCursa = 7;</code>
+       * @return The numeCursa.
        */
-      public String getCapMotor() {
-        Object ref = capMotor_;
+      public String getNumeCursa() {
+        Object ref = numeCursa_;
         if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           String s = bs.toStringUtf8();
-          capMotor_ = s;
+          numeCursa_ = s;
           return s;
         } else {
           return (String) ref;
         }
       }
       /**
-       * <code>string capMotor = 6;</code>
-       * @return The bytes for capMotor.
+       * <pre>
+       * string numeEchipa = 6;
+       * </pre>
+       *
+       * <code>string numeCursa = 7;</code>
+       * @return The bytes for numeCursa.
        */
       public com.google.protobuf.ByteString
-          getCapMotorBytes() {
-        Object ref = capMotor_;
+          getNumeCursaBytes() {
+        Object ref = numeCursa_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (String) ref);
-          capMotor_ = b;
+          numeCursa_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string capMotor = 6;</code>
-       * @param value The capMotor to set.
+       * <pre>
+       * string numeEchipa = 6;
+       * </pre>
+       *
+       * <code>string numeCursa = 7;</code>
+       * @param value The numeCursa to set.
        * @return This builder for chaining.
        */
-      public Builder setCapMotor(
+      public Builder setNumeCursa(
           String value) {
         if (value == null) { throw new NullPointerException(); }
-        capMotor_ = value;
+        numeCursa_ = value;
         bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
       /**
-       * <code>string capMotor = 6;</code>
+       * <pre>
+       * string numeEchipa = 6;
+       * </pre>
+       *
+       * <code>string numeCursa = 7;</code>
        * @return This builder for chaining.
        */
-      public Builder clearCapMotor() {
-        capMotor_ = getDefaultInstance().getCapMotor();
+      public Builder clearNumeCursa() {
+        numeCursa_ = getDefaultInstance().getNumeCursa();
         bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
       /**
-       * <code>string capMotor = 6;</code>
-       * @param value The bytes for capMotor to set.
+       * <pre>
+       * string numeEchipa = 6;
+       * </pre>
+       *
+       * <code>string numeCursa = 7;</code>
+       * @param value The bytes for numeCursa to set.
        * @return This builder for chaining.
        */
-      public Builder setCapMotorBytes(
+      public Builder setNumeCursaBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        capMotor_ = value;
+        numeCursa_ = value;
         bitField0_ |= 0x00000020;
         onChanged();
         return this;
@@ -3681,23 +3777,23 @@ public final class Protobufs {
     String[] descriptorData = {
       "\n\021Protocol_v3.proto\022\013org.example\"3\n\021Pers" +
       "oanaOficiuDto\022\014\n\004name\030\001 \001(\t\022\020\n\010password\030" +
-      "\002 \001(\t\"\274\002\n\rClientRequest\022-\n\004type\030\001 \001(\0162\037." +
+      "\002 \001(\t\"\275\002\n\rClientRequest\022-\n\004type\030\001 \001(\0162\037." +
       "org.example.ClientRequest.Type\022,\n\004user\030\002" +
       " \001(\0132\036.org.example.PersoanaOficiuDto\022\032\n\022" +
       "persoanaOficiuName\030\003 \001(\t\022\022\n\nnumeEchipa\030\004" +
-      " \001(\t\022\027\n\017numeParticipant\030\005 \001(\t\022\020\n\010capMoto" +
-      "r\030\006 \001(\t\"s\n\004Type\022\n\n\006Unkown\020\000\022\t\n\005LOGIN\020\001\022\023" +
-      "\n\017NEW_PARTICIPANT\020\002\022\032\n\026NR_PARTICIPANTS_B" +
-      "YRACE\020\003\022\027\n\023PARTICIPANTS_BYTEAM\020\004\022\n\n\006LOGO" +
-      "UT\020\005\"\214\002\n\016ClientResponse\022.\n\004type\030\001 \001(\0162 ." +
-      "org.example.ClientResponse.Type\022\r\n\005error" +
-      "\030\002 \001(\t\022:\n\022persoanaOficiuDtos\030\003 \003(\0132\036.org" +
-      ".example.PersoanaOficiuDto\0229\n\021persoanaOf" +
-      "iciuDto\030\004 \001(\0132\036.org.example.PersoanaOfic" +
-      "iuDto\"D\n\004Type\022\013\n\007Unknown\020\000\022\006\n\002OK\020\001\022\t\n\005ER" +
-      "ROR\020\002\022\034\n\030PERSOANAOFICIU_LOGGED_IN\020\003B*\n\035o" +
-      "rg.example.protobuffprotocolB\tProtobufsb" +
-      "\006proto3"
+      " \001(\t\022\027\n\017numeParticipant\030\005 \001(\t\022\021\n\tnumeCur" +
+      "sa\030\007 \001(\t\"s\n\004Type\022\n\n\006Unkown\020\000\022\t\n\005LOGIN\020\001\022" +
+      "\023\n\017NEW_PARTICIPANT\020\002\022\032\n\026NR_PARTICIPANTS_" +
+      "BYRACE\020\003\022\027\n\023PARTICIPANTS_BYTEAM\020\004\022\n\n\006LOG" +
+      "OUT\020\005\"\214\002\n\016ClientResponse\022.\n\004type\030\001 \001(\0162 " +
+      ".org.example.ClientResponse.Type\022\r\n\005erro" +
+      "r\030\002 \001(\t\022:\n\022persoanaOficiuDtos\030\003 \003(\0132\036.or" +
+      "g.example.PersoanaOficiuDto\0229\n\021persoanaO" +
+      "ficiuDto\030\004 \001(\0132\036.org.example.PersoanaOfi" +
+      "ciuDto\"D\n\004Type\022\013\n\007Unknown\020\000\022\006\n\002OK\020\001\022\t\n\005E" +
+      "RROR\020\002\022\034\n\030PERSOANAOFICIU_LOGGED_IN\020\003B*\n\035" +
+      "org.example.protobuffprotocolB\tProtobufs" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3714,7 +3810,7 @@ public final class Protobufs {
     internal_static_org_example_ClientRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_org_example_ClientRequest_descriptor,
-        new String[] { "Type", "User", "PersoanaOficiuName", "NumeEchipa", "NumeParticipant", "CapMotor", });
+        new String[] { "Type", "User", "PersoanaOficiuName", "NumeEchipa", "NumeParticipant", "NumeCursa", });
     internal_static_org_example_ClientResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_org_example_ClientResponse_fieldAccessorTable = new

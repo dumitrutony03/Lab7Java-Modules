@@ -83,30 +83,18 @@ public class ClientServicesProtoProxy implements IServices {
     }
 
     @Override
-    public void InscrieParticipant(String numeParticipant, String numeEchipa, String capMotor) {
-//        initializeConnection();
-
-//        Echipa e1 = Echipa.valueOf(numeEchipa); // Conversie din String în enum Echipa
-//        Cursa c1 = new Cursa(CapacitateMotor.valueOf(capMotor));
-//        CursaDto c1Dto = DTOUtils.getDTO(c1);
-//        ParticipantDto participantDto = new ParticipantDto(numeParticipant, e1, c1Dto);
-//
-////        ParticipantDto udto = DTOUtils.getDTO(participant);
-//        System.out.println("participantdto: " + participantDto);
-//
-//        Request req = new Request.Builder().type(RequestType.NEW_PARTICIPANT).data(participantDto).build();
-//        sendRequest(req);
-//        Response response = readResponse();
-//
-//        if (response.type() == ResponseType.OK) {
-//            System.out.println("Raspuns OK pentru LOGIN - PersoanaOficiu");
-//        }
-//        if (response.type() == ResponseType.ERROR) {
-//            String err = response.data().toString();
-//            closeConnection();
-////            throw new ChatException(err);
-//            System.out.println("EROARE persoanaOficiuLoggedIn: " + err);
-//        }
+    public void InscrieParticipant(String numeParticipant, String numeEchipa, String capMotor) {        sendRequest(ProtoUtils.createNewParticipantRequest(numeParticipant, numeEchipa, capMotor));
+        System.out.println("Request trimis din UI PROTO PROXY - ADD NEW PARTICIPANT");
+        Protobufs.ClientResponse response = readResponse();
+        System.out.println("Raspuns primit din SERVER PROTO PROXY");
+        if (response.getType() == OK) {
+            System.out.println("Raspuns OK pentru ADAUGARE NOU PARTICIPANT - PARTICIPANT");
+        }
+        if (response.getType() == ERROR) {
+//            String err = ProtoUtils.(response);
+            closeConnection();
+            System.out.println("EROARE PARTICIPANT: ");
+        }
     }
 
     @Override
@@ -211,6 +199,8 @@ public class ClientServicesProtoProxy implements IServices {
     }
 
 
+    // Este folosit pentru IObserver, ca sa se updat-eze instant,
+    // dar noi nu folosim asta, astfel, primim numai OkResponse-uri
     private void handleUpdate(Protobufs.ClientResponse updateResponse){
         System.out.println("HANDLE UPDATE response type got from server side " + updateResponse.getType());
         switch (updateResponse.getType()){
@@ -230,7 +220,7 @@ public class ClientServicesProtoProxy implements IServices {
             while(!finished){
                 try {
                     Protobufs.ClientResponse response=Protobufs.ClientResponse.parseDelimitedFrom(input);
-                    System.out.println("response received into ReaderThread"+response);
+                    System.out.println("response received into ReaderThread " +response);
 
                     if (isUpdateResponse(response.getType())){
                         handleUpdate(response);
