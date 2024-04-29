@@ -13,6 +13,13 @@ public class ProtoUtils {
         return request;
     }
 
+    public static Protobufs.ClientRequest createLogoutRequest(String name){
+//        Protobufs.PersoanaOficiuDto persoanaOficiuDto=Protobufs.PersoanaOficiuDto.newBuilder().setName(persoanaOficiu.getNume()).setPassword(persoanaOficiu.getParola()).build();
+        Protobufs.ClientRequest request= Protobufs.ClientRequest.newBuilder().setType(Protobufs.ClientRequest.Type.LOGOUT)
+                .setPersoanaOficiuName(name).build();
+        return request;
+    }
+
                         ////////////////// RESPONSES
     public static Protobufs.ClientResponse createOkResponse(){
         Protobufs.ClientResponse response=Protobufs.ClientResponse.newBuilder()

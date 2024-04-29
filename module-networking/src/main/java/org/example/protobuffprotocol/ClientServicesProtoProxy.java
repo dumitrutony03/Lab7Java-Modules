@@ -64,16 +64,22 @@ public class ClientServicesProtoProxy implements IServices {
 
     @Override
     public void Logout(String numeParticipant) {
-//        Request req = new Request.Builder().type(RequestType.LOGOUT).data(numeParticipant).build();
-//        sendRequest(req);
-//        Response response = readResponse();
-//        closeConnection();
-//        if (response.type() == ResponseType.OK) {
-//            System.out.println("Raspuns OK pentru LOGOUT - PersoanaOficiu");
-//        } else if (response.type() == ResponseType.ERROR) {
-//            String err = response.data().toString();
-//            System.out.println("EROARE LOGOUT PERSOANA OFICIU: " + err);
-//        }
+        System.out.println("LogoutPersoanaOFICIU PROTO PROXY");
+
+        System.out.println("Urmeaza sa trimitem un request PROTO PROXY");
+//        sendRequest(ProtoUtils.createLoginRequest(DTOUtils.getDTO(persoanaOficiu)));
+        sendRequest(ProtoUtils.createLogoutRequest(numeParticipant));
+        System.out.println("Request trimis din UI PROTO PROXY");
+        Protobufs.ClientResponse response = readResponse();
+        System.out.println("Raspuns primit din SERVER PROTO PROXY");
+        if (response.getType() == OK) {
+            System.out.println("Raspuns OK pentru LOGOUT - PersoanaOficiu");
+        }
+        if (response.getType() == ERROR) {
+//            String err = ProtoUtils.(response);
+            closeConnection();
+            System.out.println("EROARE persoanaOficiuLoggedOUT: ");
+        }
     }
 
     @Override
@@ -246,10 +252,10 @@ public class ClientServicesProtoProxy implements IServices {
 
     private boolean isUpdateResponse(Protobufs.ClientResponse.Type type) {
         switch (type) {
-//            case PERSOANAOFICIU_LOGGED_OUT:
-//                return true;
             case PERSOANAOFICIU_LOGGED_IN:
                 return true;
+//            case PERSOANAOFICIU_LOGGED_OUT:
+//                return true;
 //            case NEW_PARTICIPANT:
 //                return true;
 //            case NR_PARTICIPANTS_BYRACE:

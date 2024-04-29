@@ -720,7 +720,77 @@ public final class Protobufs {
      */
     org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder getUserOrBuilder();
 
-    org.example.protobuffprotocol.Protobufs.ClientRequest.PayloadCase getPayloadCase();
+    /**
+     * <pre>
+     * pentru LOGOUT persoanaOficiu
+     * </pre>
+     *
+     * <code>string persoanaOficiuName = 3;</code>
+     * @return The persoanaOficiuName.
+     */
+    java.lang.String getPersoanaOficiuName();
+    /**
+     * <pre>
+     * pentru LOGOUT persoanaOficiu
+     * </pre>
+     *
+     * <code>string persoanaOficiuName = 3;</code>
+     * @return The bytes for persoanaOficiuName.
+     */
+    com.google.protobuf.ByteString
+        getPersoanaOficiuNameBytes();
+
+    /**
+     * <pre>
+     * pentru FILTRARE PARTICIPANTI DUPA ECHIPA
+     * </pre>
+     *
+     * <code>string numeEchipa = 4;</code>
+     * @return The numeEchipa.
+     */
+    java.lang.String getNumeEchipa();
+    /**
+     * <pre>
+     * pentru FILTRARE PARTICIPANTI DUPA ECHIPA
+     * </pre>
+     *
+     * <code>string numeEchipa = 4;</code>
+     * @return The bytes for numeEchipa.
+     */
+    com.google.protobuf.ByteString
+        getNumeEchipaBytes();
+
+    /**
+     * <pre>
+     * pentru inscriere PARTICIPANT
+     * </pre>
+     *
+     * <code>string numeParticipant = 5;</code>
+     * @return The numeParticipant.
+     */
+    java.lang.String getNumeParticipant();
+    /**
+     * <pre>
+     * pentru inscriere PARTICIPANT
+     * </pre>
+     *
+     * <code>string numeParticipant = 5;</code>
+     * @return The bytes for numeParticipant.
+     */
+    com.google.protobuf.ByteString
+        getNumeParticipantBytes();
+
+    /**
+     * <code>string capMotor = 6;</code>
+     * @return The capMotor.
+     */
+    java.lang.String getCapMotor();
+    /**
+     * <code>string capMotor = 6;</code>
+     * @return The bytes for capMotor.
+     */
+    com.google.protobuf.ByteString
+        getCapMotorBytes();
   }
   /**
    * Protobuf type {@code org.example.ClientRequest}
@@ -745,6 +815,10 @@ public final class Protobufs {
     }
     private ClientRequest() {
       type_ = 0;
+      persoanaOficiuName_ = "";
+      numeEchipa_ = "";
+      numeParticipant_ = "";
+      capMotor_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -773,6 +847,22 @@ public final class Protobufs {
        * <code>LOGIN = 1;</code>
        */
       LOGIN(1),
+      /**
+       * <code>NEW_PARTICIPANT = 2;</code>
+       */
+      NEW_PARTICIPANT(2),
+      /**
+       * <code>NR_PARTICIPANTS_BYRACE = 3;</code>
+       */
+      NR_PARTICIPANTS_BYRACE(3),
+      /**
+       * <code>PARTICIPANTS_BYTEAM = 4;</code>
+       */
+      PARTICIPANTS_BYTEAM(4),
+      /**
+       * <code>LOGOUT = 5;</code>
+       */
+      LOGOUT(5),
       UNRECOGNIZED(-1),
       ;
 
@@ -793,6 +883,22 @@ public final class Protobufs {
        * <code>LOGIN = 1;</code>
        */
       public static final int LOGIN_VALUE = 1;
+      /**
+       * <code>NEW_PARTICIPANT = 2;</code>
+       */
+      public static final int NEW_PARTICIPANT_VALUE = 2;
+      /**
+       * <code>NR_PARTICIPANTS_BYRACE = 3;</code>
+       */
+      public static final int NR_PARTICIPANTS_BYRACE_VALUE = 3;
+      /**
+       * <code>PARTICIPANTS_BYTEAM = 4;</code>
+       */
+      public static final int PARTICIPANTS_BYTEAM_VALUE = 4;
+      /**
+       * <code>LOGOUT = 5;</code>
+       */
+      public static final int LOGOUT_VALUE = 5;
 
 
       public final int getNumber() {
@@ -821,6 +927,10 @@ public final class Protobufs {
         switch (value) {
           case 0: return Unkown;
           case 1: return LOGIN;
+          case 2: return NEW_PARTICIPANT;
+          case 3: return NR_PARTICIPANTS_BYRACE;
+          case 4: return PARTICIPANTS_BYTEAM;
+          case 5: return LOGOUT;
           default: return null;
         }
       }
@@ -877,46 +987,7 @@ public final class Protobufs {
       // @@protoc_insertion_point(enum_scope:org.example.ClientRequest.Type)
     }
 
-    private int payloadCase_ = 0;
-    @SuppressWarnings("serial")
-    private java.lang.Object payload_;
-    public enum PayloadCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      USER(2),
-      PAYLOAD_NOT_SET(0);
-      private final int value;
-      private PayloadCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static PayloadCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static PayloadCase forNumber(int value) {
-        switch (value) {
-          case 2: return USER;
-          case 0: return PAYLOAD_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public PayloadCase
-    getPayloadCase() {
-      return PayloadCase.forNumber(
-          payloadCase_);
-    }
-
+    private int bitField0_;
     public static final int TYPE_FIELD_NUMBER = 1;
     private int type_ = 0;
     /**
@@ -944,13 +1015,14 @@ public final class Protobufs {
     }
 
     public static final int USER_FIELD_NUMBER = 2;
+    private org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto user_;
     /**
      * <code>.org.example.PersoanaOficiuDto user = 2;</code>
      * @return Whether the user field is set.
      */
     @java.lang.Override
     public boolean hasUser() {
-      return payloadCase_ == 2;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.org.example.PersoanaOficiuDto user = 2;</code>
@@ -958,20 +1030,194 @@ public final class Protobufs {
      */
     @java.lang.Override
     public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto getUser() {
-      if (payloadCase_ == 2) {
-         return (org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto) payload_;
-      }
-      return org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance();
+      return user_ == null ? org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance() : user_;
     }
     /**
      * <code>.org.example.PersoanaOficiuDto user = 2;</code>
      */
     @java.lang.Override
     public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder getUserOrBuilder() {
-      if (payloadCase_ == 2) {
-         return (org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto) payload_;
+      return user_ == null ? org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance() : user_;
+    }
+
+    public static final int PERSOANAOFICIUNAME_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object persoanaOficiuName_ = "";
+    /**
+     * <pre>
+     * pentru LOGOUT persoanaOficiu
+     * </pre>
+     *
+     * <code>string persoanaOficiuName = 3;</code>
+     * @return The persoanaOficiuName.
+     */
+    @java.lang.Override
+    public java.lang.String getPersoanaOficiuName() {
+      java.lang.Object ref = persoanaOficiuName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        persoanaOficiuName_ = s;
+        return s;
       }
-      return org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * pentru LOGOUT persoanaOficiu
+     * </pre>
+     *
+     * <code>string persoanaOficiuName = 3;</code>
+     * @return The bytes for persoanaOficiuName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPersoanaOficiuNameBytes() {
+      java.lang.Object ref = persoanaOficiuName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        persoanaOficiuName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NUMEECHIPA_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object numeEchipa_ = "";
+    /**
+     * <pre>
+     * pentru FILTRARE PARTICIPANTI DUPA ECHIPA
+     * </pre>
+     *
+     * <code>string numeEchipa = 4;</code>
+     * @return The numeEchipa.
+     */
+    @java.lang.Override
+    public java.lang.String getNumeEchipa() {
+      java.lang.Object ref = numeEchipa_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        numeEchipa_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * pentru FILTRARE PARTICIPANTI DUPA ECHIPA
+     * </pre>
+     *
+     * <code>string numeEchipa = 4;</code>
+     * @return The bytes for numeEchipa.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNumeEchipaBytes() {
+      java.lang.Object ref = numeEchipa_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        numeEchipa_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NUMEPARTICIPANT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object numeParticipant_ = "";
+    /**
+     * <pre>
+     * pentru inscriere PARTICIPANT
+     * </pre>
+     *
+     * <code>string numeParticipant = 5;</code>
+     * @return The numeParticipant.
+     */
+    @java.lang.Override
+    public java.lang.String getNumeParticipant() {
+      java.lang.Object ref = numeParticipant_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        numeParticipant_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * pentru inscriere PARTICIPANT
+     * </pre>
+     *
+     * <code>string numeParticipant = 5;</code>
+     * @return The bytes for numeParticipant.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNumeParticipantBytes() {
+      java.lang.Object ref = numeParticipant_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        numeParticipant_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CAPMOTOR_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object capMotor_ = "";
+    /**
+     * <code>string capMotor = 6;</code>
+     * @return The capMotor.
+     */
+    @java.lang.Override
+    public java.lang.String getCapMotor() {
+      java.lang.Object ref = capMotor_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        capMotor_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string capMotor = 6;</code>
+     * @return The bytes for capMotor.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCapMotorBytes() {
+      java.lang.Object ref = capMotor_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        capMotor_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -991,8 +1237,20 @@ public final class Protobufs {
       if (type_ != org.example.protobuffprotocol.Protobufs.ClientRequest.Type.Unkown.getNumber()) {
         output.writeEnum(1, type_);
       }
-      if (payloadCase_ == 2) {
-        output.writeMessage(2, (org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto) payload_);
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(2, getUser());
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(persoanaOficiuName_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, persoanaOficiuName_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(numeEchipa_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, numeEchipa_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(numeParticipant_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, numeParticipant_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(capMotor_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, capMotor_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1007,9 +1265,21 @@ public final class Protobufs {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, type_);
       }
-      if (payloadCase_ == 2) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto) payload_);
+          .computeMessageSize(2, getUser());
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(persoanaOficiuName_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, persoanaOficiuName_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(numeEchipa_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, numeEchipa_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(numeParticipant_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, numeParticipant_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(capMotor_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, capMotor_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1027,15 +1297,19 @@ public final class Protobufs {
       org.example.protobuffprotocol.Protobufs.ClientRequest other = (org.example.protobuffprotocol.Protobufs.ClientRequest) obj;
 
       if (type_ != other.type_) return false;
-      if (!getPayloadCase().equals(other.getPayloadCase())) return false;
-      switch (payloadCase_) {
-        case 2:
-          if (!getUser()
-              .equals(other.getUser())) return false;
-          break;
-        case 0:
-        default:
+      if (hasUser() != other.hasUser()) return false;
+      if (hasUser()) {
+        if (!getUser()
+            .equals(other.getUser())) return false;
       }
+      if (!getPersoanaOficiuName()
+          .equals(other.getPersoanaOficiuName())) return false;
+      if (!getNumeEchipa()
+          .equals(other.getNumeEchipa())) return false;
+      if (!getNumeParticipant()
+          .equals(other.getNumeParticipant())) return false;
+      if (!getCapMotor()
+          .equals(other.getCapMotor())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1049,14 +1323,18 @@ public final class Protobufs {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + type_;
-      switch (payloadCase_) {
-        case 2:
-          hash = (37 * hash) + USER_FIELD_NUMBER;
-          hash = (53 * hash) + getUser().hashCode();
-          break;
-        case 0:
-        default:
+      if (hasUser()) {
+        hash = (37 * hash) + USER_FIELD_NUMBER;
+        hash = (53 * hash) + getUser().hashCode();
       }
+      hash = (37 * hash) + PERSOANAOFICIUNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getPersoanaOficiuName().hashCode();
+      hash = (37 * hash) + NUMEECHIPA_FIELD_NUMBER;
+      hash = (53 * hash) + getNumeEchipa().hashCode();
+      hash = (37 * hash) + NUMEPARTICIPANT_FIELD_NUMBER;
+      hash = (53 * hash) + getNumeParticipant().hashCode();
+      hash = (37 * hash) + CAPMOTOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCapMotor().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1176,24 +1454,34 @@ public final class Protobufs {
 
       // Construct using org.example.protobuffprotocol.Protobufs.ClientRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getUserFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
         type_ = 0;
+        user_ = null;
         if (userBuilder_ != null) {
-          userBuilder_.clear();
+          userBuilder_.dispose();
+          userBuilder_ = null;
         }
-        payloadCase_ = 0;
-        payload_ = null;
+        persoanaOficiuName_ = "";
+        numeEchipa_ = "";
+        numeParticipant_ = "";
+        capMotor_ = "";
         return this;
       }
 
@@ -1221,7 +1509,6 @@ public final class Protobufs {
       public org.example.protobuffprotocol.Protobufs.ClientRequest buildPartial() {
         org.example.protobuffprotocol.Protobufs.ClientRequest result = new org.example.protobuffprotocol.Protobufs.ClientRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
-        buildPartialOneofs(result);
         onBuilt();
         return result;
       }
@@ -1231,15 +1518,26 @@ public final class Protobufs {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.type_ = type_;
         }
-      }
-
-      private void buildPartialOneofs(org.example.protobuffprotocol.Protobufs.ClientRequest result) {
-        result.payloadCase_ = payloadCase_;
-        result.payload_ = this.payload_;
-        if (payloadCase_ == 2 &&
-            userBuilder_ != null) {
-          result.payload_ = userBuilder_.build();
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.user_ = userBuilder_ == null
+              ? user_
+              : userBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.persoanaOficiuName_ = persoanaOficiuName_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.numeEchipa_ = numeEchipa_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.numeParticipant_ = numeParticipant_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.capMotor_ = capMotor_;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1257,14 +1555,28 @@ public final class Protobufs {
         if (other.type_ != 0) {
           setTypeValue(other.getTypeValue());
         }
-        switch (other.getPayloadCase()) {
-          case USER: {
-            mergeUser(other.getUser());
-            break;
-          }
-          case PAYLOAD_NOT_SET: {
-            break;
-          }
+        if (other.hasUser()) {
+          mergeUser(other.getUser());
+        }
+        if (!other.getPersoanaOficiuName().isEmpty()) {
+          persoanaOficiuName_ = other.persoanaOficiuName_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getNumeEchipa().isEmpty()) {
+          numeEchipa_ = other.numeEchipa_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getNumeParticipant().isEmpty()) {
+          numeParticipant_ = other.numeParticipant_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getCapMotor().isEmpty()) {
+          capMotor_ = other.capMotor_;
+          bitField0_ |= 0x00000020;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1301,9 +1613,29 @@ public final class Protobufs {
                 input.readMessage(
                     getUserFieldBuilder().getBuilder(),
                     extensionRegistry);
-                payloadCase_ = 2;
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 26: {
+                persoanaOficiuName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                numeEchipa_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                numeParticipant_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                capMotor_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1319,21 +1651,6 @@ public final class Protobufs {
         } // finally
         return this;
       }
-      private int payloadCase_ = 0;
-      private java.lang.Object payload_;
-      public PayloadCase
-          getPayloadCase() {
-        return PayloadCase.forNumber(
-            payloadCase_);
-      }
-
-      public Builder clearPayload() {
-        payloadCase_ = 0;
-        payload_ = null;
-        onChanged();
-        return this;
-      }
-
       private int bitField0_;
 
       private int type_ = 0;
@@ -1409,32 +1726,25 @@ public final class Protobufs {
         return this;
       }
 
+      private org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto user_;
       private com.google.protobuf.SingleFieldBuilder<
           org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder> userBuilder_;
       /**
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        * @return Whether the user field is set.
        */
-      @java.lang.Override
       public boolean hasUser() {
-        return payloadCase_ == 2;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        * @return The user.
        */
-      @java.lang.Override
       public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto getUser() {
         if (userBuilder_ == null) {
-          if (payloadCase_ == 2) {
-            return (org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto) payload_;
-          }
-          return org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance();
+          return user_ == null ? org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance() : user_;
         } else {
-          if (payloadCase_ == 2) {
-            return userBuilder_.getMessage();
-          }
-          return org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance();
+          return userBuilder_.getMessage();
         }
       }
       /**
@@ -1445,12 +1755,12 @@ public final class Protobufs {
           if (value == null) {
             throw new NullPointerException();
           }
-          payload_ = value;
-          onChanged();
+          user_ = value;
         } else {
           userBuilder_.setMessage(value);
         }
-        payloadCase_ = 2;
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1459,12 +1769,12 @@ public final class Protobufs {
       public Builder setUser(
           org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder builderForValue) {
         if (userBuilder_ == null) {
-          payload_ = builderForValue.build();
-          onChanged();
+          user_ = builderForValue.build();
         } else {
           userBuilder_.setMessage(builderForValue.build());
         }
-        payloadCase_ = 2;
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1472,61 +1782,52 @@ public final class Protobufs {
        */
       public Builder mergeUser(org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto value) {
         if (userBuilder_ == null) {
-          if (payloadCase_ == 2 &&
-              payload_ != org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance()) {
-            payload_ = org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.newBuilder((org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto) payload_)
-                .mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            user_ != null &&
+            user_ != org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance()) {
+            getUserBuilder().mergeFrom(value);
           } else {
-            payload_ = value;
+            user_ = value;
           }
-          onChanged();
         } else {
-          if (payloadCase_ == 2) {
-            userBuilder_.mergeFrom(value);
-          } else {
-            userBuilder_.setMessage(value);
-          }
+          userBuilder_.mergeFrom(value);
         }
-        payloadCase_ = 2;
+        if (user_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        */
       public Builder clearUser() {
-        if (userBuilder_ == null) {
-          if (payloadCase_ == 2) {
-            payloadCase_ = 0;
-            payload_ = null;
-            onChanged();
-          }
-        } else {
-          if (payloadCase_ == 2) {
-            payloadCase_ = 0;
-            payload_ = null;
-          }
-          userBuilder_.clear();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        user_ = null;
+        if (userBuilder_ != null) {
+          userBuilder_.dispose();
+          userBuilder_ = null;
         }
+        onChanged();
         return this;
       }
       /**
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        */
       public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder getUserBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
         return getUserFieldBuilder().getBuilder();
       }
       /**
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        */
-      @java.lang.Override
       public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder getUserOrBuilder() {
-        if ((payloadCase_ == 2) && (userBuilder_ != null)) {
+        if (userBuilder_ != null) {
           return userBuilder_.getMessageOrBuilder();
         } else {
-          if (payloadCase_ == 2) {
-            return (org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto) payload_;
-          }
-          return org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance();
+          return user_ == null ?
+              org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance() : user_;
         }
       }
       /**
@@ -1536,19 +1837,362 @@ public final class Protobufs {
           org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder> 
           getUserFieldBuilder() {
         if (userBuilder_ == null) {
-          if (!(payloadCase_ == 2)) {
-            payload_ = org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance();
-          }
           userBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder>(
-                  (org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto) payload_,
+                  getUser(),
                   getParentForChildren(),
                   isClean());
-          payload_ = null;
+          user_ = null;
         }
-        payloadCase_ = 2;
-        onChanged();
         return userBuilder_;
+      }
+
+      private java.lang.Object persoanaOficiuName_ = "";
+      /**
+       * <pre>
+       * pentru LOGOUT persoanaOficiu
+       * </pre>
+       *
+       * <code>string persoanaOficiuName = 3;</code>
+       * @return The persoanaOficiuName.
+       */
+      public java.lang.String getPersoanaOficiuName() {
+        java.lang.Object ref = persoanaOficiuName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          persoanaOficiuName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * pentru LOGOUT persoanaOficiu
+       * </pre>
+       *
+       * <code>string persoanaOficiuName = 3;</code>
+       * @return The bytes for persoanaOficiuName.
+       */
+      public com.google.protobuf.ByteString
+          getPersoanaOficiuNameBytes() {
+        java.lang.Object ref = persoanaOficiuName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          persoanaOficiuName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * pentru LOGOUT persoanaOficiu
+       * </pre>
+       *
+       * <code>string persoanaOficiuName = 3;</code>
+       * @param value The persoanaOficiuName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPersoanaOficiuName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        persoanaOficiuName_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pentru LOGOUT persoanaOficiu
+       * </pre>
+       *
+       * <code>string persoanaOficiuName = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPersoanaOficiuName() {
+        persoanaOficiuName_ = getDefaultInstance().getPersoanaOficiuName();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pentru LOGOUT persoanaOficiu
+       * </pre>
+       *
+       * <code>string persoanaOficiuName = 3;</code>
+       * @param value The bytes for persoanaOficiuName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPersoanaOficiuNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        persoanaOficiuName_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object numeEchipa_ = "";
+      /**
+       * <pre>
+       * pentru FILTRARE PARTICIPANTI DUPA ECHIPA
+       * </pre>
+       *
+       * <code>string numeEchipa = 4;</code>
+       * @return The numeEchipa.
+       */
+      public java.lang.String getNumeEchipa() {
+        java.lang.Object ref = numeEchipa_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          numeEchipa_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * pentru FILTRARE PARTICIPANTI DUPA ECHIPA
+       * </pre>
+       *
+       * <code>string numeEchipa = 4;</code>
+       * @return The bytes for numeEchipa.
+       */
+      public com.google.protobuf.ByteString
+          getNumeEchipaBytes() {
+        java.lang.Object ref = numeEchipa_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          numeEchipa_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * pentru FILTRARE PARTICIPANTI DUPA ECHIPA
+       * </pre>
+       *
+       * <code>string numeEchipa = 4;</code>
+       * @param value The numeEchipa to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumeEchipa(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        numeEchipa_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pentru FILTRARE PARTICIPANTI DUPA ECHIPA
+       * </pre>
+       *
+       * <code>string numeEchipa = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumeEchipa() {
+        numeEchipa_ = getDefaultInstance().getNumeEchipa();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pentru FILTRARE PARTICIPANTI DUPA ECHIPA
+       * </pre>
+       *
+       * <code>string numeEchipa = 4;</code>
+       * @param value The bytes for numeEchipa to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumeEchipaBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        numeEchipa_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object numeParticipant_ = "";
+      /**
+       * <pre>
+       * pentru inscriere PARTICIPANT
+       * </pre>
+       *
+       * <code>string numeParticipant = 5;</code>
+       * @return The numeParticipant.
+       */
+      public java.lang.String getNumeParticipant() {
+        java.lang.Object ref = numeParticipant_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          numeParticipant_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * pentru inscriere PARTICIPANT
+       * </pre>
+       *
+       * <code>string numeParticipant = 5;</code>
+       * @return The bytes for numeParticipant.
+       */
+      public com.google.protobuf.ByteString
+          getNumeParticipantBytes() {
+        java.lang.Object ref = numeParticipant_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          numeParticipant_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * pentru inscriere PARTICIPANT
+       * </pre>
+       *
+       * <code>string numeParticipant = 5;</code>
+       * @param value The numeParticipant to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumeParticipant(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        numeParticipant_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pentru inscriere PARTICIPANT
+       * </pre>
+       *
+       * <code>string numeParticipant = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumeParticipant() {
+        numeParticipant_ = getDefaultInstance().getNumeParticipant();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pentru inscriere PARTICIPANT
+       * </pre>
+       *
+       * <code>string numeParticipant = 5;</code>
+       * @param value The bytes for numeParticipant to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumeParticipantBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        numeParticipant_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object capMotor_ = "";
+      /**
+       * <code>string capMotor = 6;</code>
+       * @return The capMotor.
+       */
+      public java.lang.String getCapMotor() {
+        java.lang.Object ref = capMotor_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          capMotor_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string capMotor = 6;</code>
+       * @return The bytes for capMotor.
+       */
+      public com.google.protobuf.ByteString
+          getCapMotorBytes() {
+        java.lang.Object ref = capMotor_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          capMotor_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string capMotor = 6;</code>
+       * @param value The capMotor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCapMotor(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        capMotor_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string capMotor = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCapMotor() {
+        capMotor_ = getDefaultInstance().getCapMotor();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string capMotor = 6;</code>
+       * @param value The bytes for capMotor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCapMotorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        capMotor_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:org.example.ClientRequest)
@@ -3037,19 +3681,23 @@ public final class Protobufs {
     java.lang.String[] descriptorData = {
       "\n\021Protocol_v3.proto\022\013org.example\"3\n\021Pers" +
       "oanaOficiuDto\022\014\n\004name\030\001 \001(\t\022\020\n\010password\030" +
-      "\002 \001(\t\"\230\001\n\rClientRequest\022-\n\004type\030\001 \001(\0162\037." +
-      "org.example.ClientRequest.Type\022.\n\004user\030\002" +
-      " \001(\0132\036.org.example.PersoanaOficiuDtoH\000\"\035" +
-      "\n\004Type\022\n\n\006Unkown\020\000\022\t\n\005LOGIN\020\001B\t\n\007payload" +
-      "\"\214\002\n\016ClientResponse\022.\n\004type\030\001 \001(\0162 .org." +
-      "example.ClientResponse.Type\022\r\n\005error\030\002 \001" +
-      "(\t\022:\n\022persoanaOficiuDtos\030\003 \003(\0132\036.org.exa" +
-      "mple.PersoanaOficiuDto\0229\n\021persoanaOficiu" +
-      "Dto\030\004 \001(\0132\036.org.example.PersoanaOficiuDt" +
-      "o\"D\n\004Type\022\013\n\007Unknown\020\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020" +
-      "\002\022\034\n\030PERSOANAOFICIU_LOGGED_IN\020\003B*\n\035org.e" +
-      "xample.protobuffprotocolB\tProtobufsb\006pro" +
-      "to3"
+      "\002 \001(\t\"\274\002\n\rClientRequest\022-\n\004type\030\001 \001(\0162\037." +
+      "org.example.ClientRequest.Type\022,\n\004user\030\002" +
+      " \001(\0132\036.org.example.PersoanaOficiuDto\022\032\n\022" +
+      "persoanaOficiuName\030\003 \001(\t\022\022\n\nnumeEchipa\030\004" +
+      " \001(\t\022\027\n\017numeParticipant\030\005 \001(\t\022\020\n\010capMoto" +
+      "r\030\006 \001(\t\"s\n\004Type\022\n\n\006Unkown\020\000\022\t\n\005LOGIN\020\001\022\023" +
+      "\n\017NEW_PARTICIPANT\020\002\022\032\n\026NR_PARTICIPANTS_B" +
+      "YRACE\020\003\022\027\n\023PARTICIPANTS_BYTEAM\020\004\022\n\n\006LOGO" +
+      "UT\020\005\"\214\002\n\016ClientResponse\022.\n\004type\030\001 \001(\0162 ." +
+      "org.example.ClientResponse.Type\022\r\n\005error" +
+      "\030\002 \001(\t\022:\n\022persoanaOficiuDtos\030\003 \003(\0132\036.org" +
+      ".example.PersoanaOficiuDto\0229\n\021persoanaOf" +
+      "iciuDto\030\004 \001(\0132\036.org.example.PersoanaOfic" +
+      "iuDto\"D\n\004Type\022\013\n\007Unknown\020\000\022\006\n\002OK\020\001\022\t\n\005ER" +
+      "ROR\020\002\022\034\n\030PERSOANAOFICIU_LOGGED_IN\020\003B*\n\035o" +
+      "rg.example.protobuffprotocolB\tProtobufsb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3066,7 +3714,7 @@ public final class Protobufs {
     internal_static_org_example_ClientRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_org_example_ClientRequest_descriptor,
-        new java.lang.String[] { "Type", "User", "Payload", });
+        new java.lang.String[] { "Type", "User", "PersoanaOficiuName", "NumeEchipa", "NumeParticipant", "CapMotor", });
     internal_static_org_example_ClientResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_org_example_ClientResponse_fieldAccessorTable = new

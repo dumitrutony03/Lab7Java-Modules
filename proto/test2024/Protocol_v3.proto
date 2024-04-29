@@ -56,15 +56,24 @@ message PersoanaOficiuDto{
 
 
 message ClientRequest {
-  enum Type {Unkown = 0; LOGIN = 1;}
+  enum Type {Unkown = 0; LOGIN = 1; NEW_PARTICIPANT = 2; NR_PARTICIPANTS_BYRACE = 3; PARTICIPANTS_BYTEAM = 4; LOGOUT = 5;}
 
   // Identifies which request is filled in.
   Type type = 1;
 
-  // One of the following will be filled in, depending on the type.
-  oneof payload{
-    PersoanaOficiuDto user = 2;
-  }
+    // One of the following will be filled in, depending on the type.
+
+  PersoanaOficiuDto user = 2;
+
+  // pentru LOGOUT persoanaOficiu
+  string persoanaOficiuName = 3;
+
+  // pentru FILTRARE PARTICIPANTI DUPA ECHIPA
+  string numeEchipa = 4;
+
+  // pentru inscriere PARTICIPANT
+  string numeParticipant = 5;
+  string capMotor = 6;
 }
 
 message ClientResponse{

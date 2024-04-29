@@ -25,23 +25,27 @@ namespace Org.Example {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFQcm90b2NvbF92My5wcm90bxILb3JnLmV4YW1wbGUiMwoRUGVyc29hbmFP",
-            "ZmljaXVEdG8SDAoEbmFtZRgBIAEoCRIQCghwYXNzd29yZBgCIAEoCSKYAQoN",
+            "ZmljaXVEdG8SDAoEbmFtZRgBIAEoCRIQCghwYXNzd29yZBgCIAEoCSK8AgoN",
             "Q2xpZW50UmVxdWVzdBItCgR0eXBlGAEgASgOMh8ub3JnLmV4YW1wbGUuQ2xp",
-            "ZW50UmVxdWVzdC5UeXBlEi4KBHVzZXIYAiABKAsyHi5vcmcuZXhhbXBsZS5Q",
-            "ZXJzb2FuYU9maWNpdUR0b0gAIh0KBFR5cGUSCgoGVW5rb3duEAASCQoFTE9H",
-            "SU4QAUIJCgdwYXlsb2FkIowCCg5DbGllbnRSZXNwb25zZRIuCgR0eXBlGAEg",
-            "ASgOMiAub3JnLmV4YW1wbGUuQ2xpZW50UmVzcG9uc2UuVHlwZRINCgVlcnJv",
-            "chgCIAEoCRI6ChJwZXJzb2FuYU9maWNpdUR0b3MYAyADKAsyHi5vcmcuZXhh",
-            "bXBsZS5QZXJzb2FuYU9maWNpdUR0bxI5ChFwZXJzb2FuYU9maWNpdUR0bxgE",
-            "IAEoCzIeLm9yZy5leGFtcGxlLlBlcnNvYW5hT2ZpY2l1RHRvIkQKBFR5cGUS",
-            "CwoHVW5rbm93bhAAEgYKAk9LEAESCQoFRVJST1IQAhIcChhQRVJTT0FOQU9G",
-            "SUNJVV9MT0dHRURfSU4QA0IqCh1vcmcuZXhhbXBsZS5wcm90b2J1ZmZwcm90",
-            "b2NvbEIJUHJvdG9idWZzYgZwcm90bzM="));
+            "ZW50UmVxdWVzdC5UeXBlEiwKBHVzZXIYAiABKAsyHi5vcmcuZXhhbXBsZS5Q",
+            "ZXJzb2FuYU9maWNpdUR0bxIaChJwZXJzb2FuYU9maWNpdU5hbWUYAyABKAkS",
+            "EgoKbnVtZUVjaGlwYRgEIAEoCRIXCg9udW1lUGFydGljaXBhbnQYBSABKAkS",
+            "EAoIY2FwTW90b3IYBiABKAkicwoEVHlwZRIKCgZVbmtvd24QABIJCgVMT0dJ",
+            "ThABEhMKD05FV19QQVJUSUNJUEFOVBACEhoKFk5SX1BBUlRJQ0lQQU5UU19C",
+            "WVJBQ0UQAxIXChNQQVJUSUNJUEFOVFNfQllURUFNEAQSCgoGTE9HT1VUEAUi",
+            "jAIKDkNsaWVudFJlc3BvbnNlEi4KBHR5cGUYASABKA4yIC5vcmcuZXhhbXBs",
+            "ZS5DbGllbnRSZXNwb25zZS5UeXBlEg0KBWVycm9yGAIgASgJEjoKEnBlcnNv",
+            "YW5hT2ZpY2l1RHRvcxgDIAMoCzIeLm9yZy5leGFtcGxlLlBlcnNvYW5hT2Zp",
+            "Y2l1RHRvEjkKEXBlcnNvYW5hT2ZpY2l1RHRvGAQgASgLMh4ub3JnLmV4YW1w",
+            "bGUuUGVyc29hbmFPZmljaXVEdG8iRAoEVHlwZRILCgdVbmtub3duEAASBgoC",
+            "T0sQARIJCgVFUlJPUhACEhwKGFBFUlNPQU5BT0ZJQ0lVX0xPR0dFRF9JThAD",
+            "QioKHW9yZy5leGFtcGxlLnByb3RvYnVmZnByb3RvY29sQglQcm90b2J1ZnNi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Org.Example.PersoanaOficiuDto), global::Org.Example.PersoanaOficiuDto.Parser, new[]{ "Name", "Password" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Org.Example.ClientRequest), global::Org.Example.ClientRequest.Parser, new[]{ "Type", "User" }, new[]{ "Payload" }, new[]{ typeof(global::Org.Example.ClientRequest.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Org.Example.ClientRequest), global::Org.Example.ClientRequest.Parser, new[]{ "Type", "User", "PersoanaOficiuName", "NumeEchipa", "NumeParticipant", "CapMotor" }, null, new[]{ typeof(global::Org.Example.ClientRequest.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Org.Example.ClientResponse), global::Org.Example.ClientResponse.Parser, new[]{ "Type", "Error", "PersoanaOficiuDtos", "PersoanaOficiuDto" }, null, new[]{ typeof(global::Org.Example.ClientResponse.Types.Type) }, null, null)
           }));
     }
@@ -312,12 +316,11 @@ namespace Org.Example {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ClientRequest(ClientRequest other) : this() {
       type_ = other.type_;
-      switch (other.PayloadCase) {
-        case PayloadOneofCase.User:
-          User = other.User.Clone();
-          break;
-      }
-
+      user_ = other.user_ != null ? other.user_.Clone() : null;
+      persoanaOficiuName_ = other.persoanaOficiuName_;
+      numeEchipa_ = other.numeEchipa_;
+      numeParticipant_ = other.numeParticipant_;
+      capMotor_ = other.capMotor_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -344,34 +347,71 @@ namespace Org.Example {
 
     /// <summary>Field number for the "user" field.</summary>
     public const int UserFieldNumber = 2;
+    private global::Org.Example.PersoanaOficiuDto user_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Org.Example.PersoanaOficiuDto User {
-      get { return payloadCase_ == PayloadOneofCase.User ? (global::Org.Example.PersoanaOficiuDto) payload_ : null; }
+      get { return user_; }
       set {
-        payload_ = value;
-        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.User;
+        user_ = value;
       }
     }
 
-    private object payload_;
-    /// <summary>Enum of possible cases for the "payload" oneof.</summary>
-    public enum PayloadOneofCase {
-      None = 0,
-      User = 2,
-    }
-    private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
+    /// <summary>Field number for the "persoanaOficiuName" field.</summary>
+    public const int PersoanaOficiuNameFieldNumber = 3;
+    private string persoanaOficiuName_ = "";
+    /// <summary>
+    /// pentru LOGOUT persoanaOficiu
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public PayloadOneofCase PayloadCase {
-      get { return payloadCase_; }
+    public string PersoanaOficiuName {
+      get { return persoanaOficiuName_; }
+      set {
+        persoanaOficiuName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
+    /// <summary>Field number for the "numeEchipa" field.</summary>
+    public const int NumeEchipaFieldNumber = 4;
+    private string numeEchipa_ = "";
+    /// <summary>
+    /// pentru FILTRARE PARTICIPANTI DUPA ECHIPA
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearPayload() {
-      payloadCase_ = PayloadOneofCase.None;
-      payload_ = null;
+    public string NumeEchipa {
+      get { return numeEchipa_; }
+      set {
+        numeEchipa_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "numeParticipant" field.</summary>
+    public const int NumeParticipantFieldNumber = 5;
+    private string numeParticipant_ = "";
+    /// <summary>
+    /// pentru inscriere PARTICIPANT
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NumeParticipant {
+      get { return numeParticipant_; }
+      set {
+        numeParticipant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "capMotor" field.</summary>
+    public const int CapMotorFieldNumber = 6;
+    private string capMotor_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CapMotor {
+      get { return capMotor_; }
+      set {
+        capMotor_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -391,7 +431,10 @@ namespace Org.Example {
       }
       if (Type != other.Type) return false;
       if (!object.Equals(User, other.User)) return false;
-      if (PayloadCase != other.PayloadCase) return false;
+      if (PersoanaOficiuName != other.PersoanaOficiuName) return false;
+      if (NumeEchipa != other.NumeEchipa) return false;
+      if (NumeParticipant != other.NumeParticipant) return false;
+      if (CapMotor != other.CapMotor) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -400,8 +443,11 @@ namespace Org.Example {
     public override int GetHashCode() {
       int hash = 1;
       if (Type != global::Org.Example.ClientRequest.Types.Type.Unkown) hash ^= Type.GetHashCode();
-      if (payloadCase_ == PayloadOneofCase.User) hash ^= User.GetHashCode();
-      hash ^= (int) payloadCase_;
+      if (user_ != null) hash ^= User.GetHashCode();
+      if (PersoanaOficiuName.Length != 0) hash ^= PersoanaOficiuName.GetHashCode();
+      if (NumeEchipa.Length != 0) hash ^= NumeEchipa.GetHashCode();
+      if (NumeParticipant.Length != 0) hash ^= NumeParticipant.GetHashCode();
+      if (CapMotor.Length != 0) hash ^= CapMotor.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -424,9 +470,25 @@ namespace Org.Example {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
-      if (payloadCase_ == PayloadOneofCase.User) {
+      if (user_ != null) {
         output.WriteRawTag(18);
         output.WriteMessage(User);
+      }
+      if (PersoanaOficiuName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PersoanaOficiuName);
+      }
+      if (NumeEchipa.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(NumeEchipa);
+      }
+      if (NumeParticipant.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(NumeParticipant);
+      }
+      if (CapMotor.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(CapMotor);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -442,9 +504,25 @@ namespace Org.Example {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
-      if (payloadCase_ == PayloadOneofCase.User) {
+      if (user_ != null) {
         output.WriteRawTag(18);
         output.WriteMessage(User);
+      }
+      if (PersoanaOficiuName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PersoanaOficiuName);
+      }
+      if (NumeEchipa.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(NumeEchipa);
+      }
+      if (NumeParticipant.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(NumeParticipant);
+      }
+      if (CapMotor.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(CapMotor);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -459,8 +537,20 @@ namespace Org.Example {
       if (Type != global::Org.Example.ClientRequest.Types.Type.Unkown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
-      if (payloadCase_ == PayloadOneofCase.User) {
+      if (user_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(User);
+      }
+      if (PersoanaOficiuName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PersoanaOficiuName);
+      }
+      if (NumeEchipa.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NumeEchipa);
+      }
+      if (NumeParticipant.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NumeParticipant);
+      }
+      if (CapMotor.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CapMotor);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -477,15 +567,24 @@ namespace Org.Example {
       if (other.Type != global::Org.Example.ClientRequest.Types.Type.Unkown) {
         Type = other.Type;
       }
-      switch (other.PayloadCase) {
-        case PayloadOneofCase.User:
-          if (User == null) {
-            User = new global::Org.Example.PersoanaOficiuDto();
-          }
-          User.MergeFrom(other.User);
-          break;
+      if (other.user_ != null) {
+        if (user_ == null) {
+          User = new global::Org.Example.PersoanaOficiuDto();
+        }
+        User.MergeFrom(other.User);
       }
-
+      if (other.PersoanaOficiuName.Length != 0) {
+        PersoanaOficiuName = other.PersoanaOficiuName;
+      }
+      if (other.NumeEchipa.Length != 0) {
+        NumeEchipa = other.NumeEchipa;
+      }
+      if (other.NumeParticipant.Length != 0) {
+        NumeParticipant = other.NumeParticipant;
+      }
+      if (other.CapMotor.Length != 0) {
+        CapMotor = other.CapMotor;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -506,12 +605,26 @@ namespace Org.Example {
             break;
           }
           case 18: {
-            global::Org.Example.PersoanaOficiuDto subBuilder = new global::Org.Example.PersoanaOficiuDto();
-            if (payloadCase_ == PayloadOneofCase.User) {
-              subBuilder.MergeFrom(User);
+            if (user_ == null) {
+              User = new global::Org.Example.PersoanaOficiuDto();
             }
-            input.ReadMessage(subBuilder);
-            User = subBuilder;
+            input.ReadMessage(User);
+            break;
+          }
+          case 26: {
+            PersoanaOficiuName = input.ReadString();
+            break;
+          }
+          case 34: {
+            NumeEchipa = input.ReadString();
+            break;
+          }
+          case 42: {
+            NumeParticipant = input.ReadString();
+            break;
+          }
+          case 50: {
+            CapMotor = input.ReadString();
             break;
           }
         }
@@ -534,12 +647,26 @@ namespace Org.Example {
             break;
           }
           case 18: {
-            global::Org.Example.PersoanaOficiuDto subBuilder = new global::Org.Example.PersoanaOficiuDto();
-            if (payloadCase_ == PayloadOneofCase.User) {
-              subBuilder.MergeFrom(User);
+            if (user_ == null) {
+              User = new global::Org.Example.PersoanaOficiuDto();
             }
-            input.ReadMessage(subBuilder);
-            User = subBuilder;
+            input.ReadMessage(User);
+            break;
+          }
+          case 26: {
+            PersoanaOficiuName = input.ReadString();
+            break;
+          }
+          case 34: {
+            NumeEchipa = input.ReadString();
+            break;
+          }
+          case 42: {
+            NumeParticipant = input.ReadString();
+            break;
+          }
+          case 50: {
+            CapMotor = input.ReadString();
             break;
           }
         }
@@ -555,6 +682,10 @@ namespace Org.Example {
       public enum Type {
         [pbr::OriginalName("Unkown")] Unkown = 0,
         [pbr::OriginalName("LOGIN")] Login = 1,
+        [pbr::OriginalName("NEW_PARTICIPANT")] NewParticipant = 2,
+        [pbr::OriginalName("NR_PARTICIPANTS_BYRACE")] NrParticipantsByrace = 3,
+        [pbr::OriginalName("PARTICIPANTS_BYTEAM")] ParticipantsByteam = 4,
+        [pbr::OriginalName("LOGOUT")] Logout = 5,
       }
 
     }
