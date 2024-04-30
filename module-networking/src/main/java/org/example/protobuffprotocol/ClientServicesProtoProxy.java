@@ -122,24 +122,29 @@ public class ClientServicesProtoProxy implements IServices {
 
     @Override
     public StringBuilder GetTeam_Participants(String numeEchipa) {
-//        Request req = new Request.Builder().type(RequestType.PARTICIPANTS_BYTEAM).data(numeEchipa).build();
-//        sendRequest(req);
-//        Response response = readResponse();
-//        if (response.type() == ResponseType.ERROR) {
-//            String err = response.data().toString();
-//            System.out.println("Ceva eroare la GetTeam_Participants: " + err);
-//            return null;
-//        }
-//        if (response.type() == ResponseType.OK) {
-//            try {
-//                StringBuilder result = (StringBuilder) response.data();
-//                return result;
-//            } catch (ClassCastException e) {
-//                System.out.println("Failed to cast response data to StringBuilder");
-//                return null;
-//            }
-//        }
-        return null;
+        sendRequest(ProtoUtils.createPARTICIPANTS_BYTEAMRequest(numeEchipa));
+
+        Protobufs.ClientResponse response = readResponse();
+        List<Protobufs.TeamsAndParticipantsDto> participantsByRaceDtoList = response.getTeamsAndParticipantsDtoList();
+
+        StringBuilder sb = new StringBuilder();
+        System.out.println("Raspuns primit din SERVER PROTO PROXY");
+        if (response.getType() == OK) {
+            System.out.println("Raspuns OK primire - GetNumberOfParticipantsByRace");
+
+            // Populate the StringBuilder with data from the ParticipantsByRaceDto objects
+            for (Protobufs.TeamsAndParticipantsDto dto : participantsByRaceDtoList) {
+                sb.append("Echipa: ").append(dto.getEchipa()).append(", Participant: ").append(dto.getParticipant()).append("\n");
+            }
+        }
+        if (response.getType() == ERROR) {
+//            String err = ProtoUtils.(response);
+            closeConnection();
+            System.out.println("EROARE GetNumberOfParticipantsByRace: ");
+        }
+
+        return sb;
+
     }
 
     @Override

@@ -40,6 +40,15 @@ public class ProtoUtils {
                 .build();
         return request;
     }
+
+    public static Protobufs.ClientRequest createPARTICIPANTS_BYTEAMRequest(String numeEchipa) {
+
+        Protobufs.ClientRequest request = Protobufs.ClientRequest.newBuilder()
+                .setType(Protobufs.ClientRequest.Type.PARTICIPANTS_BYTEAM)
+                .setNumeEchipa(numeEchipa)
+                .build();
+        return request;
+    }
 }
 
 
