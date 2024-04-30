@@ -9,6 +9,16 @@ message PersoanaOficiuDto{
   string password = 2;
 }
 
+message ParticipantsByRaceDto{
+  string cursa = 1;
+  int32 nrParticipanti = 2;
+}
+
+message TeamsAndParticipantsDto{
+  string echipa = 1;
+  string participant = 2;
+}
+
 message ClientRequest {
   enum Type {Unkown = 0; LOGIN = 1; NEW_PARTICIPANT = 2; NR_PARTICIPANTS_BYRACE = 3; PARTICIPANTS_BYTEAM = 4; LOGOUT = 5;}
 
@@ -38,7 +48,10 @@ message ClientResponse{
 
   // One of the following will be filled in, depending on the type.
   string error = 2;
-  repeated PersoanaOficiuDto persoanaOficiuDtos = 3;
-  PersoanaOficiuDto persoanaOficiuDto = 4 ;
+
+  repeated ParticipantsByRaceDto participantsByRaceDto = 3;
+  ParticipantsByRaceDto participantByRaceDto = 4;
+  repeated TeamsAndParticipantsDto teamsAndParticipantsDto = 5;
+  TeamsAndParticipantsDto teamAndParticipantsDto = 6;
 }
 

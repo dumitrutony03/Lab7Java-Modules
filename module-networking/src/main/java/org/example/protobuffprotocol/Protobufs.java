@@ -8,66 +8,66 @@ public final class Protobufs {
   private Protobufs() {}
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-      /* major= */ 4,
-      /* minor= */ 26,
-      /* patch= */ 1,
-      /* suffix= */ "",
-      Protobufs.class.getName());
+            com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+            /* major= */ 4,
+            /* minor= */ 26,
+            /* patch= */ 1,
+            /* suffix= */ "",
+            Protobufs.class.getName());
   }
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
+          com.google.protobuf.ExtensionRegistryLite registry) {
   }
 
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+          com.google.protobuf.ExtensionRegistry registry) {
     registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
+            (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface PersoanaOficiuDtoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:org.example.PersoanaOficiuDto)
-      com.google.protobuf.MessageOrBuilder {
+          // @@protoc_insertion_point(interface_extends:org.example.PersoanaOficiuDto)
+          com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>string name = 1;</code>
      * @return The name.
      */
-    String getName();
+    java.lang.String getName();
     /**
      * <code>string name = 1;</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
-        getNameBytes();
+    getNameBytes();
 
     /**
      * <code>string password = 2;</code>
      * @return The password.
      */
-    String getPassword();
+    java.lang.String getPassword();
     /**
      * <code>string password = 2;</code>
      * @return The bytes for password.
      */
     com.google.protobuf.ByteString
-        getPasswordBytes();
+    getPasswordBytes();
   }
   /**
    * Protobuf type {@code org.example.PersoanaOficiuDto}
    */
   public static final class PersoanaOficiuDto extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:org.example.PersoanaOficiuDto)
-      PersoanaOficiuDtoOrBuilder {
-  private static final long serialVersionUID = 0L;
+          com.google.protobuf.GeneratedMessage implements
+          // @@protoc_insertion_point(message_implements:org.example.PersoanaOficiuDto)
+          PersoanaOficiuDtoOrBuilder {
+    private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 26,
-        /* patch= */ 1,
-        /* suffix= */ "",
-        PersoanaOficiuDto.class.getName());
+              com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+              /* major= */ 4,
+              /* minor= */ 26,
+              /* patch= */ 1,
+              /* suffix= */ "",
+              PersoanaOficiuDto.class.getName());
     }
     // Use PersoanaOficiuDto.newBuilder() to construct.
     private PersoanaOficiuDto(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -79,34 +79,34 @@ public final class Protobufs {
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return Protobufs.internal_static_org_example_PersoanaOficiuDto_descriptor;
+    getDescriptor() {
+      return org.example.protobuffprotocol.Protobufs.internal_static_org_example_PersoanaOficiuDto_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return Protobufs.internal_static_org_example_PersoanaOficiuDto_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              PersoanaOficiuDto.class, Builder.class);
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return org.example.protobuffprotocol.Protobufs.internal_static_org_example_PersoanaOficiuDto_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                      org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.class, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder.class);
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile Object name_ = "";
+    private volatile java.lang.Object name_ = "";
     /**
      * <code>string name = 1;</code>
      * @return The name.
      */
-    @Override
-    public String getName() {
-      Object ref = name_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
         name_ = s;
         return s;
       }
@@ -115,14 +115,14 @@ public final class Protobufs {
      * <code>string name = 1;</code>
      * @return The bytes for name.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
-        getNameBytes() {
-      Object ref = name_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+    getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
         name_ = b;
         return b;
       } else {
@@ -132,20 +132,20 @@ public final class Protobufs {
 
     public static final int PASSWORD_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private volatile Object password_ = "";
+    private volatile java.lang.Object password_ = "";
     /**
      * <code>string password = 2;</code>
      * @return The password.
      */
-    @Override
-    public String getPassword() {
-      Object ref = password_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getPassword() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
         password_ = s;
         return s;
       }
@@ -154,14 +154,14 @@ public final class Protobufs {
      * <code>string password = 2;</code>
      * @return The bytes for password.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
-        getPasswordBytes() {
-      Object ref = password_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+    getPasswordBytes() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
         password_ = b;
         return b;
       } else {
@@ -170,7 +170,7 @@ public final class Protobufs {
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -180,9 +180,9 @@ public final class Protobufs {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+            throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 1, name_);
       }
@@ -192,7 +192,7 @@ public final class Protobufs {
       getUnknownFields().writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -209,25 +209,25 @@ public final class Protobufs {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
-      if (!(obj instanceof PersoanaOficiuDto)) {
+      if (!(obj instanceof org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto)) {
         return super.equals(obj);
       }
-      PersoanaOficiuDto other = (PersoanaOficiuDto) obj;
+      org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto other = (org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto) obj;
 
       if (!getName()
-          .equals(other.getName())) return false;
+              .equals(other.getName())) return false;
       if (!getPassword()
-          .equals(other.getPassword())) return false;
+              .equals(other.getPassword())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -243,95 +243,95 @@ public final class Protobufs {
       return hash;
     }
 
-    public static PersoanaOficiuDto parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static PersoanaOficiuDto parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static PersoanaOficiuDto parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static PersoanaOficiuDto parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static PersoanaOficiuDto parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static PersoanaOficiuDto parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static PersoanaOficiuDto parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
+    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input);
     }
-    public static PersoanaOficiuDto parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static PersoanaOficiuDto parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseDelimitedWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static PersoanaOficiuDto parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static PersoanaOficiuDto parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input);
-    }
-    public static PersoanaOficiuDto parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input, extensionRegistry);
+              .parseDelimitedWithIOException(PARSER, input);
     }
 
-    @Override
+    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+              .parseWithIOException(PARSER, input);
+    }
+    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+              .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(PersoanaOficiuDto prototype) {
+    public static Builder newBuilder(org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+              ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -339,20 +339,20 @@ public final class Protobufs {
      * Protobuf type {@code org.example.PersoanaOficiuDto}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:org.example.PersoanaOficiuDto)
-        PersoanaOficiuDtoOrBuilder {
+            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:org.example.PersoanaOficiuDto)
+            org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return Protobufs.internal_static_org_example_PersoanaOficiuDto_descriptor;
+      getDescriptor() {
+        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_PersoanaOficiuDto_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return Protobufs.internal_static_org_example_PersoanaOficiuDto_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                PersoanaOficiuDto.class, Builder.class);
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_PersoanaOficiuDto_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.class, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder.class);
       }
 
       // Construct using org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.newBuilder()
@@ -361,11 +361,11 @@ public final class Protobufs {
       }
 
       private Builder(
-          BuilderParent parent) {
+              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
 
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
@@ -374,35 +374,35 @@ public final class Protobufs {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return Protobufs.internal_static_org_example_PersoanaOficiuDto_descriptor;
+      getDescriptorForType() {
+        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_PersoanaOficiuDto_descriptor;
       }
 
-      @Override
-      public PersoanaOficiuDto getDefaultInstanceForType() {
-        return PersoanaOficiuDto.getDefaultInstance();
+      @java.lang.Override
+      public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto getDefaultInstanceForType() {
+        return org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance();
       }
 
-      @Override
-      public PersoanaOficiuDto build() {
-        PersoanaOficiuDto result = buildPartial();
+      @java.lang.Override
+      public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto build() {
+        org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public PersoanaOficiuDto buildPartial() {
-        PersoanaOficiuDto result = new PersoanaOficiuDto(this);
+      @java.lang.Override
+      public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto buildPartial() {
+        org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto result = new org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(PersoanaOficiuDto result) {
+      private void buildPartial0(org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.name_ = name_;
@@ -412,18 +412,18 @@ public final class Protobufs {
         }
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof PersoanaOficiuDto) {
-          return mergeFrom((PersoanaOficiuDto)other);
+        if (other instanceof org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto) {
+          return mergeFrom((org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(PersoanaOficiuDto other) {
-        if (other == PersoanaOficiuDto.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto other) {
+        if (other == org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           bitField0_ |= 0x00000001;
@@ -439,18 +439,18 @@ public final class Protobufs {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new NullPointerException();
+          throw new java.lang.NullPointerException();
         }
         try {
           boolean done = false;
@@ -487,21 +487,21 @@ public final class Protobufs {
       }
       private int bitField0_;
 
-      private Object name_ = "";
+      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1;</code>
        * @return The name.
        */
-      public String getName() {
-        Object ref = name_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
           name_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -509,12 +509,12 @@ public final class Protobufs {
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
-          getNameBytes() {
-        Object ref = name_;
+      getNameBytes() {
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
           name_ = b;
           return b;
         } else {
@@ -527,7 +527,7 @@ public final class Protobufs {
        * @return This builder for chaining.
        */
       public Builder setName(
-          String value) {
+              java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         name_ = value;
         bitField0_ |= 0x00000001;
@@ -550,7 +550,7 @@ public final class Protobufs {
        * @return This builder for chaining.
        */
       public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         name_ = value;
@@ -559,21 +559,21 @@ public final class Protobufs {
         return this;
       }
 
-      private Object password_ = "";
+      private java.lang.Object password_ = "";
       /**
        * <code>string password = 2;</code>
        * @return The password.
        */
-      public String getPassword() {
-        Object ref = password_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
           password_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -581,12 +581,12 @@ public final class Protobufs {
        * @return The bytes for password.
        */
       public com.google.protobuf.ByteString
-          getPasswordBytes() {
-        Object ref = password_;
+      getPasswordBytes() {
+        java.lang.Object ref = password_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
           password_ = b;
           return b;
         } else {
@@ -599,7 +599,7 @@ public final class Protobufs {
        * @return This builder for chaining.
        */
       public Builder setPassword(
-          String value) {
+              java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         password_ = value;
         bitField0_ |= 0x00000002;
@@ -622,7 +622,7 @@ public final class Protobufs {
        * @return This builder for chaining.
        */
       public Builder setPasswordBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         password_ = value;
@@ -635,22 +635,22 @@ public final class Protobufs {
     }
 
     // @@protoc_insertion_point(class_scope:org.example.PersoanaOficiuDto)
-    private static final PersoanaOficiuDto DEFAULT_INSTANCE;
+    private static final org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new PersoanaOficiuDto();
+      DEFAULT_INSTANCE = new org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto();
     }
 
-    public static PersoanaOficiuDto getDefaultInstance() {
+    public static org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<PersoanaOficiuDto>
-        PARSER = new com.google.protobuf.AbstractParser<PersoanaOficiuDto>() {
-      @Override
+            PARSER = new com.google.protobuf.AbstractParser<PersoanaOficiuDto>() {
+      @java.lang.Override
       public PersoanaOficiuDto parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
         Builder builder = newBuilder();
         try {
           builder.mergeFrom(input, extensionRegistry);
@@ -660,7 +660,7 @@ public final class Protobufs {
           throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
+                  .setUnfinishedMessage(builder.buildPartial());
         }
         return builder.buildPartial();
       }
@@ -670,21 +670,1261 @@ public final class Protobufs {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<PersoanaOficiuDto> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public PersoanaOficiuDto getDefaultInstanceForType() {
+    @java.lang.Override
+    public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParticipantsByRaceDtoOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:org.example.ParticipantsByRaceDto)
+          com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string cursa = 1;</code>
+     * @return The cursa.
+     */
+    java.lang.String getCursa();
+    /**
+     * <code>string cursa = 1;</code>
+     * @return The bytes for cursa.
+     */
+    com.google.protobuf.ByteString
+    getCursaBytes();
+
+    /**
+     * <code>int32 nrParticipanti = 2;</code>
+     * @return The nrParticipanti.
+     */
+    int getNrParticipanti();
+  }
+  /**
+   * Protobuf type {@code org.example.ParticipantsByRaceDto}
+   */
+  public static final class ParticipantsByRaceDto extends
+          com.google.protobuf.GeneratedMessage implements
+          // @@protoc_insertion_point(message_implements:org.example.ParticipantsByRaceDto)
+          ParticipantsByRaceDtoOrBuilder {
+    private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+              com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+              /* major= */ 4,
+              /* minor= */ 26,
+              /* patch= */ 1,
+              /* suffix= */ "",
+              ParticipantsByRaceDto.class.getName());
+    }
+    // Use ParticipantsByRaceDto.newBuilder() to construct.
+    private ParticipantsByRaceDto(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ParticipantsByRaceDto() {
+      cursa_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+    getDescriptor() {
+      return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ParticipantsByRaceDto_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ParticipantsByRaceDto_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                      org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.class, org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.Builder.class);
+    }
+
+    public static final int CURSA_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object cursa_ = "";
+    /**
+     * <code>string cursa = 1;</code>
+     * @return The cursa.
+     */
+    @java.lang.Override
+    public java.lang.String getCursa() {
+      java.lang.Object ref = cursa_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cursa_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string cursa = 1;</code>
+     * @return The bytes for cursa.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getCursaBytes() {
+      java.lang.Object ref = cursa_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        cursa_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NRPARTICIPANTI_FIELD_NUMBER = 2;
+    private int nrParticipanti_ = 0;
+    /**
+     * <code>int32 nrParticipanti = 2;</code>
+     * @return The nrParticipanti.
+     */
+    @java.lang.Override
+    public int getNrParticipanti() {
+      return nrParticipanti_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+            throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(cursa_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, cursa_);
+      }
+      if (nrParticipanti_ != 0) {
+        output.writeInt32(2, nrParticipanti_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(cursa_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, cursa_);
+      }
+      if (nrParticipanti_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeInt32Size(2, nrParticipanti_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+        return true;
+      }
+      if (!(obj instanceof org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto)) {
+        return super.equals(obj);
+      }
+      org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto other = (org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto) obj;
+
+      if (!getCursa()
+              .equals(other.getCursa())) return false;
+      if (getNrParticipanti()
+              != other.getNrParticipanti()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CURSA_FIELD_NUMBER;
+      hash = (53 * hash) + getCursa().hashCode();
+      hash = (37 * hash) + NRPARTICIPANTI_FIELD_NUMBER;
+      hash = (53 * hash) + getNrParticipanti();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+              .parseWithIOException(PARSER, input);
+    }
+    public static org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+              .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+              .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+              .parseWithIOException(PARSER, input);
+    }
+    public static org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+              .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code org.example.ParticipantsByRaceDto}
+     */
+    public static final class Builder extends
+            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:org.example.ParticipantsByRaceDto)
+            org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDtoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ParticipantsByRaceDto_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ParticipantsByRaceDto_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.class, org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.Builder.class);
+      }
+
+      // Construct using org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        cursa_ = "";
+        nrParticipanti_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+      getDescriptorForType() {
+        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ParticipantsByRaceDto_descriptor;
+      }
+
+      @java.lang.Override
+      public org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto getDefaultInstanceForType() {
+        return org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto build() {
+        org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto buildPartial() {
+        org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto result = new org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.cursa_ = cursa_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nrParticipanti_ = nrParticipanti_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto) {
+          return mergeFrom((org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto other) {
+        if (other == org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.getDefaultInstance()) return this;
+        if (!other.getCursa().isEmpty()) {
+          cursa_ = other.cursa_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getNrParticipanti() != 0) {
+          setNrParticipanti(other.getNrParticipanti());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                cursa_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                nrParticipanti_ = input.readInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object cursa_ = "";
+      /**
+       * <code>string cursa = 1;</code>
+       * @return The cursa.
+       */
+      public java.lang.String getCursa() {
+        java.lang.Object ref = cursa_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cursa_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string cursa = 1;</code>
+       * @return The bytes for cursa.
+       */
+      public com.google.protobuf.ByteString
+      getCursaBytes() {
+        java.lang.Object ref = cursa_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          cursa_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string cursa = 1;</code>
+       * @param value The cursa to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCursa(
+              java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        cursa_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string cursa = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCursa() {
+        cursa_ = getDefaultInstance().getCursa();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string cursa = 1;</code>
+       * @param value The bytes for cursa to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCursaBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        cursa_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int nrParticipanti_ ;
+      /**
+       * <code>int32 nrParticipanti = 2;</code>
+       * @return The nrParticipanti.
+       */
+      @java.lang.Override
+      public int getNrParticipanti() {
+        return nrParticipanti_;
+      }
+      /**
+       * <code>int32 nrParticipanti = 2;</code>
+       * @param value The nrParticipanti to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNrParticipanti(int value) {
+
+        nrParticipanti_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 nrParticipanti = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNrParticipanti() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        nrParticipanti_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:org.example.ParticipantsByRaceDto)
+    }
+
+    // @@protoc_insertion_point(class_scope:org.example.ParticipantsByRaceDto)
+    private static final org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto();
+    }
+
+    public static org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ParticipantsByRaceDto>
+            PARSER = new com.google.protobuf.AbstractParser<ParticipantsByRaceDto>() {
+      @java.lang.Override
+      public ParticipantsByRaceDto parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ParticipantsByRaceDto> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ParticipantsByRaceDto> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TeamsAndParticipantsDtoOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:org.example.TeamsAndParticipantsDto)
+          com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string echipa = 1;</code>
+     * @return The echipa.
+     */
+    java.lang.String getEchipa();
+    /**
+     * <code>string echipa = 1;</code>
+     * @return The bytes for echipa.
+     */
+    com.google.protobuf.ByteString
+    getEchipaBytes();
+
+    /**
+     * <code>string participant = 2;</code>
+     * @return The participant.
+     */
+    java.lang.String getParticipant();
+    /**
+     * <code>string participant = 2;</code>
+     * @return The bytes for participant.
+     */
+    com.google.protobuf.ByteString
+    getParticipantBytes();
+  }
+  /**
+   * Protobuf type {@code org.example.TeamsAndParticipantsDto}
+   */
+  public static final class TeamsAndParticipantsDto extends
+          com.google.protobuf.GeneratedMessage implements
+          // @@protoc_insertion_point(message_implements:org.example.TeamsAndParticipantsDto)
+          TeamsAndParticipantsDtoOrBuilder {
+    private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+              com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+              /* major= */ 4,
+              /* minor= */ 26,
+              /* patch= */ 1,
+              /* suffix= */ "",
+              TeamsAndParticipantsDto.class.getName());
+    }
+    // Use TeamsAndParticipantsDto.newBuilder() to construct.
+    private TeamsAndParticipantsDto(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private TeamsAndParticipantsDto() {
+      echipa_ = "";
+      participant_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+    getDescriptor() {
+      return org.example.protobuffprotocol.Protobufs.internal_static_org_example_TeamsAndParticipantsDto_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return org.example.protobuffprotocol.Protobufs.internal_static_org_example_TeamsAndParticipantsDto_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                      org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.class, org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.Builder.class);
+    }
+
+    public static final int ECHIPA_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object echipa_ = "";
+    /**
+     * <code>string echipa = 1;</code>
+     * @return The echipa.
+     */
+    @java.lang.Override
+    public java.lang.String getEchipa() {
+      java.lang.Object ref = echipa_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echipa_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echipa = 1;</code>
+     * @return The bytes for echipa.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getEchipaBytes() {
+      java.lang.Object ref = echipa_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        echipa_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARTICIPANT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object participant_ = "";
+    /**
+     * <code>string participant = 2;</code>
+     * @return The participant.
+     */
+    @java.lang.Override
+    public java.lang.String getParticipant() {
+      java.lang.Object ref = participant_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        participant_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string participant = 2;</code>
+     * @return The bytes for participant.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getParticipantBytes() {
+      java.lang.Object ref = participant_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        participant_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+            throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(echipa_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, echipa_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(participant_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, participant_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(echipa_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, echipa_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(participant_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, participant_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+        return true;
+      }
+      if (!(obj instanceof org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto)) {
+        return super.equals(obj);
+      }
+      org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto other = (org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto) obj;
+
+      if (!getEchipa()
+              .equals(other.getEchipa())) return false;
+      if (!getParticipant()
+              .equals(other.getParticipant())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ECHIPA_FIELD_NUMBER;
+      hash = (53 * hash) + getEchipa().hashCode();
+      hash = (37 * hash) + PARTICIPANT_FIELD_NUMBER;
+      hash = (53 * hash) + getParticipant().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+              .parseWithIOException(PARSER, input);
+    }
+    public static org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+              .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+              .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+              .parseWithIOException(PARSER, input);
+    }
+    public static org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+              .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code org.example.TeamsAndParticipantsDto}
+     */
+    public static final class Builder extends
+            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:org.example.TeamsAndParticipantsDto)
+            org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDtoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_TeamsAndParticipantsDto_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_TeamsAndParticipantsDto_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.class, org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.Builder.class);
+      }
+
+      // Construct using org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        echipa_ = "";
+        participant_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+      getDescriptorForType() {
+        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_TeamsAndParticipantsDto_descriptor;
+      }
+
+      @java.lang.Override
+      public org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto getDefaultInstanceForType() {
+        return org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto build() {
+        org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto buildPartial() {
+        org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto result = new org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.echipa_ = echipa_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.participant_ = participant_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto) {
+          return mergeFrom((org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto other) {
+        if (other == org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.getDefaultInstance()) return this;
+        if (!other.getEchipa().isEmpty()) {
+          echipa_ = other.echipa_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getParticipant().isEmpty()) {
+          participant_ = other.participant_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                echipa_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                participant_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object echipa_ = "";
+      /**
+       * <code>string echipa = 1;</code>
+       * @return The echipa.
+       */
+      public java.lang.String getEchipa() {
+        java.lang.Object ref = echipa_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echipa_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echipa = 1;</code>
+       * @return The bytes for echipa.
+       */
+      public com.google.protobuf.ByteString
+      getEchipaBytes() {
+        java.lang.Object ref = echipa_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          echipa_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echipa = 1;</code>
+       * @param value The echipa to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchipa(
+              java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        echipa_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echipa = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEchipa() {
+        echipa_ = getDefaultInstance().getEchipa();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echipa = 1;</code>
+       * @param value The bytes for echipa to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchipaBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        echipa_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object participant_ = "";
+      /**
+       * <code>string participant = 2;</code>
+       * @return The participant.
+       */
+      public java.lang.String getParticipant() {
+        java.lang.Object ref = participant_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          participant_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string participant = 2;</code>
+       * @return The bytes for participant.
+       */
+      public com.google.protobuf.ByteString
+      getParticipantBytes() {
+        java.lang.Object ref = participant_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          participant_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string participant = 2;</code>
+       * @param value The participant to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParticipant(
+              java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        participant_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string participant = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearParticipant() {
+        participant_ = getDefaultInstance().getParticipant();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string participant = 2;</code>
+       * @param value The bytes for participant to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParticipantBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        participant_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:org.example.TeamsAndParticipantsDto)
+    }
+
+    // @@protoc_insertion_point(class_scope:org.example.TeamsAndParticipantsDto)
+    private static final org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto();
+    }
+
+    public static org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TeamsAndParticipantsDto>
+            PARSER = new com.google.protobuf.AbstractParser<TeamsAndParticipantsDto>() {
+      @java.lang.Override
+      public TeamsAndParticipantsDto parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TeamsAndParticipantsDto> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TeamsAndParticipantsDto> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface ClientRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:org.example.ClientRequest)
-      com.google.protobuf.MessageOrBuilder {
+          // @@protoc_insertion_point(interface_extends:org.example.ClientRequest)
+          com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
@@ -703,7 +1943,7 @@ public final class Protobufs {
      * <code>.org.example.ClientRequest.Type type = 1;</code>
      * @return The type.
      */
-    ClientRequest.Type getType();
+    org.example.protobuffprotocol.Protobufs.ClientRequest.Type getType();
 
     /**
      * <pre>
@@ -722,7 +1962,7 @@ public final class Protobufs {
      * <code>.org.example.PersoanaOficiuDto user = 2;</code>
      * @return The user.
      */
-    PersoanaOficiuDto getUser();
+    org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto getUser();
     /**
      * <pre>
      * One of the following will be filled in, depending on the type.
@@ -730,7 +1970,7 @@ public final class Protobufs {
      *
      * <code>.org.example.PersoanaOficiuDto user = 2;</code>
      */
-    PersoanaOficiuDtoOrBuilder getUserOrBuilder();
+    org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder getUserOrBuilder();
 
     /**
      * <pre>
@@ -740,7 +1980,7 @@ public final class Protobufs {
      * <code>string persoanaOficiuName = 3;</code>
      * @return The persoanaOficiuName.
      */
-    String getPersoanaOficiuName();
+    java.lang.String getPersoanaOficiuName();
     /**
      * <pre>
      * pentru LOGOUT persoanaOficiu
@@ -750,7 +1990,7 @@ public final class Protobufs {
      * @return The bytes for persoanaOficiuName.
      */
     com.google.protobuf.ByteString
-        getPersoanaOficiuNameBytes();
+    getPersoanaOficiuNameBytes();
 
     /**
      * <pre>
@@ -760,7 +2000,7 @@ public final class Protobufs {
      * <code>string numeEchipa = 4;</code>
      * @return The numeEchipa.
      */
-    String getNumeEchipa();
+    java.lang.String getNumeEchipa();
     /**
      * <pre>
      * pentru FILTRARE PARTICIPANTI DUPA ECHIPA
@@ -770,7 +2010,7 @@ public final class Protobufs {
      * @return The bytes for numeEchipa.
      */
     com.google.protobuf.ByteString
-        getNumeEchipaBytes();
+    getNumeEchipaBytes();
 
     /**
      * <pre>
@@ -780,7 +2020,7 @@ public final class Protobufs {
      * <code>string numeParticipant = 5;</code>
      * @return The numeParticipant.
      */
-    String getNumeParticipant();
+    java.lang.String getNumeParticipant();
     /**
      * <pre>
      * adaugare nou participant
@@ -790,7 +2030,7 @@ public final class Protobufs {
      * @return The bytes for numeParticipant.
      */
     com.google.protobuf.ByteString
-        getNumeParticipantBytes();
+    getNumeParticipantBytes();
 
     /**
      * <pre>
@@ -800,7 +2040,7 @@ public final class Protobufs {
      * <code>string numeCursa = 7;</code>
      * @return The numeCursa.
      */
-    String getNumeCursa();
+    java.lang.String getNumeCursa();
     /**
      * <pre>
      * string numeEchipa = 6;
@@ -810,24 +2050,24 @@ public final class Protobufs {
      * @return The bytes for numeCursa.
      */
     com.google.protobuf.ByteString
-        getNumeCursaBytes();
+    getNumeCursaBytes();
   }
   /**
    * Protobuf type {@code org.example.ClientRequest}
    */
   public static final class ClientRequest extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:org.example.ClientRequest)
-      ClientRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
+          com.google.protobuf.GeneratedMessage implements
+          // @@protoc_insertion_point(message_implements:org.example.ClientRequest)
+          ClientRequestOrBuilder {
+    private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 26,
-        /* patch= */ 1,
-        /* suffix= */ "",
-        ClientRequest.class.getName());
+              com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+              /* major= */ 4,
+              /* minor= */ 26,
+              /* patch= */ 1,
+              /* suffix= */ "",
+              ClientRequest.class.getName());
     }
     // Use ClientRequest.newBuilder() to construct.
     private ClientRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -842,23 +2082,23 @@ public final class Protobufs {
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return Protobufs.internal_static_org_example_ClientRequest_descriptor;
+    getDescriptor() {
+      return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ClientRequest_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return Protobufs.internal_static_org_example_ClientRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              ClientRequest.class, Builder.class);
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ClientRequest_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                      org.example.protobuffprotocol.Protobufs.ClientRequest.class, org.example.protobuffprotocol.Protobufs.ClientRequest.Builder.class);
     }
 
     /**
      * Protobuf enum {@code org.example.ClientRequest.Type}
      */
     public enum Type
-        implements com.google.protobuf.ProtocolMessageEnum {
+            implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <code>Unkown = 0;</code>
        */
@@ -888,12 +2128,12 @@ public final class Protobufs {
 
       static {
         com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 26,
-          /* patch= */ 1,
-          /* suffix= */ "",
-          Type.class.getName());
+                com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+                /* major= */ 4,
+                /* minor= */ 26,
+                /* patch= */ 1,
+                /* suffix= */ "",
+                Type.class.getName());
       }
       /**
        * <code>Unkown = 0;</code>
@@ -923,8 +2163,8 @@ public final class Protobufs {
 
       public final int getNumber() {
         if (this == UNRECOGNIZED) {
-          throw new IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
+          throw new java.lang.IllegalArgumentException(
+                  "Can't get the number of an unknown enum value.");
         }
         return value;
       }
@@ -934,7 +2174,7 @@ public final class Protobufs {
        * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
-      @Deprecated
+      @java.lang.Deprecated
       public static Type valueOf(int value) {
         return forNumber(value);
       }
@@ -956,41 +2196,41 @@ public final class Protobufs {
       }
 
       public static com.google.protobuf.Internal.EnumLiteMap<Type>
-          internalGetValueMap() {
+      internalGetValueMap() {
         return internalValueMap;
       }
       private static final com.google.protobuf.Internal.EnumLiteMap<
-          Type> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<Type>() {
-              public Type findValueByNumber(int number) {
-                return Type.forNumber(number);
-              }
-            };
+              Type> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<Type>() {
+                public Type findValueByNumber(int number) {
+                  return Type.forNumber(number);
+                }
+              };
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
+      getValueDescriptor() {
         if (this == UNRECOGNIZED) {
-          throw new IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
+          throw new java.lang.IllegalStateException(
+                  "Can't get the descriptor of an unrecognized enum value.");
         }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
+      getDescriptorForType() {
         return getDescriptor();
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return ClientRequest.getDescriptor().getEnumTypes().get(0);
+      getDescriptor() {
+        return org.example.protobuffprotocol.Protobufs.ClientRequest.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final Type[] VALUES = values();
 
       public static Type valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+              com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
-          throw new IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
+          throw new java.lang.IllegalArgumentException(
+                  "EnumValueDescriptor is not for this type.");
         }
         if (desc.getIndex() == -1) {
           return UNRECOGNIZED;
@@ -1018,7 +2258,7 @@ public final class Protobufs {
      * <code>.org.example.ClientRequest.Type type = 1;</code>
      * @return The enum numeric value on the wire for type.
      */
-    @Override public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -1029,13 +2269,13 @@ public final class Protobufs {
      * <code>.org.example.ClientRequest.Type type = 1;</code>
      * @return The type.
      */
-    @Override public Type getType() {
-      Type result = Type.forNumber(type_);
-      return result == null ? Type.UNRECOGNIZED : result;
+    @java.lang.Override public org.example.protobuffprotocol.Protobufs.ClientRequest.Type getType() {
+      org.example.protobuffprotocol.Protobufs.ClientRequest.Type result = org.example.protobuffprotocol.Protobufs.ClientRequest.Type.forNumber(type_);
+      return result == null ? org.example.protobuffprotocol.Protobufs.ClientRequest.Type.UNRECOGNIZED : result;
     }
 
     public static final int USER_FIELD_NUMBER = 2;
-    private PersoanaOficiuDto user_;
+    private org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto user_;
     /**
      * <pre>
      * One of the following will be filled in, depending on the type.
@@ -1044,7 +2284,7 @@ public final class Protobufs {
      * <code>.org.example.PersoanaOficiuDto user = 2;</code>
      * @return Whether the user field is set.
      */
-    @Override
+    @java.lang.Override
     public boolean hasUser() {
       return ((bitField0_ & 0x00000001) != 0);
     }
@@ -1056,9 +2296,9 @@ public final class Protobufs {
      * <code>.org.example.PersoanaOficiuDto user = 2;</code>
      * @return The user.
      */
-    @Override
-    public PersoanaOficiuDto getUser() {
-      return user_ == null ? PersoanaOficiuDto.getDefaultInstance() : user_;
+    @java.lang.Override
+    public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto getUser() {
+      return user_ == null ? org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance() : user_;
     }
     /**
      * <pre>
@@ -1067,14 +2307,14 @@ public final class Protobufs {
      *
      * <code>.org.example.PersoanaOficiuDto user = 2;</code>
      */
-    @Override
-    public PersoanaOficiuDtoOrBuilder getUserOrBuilder() {
-      return user_ == null ? PersoanaOficiuDto.getDefaultInstance() : user_;
+    @java.lang.Override
+    public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder getUserOrBuilder() {
+      return user_ == null ? org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance() : user_;
     }
 
     public static final int PERSOANAOFICIUNAME_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private volatile Object persoanaOficiuName_ = "";
+    private volatile java.lang.Object persoanaOficiuName_ = "";
     /**
      * <pre>
      * pentru LOGOUT persoanaOficiu
@@ -1083,15 +2323,15 @@ public final class Protobufs {
      * <code>string persoanaOficiuName = 3;</code>
      * @return The persoanaOficiuName.
      */
-    @Override
-    public String getPersoanaOficiuName() {
-      Object ref = persoanaOficiuName_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getPersoanaOficiuName() {
+      java.lang.Object ref = persoanaOficiuName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
         persoanaOficiuName_ = s;
         return s;
       }
@@ -1104,14 +2344,14 @@ public final class Protobufs {
      * <code>string persoanaOficiuName = 3;</code>
      * @return The bytes for persoanaOficiuName.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
-        getPersoanaOficiuNameBytes() {
-      Object ref = persoanaOficiuName_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+    getPersoanaOficiuNameBytes() {
+      java.lang.Object ref = persoanaOficiuName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
         persoanaOficiuName_ = b;
         return b;
       } else {
@@ -1121,7 +2361,7 @@ public final class Protobufs {
 
     public static final int NUMEECHIPA_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private volatile Object numeEchipa_ = "";
+    private volatile java.lang.Object numeEchipa_ = "";
     /**
      * <pre>
      * pentru FILTRARE PARTICIPANTI DUPA ECHIPA
@@ -1130,15 +2370,15 @@ public final class Protobufs {
      * <code>string numeEchipa = 4;</code>
      * @return The numeEchipa.
      */
-    @Override
-    public String getNumeEchipa() {
-      Object ref = numeEchipa_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getNumeEchipa() {
+      java.lang.Object ref = numeEchipa_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
         numeEchipa_ = s;
         return s;
       }
@@ -1151,14 +2391,14 @@ public final class Protobufs {
      * <code>string numeEchipa = 4;</code>
      * @return The bytes for numeEchipa.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
-        getNumeEchipaBytes() {
-      Object ref = numeEchipa_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+    getNumeEchipaBytes() {
+      java.lang.Object ref = numeEchipa_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
         numeEchipa_ = b;
         return b;
       } else {
@@ -1168,7 +2408,7 @@ public final class Protobufs {
 
     public static final int NUMEPARTICIPANT_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
-    private volatile Object numeParticipant_ = "";
+    private volatile java.lang.Object numeParticipant_ = "";
     /**
      * <pre>
      * adaugare nou participant
@@ -1177,15 +2417,15 @@ public final class Protobufs {
      * <code>string numeParticipant = 5;</code>
      * @return The numeParticipant.
      */
-    @Override
-    public String getNumeParticipant() {
-      Object ref = numeParticipant_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getNumeParticipant() {
+      java.lang.Object ref = numeParticipant_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
         numeParticipant_ = s;
         return s;
       }
@@ -1198,14 +2438,14 @@ public final class Protobufs {
      * <code>string numeParticipant = 5;</code>
      * @return The bytes for numeParticipant.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
-        getNumeParticipantBytes() {
-      Object ref = numeParticipant_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+    getNumeParticipantBytes() {
+      java.lang.Object ref = numeParticipant_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
         numeParticipant_ = b;
         return b;
       } else {
@@ -1215,7 +2455,7 @@ public final class Protobufs {
 
     public static final int NUMECURSA_FIELD_NUMBER = 7;
     @SuppressWarnings("serial")
-    private volatile Object numeCursa_ = "";
+    private volatile java.lang.Object numeCursa_ = "";
     /**
      * <pre>
      * string numeEchipa = 6;
@@ -1224,15 +2464,15 @@ public final class Protobufs {
      * <code>string numeCursa = 7;</code>
      * @return The numeCursa.
      */
-    @Override
-    public String getNumeCursa() {
-      Object ref = numeCursa_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getNumeCursa() {
+      java.lang.Object ref = numeCursa_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
         numeCursa_ = s;
         return s;
       }
@@ -1245,14 +2485,14 @@ public final class Protobufs {
      * <code>string numeCursa = 7;</code>
      * @return The bytes for numeCursa.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
-        getNumeCursaBytes() {
-      Object ref = numeCursa_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+    getNumeCursaBytes() {
+      java.lang.Object ref = numeCursa_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
         numeCursa_ = b;
         return b;
       } else {
@@ -1261,7 +2501,7 @@ public final class Protobufs {
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1271,10 +2511,10 @@ public final class Protobufs {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (type_ != Type.Unkown.getNumber()) {
+            throws java.io.IOException {
+      if (type_ != org.example.protobuffprotocol.Protobufs.ClientRequest.Type.Unkown.getNumber()) {
         output.writeEnum(1, type_);
       }
       if (((bitField0_ & 0x00000001) != 0)) {
@@ -1295,19 +2535,19 @@ public final class Protobufs {
       getUnknownFields().writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
-      if (type_ != Type.Unkown.getNumber()) {
+      if (type_ != org.example.protobuffprotocol.Protobufs.ClientRequest.Type.Unkown.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, type_);
+                .computeEnumSize(1, type_);
       }
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getUser());
+                .computeMessageSize(2, getUser());
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(persoanaOficiuName_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(3, persoanaOficiuName_);
@@ -1326,35 +2566,35 @@ public final class Protobufs {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
-      if (!(obj instanceof ClientRequest)) {
+      if (!(obj instanceof org.example.protobuffprotocol.Protobufs.ClientRequest)) {
         return super.equals(obj);
       }
-      ClientRequest other = (ClientRequest) obj;
+      org.example.protobuffprotocol.Protobufs.ClientRequest other = (org.example.protobuffprotocol.Protobufs.ClientRequest) obj;
 
       if (type_ != other.type_) return false;
       if (hasUser() != other.hasUser()) return false;
       if (hasUser()) {
         if (!getUser()
-            .equals(other.getUser())) return false;
+                .equals(other.getUser())) return false;
       }
       if (!getPersoanaOficiuName()
-          .equals(other.getPersoanaOficiuName())) return false;
+              .equals(other.getPersoanaOficiuName())) return false;
       if (!getNumeEchipa()
-          .equals(other.getNumeEchipa())) return false;
+              .equals(other.getNumeEchipa())) return false;
       if (!getNumeParticipant()
-          .equals(other.getNumeParticipant())) return false;
+              .equals(other.getNumeParticipant())) return false;
       if (!getNumeCursa()
-          .equals(other.getNumeCursa())) return false;
+              .equals(other.getNumeCursa())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -1380,95 +2620,95 @@ public final class Protobufs {
       return hash;
     }
 
-    public static ClientRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ClientRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ClientRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ClientRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ClientRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ClientRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ClientRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
+    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input);
     }
-    public static ClientRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static ClientRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseDelimitedWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static ClientRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static ClientRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input);
-    }
-    public static ClientRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input, extensionRegistry);
+              .parseDelimitedWithIOException(PARSER, input);
     }
 
-    @Override
+    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+              .parseWithIOException(PARSER, input);
+    }
+    public static org.example.protobuffprotocol.Protobufs.ClientRequest parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+              .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ClientRequest prototype) {
+    public static Builder newBuilder(org.example.protobuffprotocol.Protobufs.ClientRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+              ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1476,20 +2716,20 @@ public final class Protobufs {
      * Protobuf type {@code org.example.ClientRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:org.example.ClientRequest)
-        ClientRequestOrBuilder {
+            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:org.example.ClientRequest)
+            org.example.protobuffprotocol.Protobufs.ClientRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return Protobufs.internal_static_org_example_ClientRequest_descriptor;
+      getDescriptor() {
+        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ClientRequest_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return Protobufs.internal_static_org_example_ClientRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                ClientRequest.class, Builder.class);
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ClientRequest_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        org.example.protobuffprotocol.Protobufs.ClientRequest.class, org.example.protobuffprotocol.Protobufs.ClientRequest.Builder.class);
       }
 
       // Construct using org.example.protobuffprotocol.Protobufs.ClientRequest.newBuilder()
@@ -1498,7 +2738,7 @@ public final class Protobufs {
       }
 
       private Builder(
-          BuilderParent parent) {
+              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1508,7 +2748,7 @@ public final class Protobufs {
           getUserFieldBuilder();
         }
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
@@ -1525,35 +2765,35 @@ public final class Protobufs {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return Protobufs.internal_static_org_example_ClientRequest_descriptor;
+      getDescriptorForType() {
+        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ClientRequest_descriptor;
       }
 
-      @Override
-      public ClientRequest getDefaultInstanceForType() {
-        return ClientRequest.getDefaultInstance();
+      @java.lang.Override
+      public org.example.protobuffprotocol.Protobufs.ClientRequest getDefaultInstanceForType() {
+        return org.example.protobuffprotocol.Protobufs.ClientRequest.getDefaultInstance();
       }
 
-      @Override
-      public ClientRequest build() {
-        ClientRequest result = buildPartial();
+      @java.lang.Override
+      public org.example.protobuffprotocol.Protobufs.ClientRequest build() {
+        org.example.protobuffprotocol.Protobufs.ClientRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public ClientRequest buildPartial() {
-        ClientRequest result = new ClientRequest(this);
+      @java.lang.Override
+      public org.example.protobuffprotocol.Protobufs.ClientRequest buildPartial() {
+        org.example.protobuffprotocol.Protobufs.ClientRequest result = new org.example.protobuffprotocol.Protobufs.ClientRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(ClientRequest result) {
+      private void buildPartial0(org.example.protobuffprotocol.Protobufs.ClientRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.type_ = type_;
@@ -1561,8 +2801,8 @@ public final class Protobufs {
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.user_ = userBuilder_ == null
-              ? user_
-              : userBuilder_.build();
+                  ? user_
+                  : userBuilder_.build();
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
@@ -1580,18 +2820,18 @@ public final class Protobufs {
         result.bitField0_ |= to_bitField0_;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ClientRequest) {
-          return mergeFrom((ClientRequest)other);
+        if (other instanceof org.example.protobuffprotocol.Protobufs.ClientRequest) {
+          return mergeFrom((org.example.protobuffprotocol.Protobufs.ClientRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ClientRequest other) {
-        if (other == ClientRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.example.protobuffprotocol.Protobufs.ClientRequest other) {
+        if (other == org.example.protobuffprotocol.Protobufs.ClientRequest.getDefaultInstance()) return this;
         if (other.type_ != 0) {
           setTypeValue(other.getTypeValue());
         }
@@ -1623,18 +2863,18 @@ public final class Protobufs {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new NullPointerException();
+          throw new java.lang.NullPointerException();
         }
         try {
           boolean done = false;
@@ -1651,8 +2891,8 @@ public final class Protobufs {
               } // case 8
               case 18: {
                 input.readMessage(
-                    getUserFieldBuilder().getBuilder(),
-                    extensionRegistry);
+                        getUserFieldBuilder().getBuilder(),
+                        extensionRegistry);
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
@@ -1702,7 +2942,7 @@ public final class Protobufs {
        * <code>.org.example.ClientRequest.Type type = 1;</code>
        * @return The enum numeric value on the wire for type.
        */
-      @Override public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -1728,10 +2968,10 @@ public final class Protobufs {
        * <code>.org.example.ClientRequest.Type type = 1;</code>
        * @return The type.
        */
-      @Override
-      public Type getType() {
-        Type result = Type.forNumber(type_);
-        return result == null ? Type.UNRECOGNIZED : result;
+      @java.lang.Override
+      public org.example.protobuffprotocol.Protobufs.ClientRequest.Type getType() {
+        org.example.protobuffprotocol.Protobufs.ClientRequest.Type result = org.example.protobuffprotocol.Protobufs.ClientRequest.Type.forNumber(type_);
+        return result == null ? org.example.protobuffprotocol.Protobufs.ClientRequest.Type.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -1742,7 +2982,7 @@ public final class Protobufs {
        * @param value The type to set.
        * @return This builder for chaining.
        */
-      public Builder setType(Type value) {
+      public Builder setType(org.example.protobuffprotocol.Protobufs.ClientRequest.Type value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -1766,9 +3006,9 @@ public final class Protobufs {
         return this;
       }
 
-      private PersoanaOficiuDto user_;
+      private org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto user_;
       private com.google.protobuf.SingleFieldBuilder<
-          PersoanaOficiuDto, PersoanaOficiuDto.Builder, PersoanaOficiuDtoOrBuilder> userBuilder_;
+              org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder> userBuilder_;
       /**
        * <pre>
        * One of the following will be filled in, depending on the type.
@@ -1788,9 +3028,9 @@ public final class Protobufs {
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        * @return The user.
        */
-      public PersoanaOficiuDto getUser() {
+      public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto getUser() {
         if (userBuilder_ == null) {
-          return user_ == null ? PersoanaOficiuDto.getDefaultInstance() : user_;
+          return user_ == null ? org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance() : user_;
         } else {
           return userBuilder_.getMessage();
         }
@@ -1802,7 +3042,7 @@ public final class Protobufs {
        *
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        */
-      public Builder setUser(PersoanaOficiuDto value) {
+      public Builder setUser(org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto value) {
         if (userBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1823,7 +3063,7 @@ public final class Protobufs {
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        */
       public Builder setUser(
-          PersoanaOficiuDto.Builder builderForValue) {
+              org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder builderForValue) {
         if (userBuilder_ == null) {
           user_ = builderForValue.build();
         } else {
@@ -1840,11 +3080,11 @@ public final class Protobufs {
        *
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        */
-      public Builder mergeUser(PersoanaOficiuDto value) {
+      public Builder mergeUser(org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto value) {
         if (userBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0) &&
-            user_ != null &&
-            user_ != PersoanaOficiuDto.getDefaultInstance()) {
+                  user_ != null &&
+                  user_ != org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance()) {
             getUserBuilder().mergeFrom(value);
           } else {
             user_ = value;
@@ -1882,7 +3122,7 @@ public final class Protobufs {
        *
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        */
-      public PersoanaOficiuDto.Builder getUserBuilder() {
+      public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder getUserBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getUserFieldBuilder().getBuilder();
@@ -1894,12 +3134,12 @@ public final class Protobufs {
        *
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        */
-      public PersoanaOficiuDtoOrBuilder getUserOrBuilder() {
+      public org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder getUserOrBuilder() {
         if (userBuilder_ != null) {
           return userBuilder_.getMessageOrBuilder();
         } else {
           return user_ == null ?
-              PersoanaOficiuDto.getDefaultInstance() : user_;
+                  org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.getDefaultInstance() : user_;
         }
       }
       /**
@@ -1910,11 +3150,11 @@ public final class Protobufs {
        * <code>.org.example.PersoanaOficiuDto user = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          PersoanaOficiuDto, PersoanaOficiuDto.Builder, PersoanaOficiuDtoOrBuilder>
-          getUserFieldBuilder() {
+              org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder>
+      getUserFieldBuilder() {
         if (userBuilder_ == null) {
           userBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              PersoanaOficiuDto, PersoanaOficiuDto.Builder, PersoanaOficiuDtoOrBuilder>(
+                  org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDto.Builder, org.example.protobuffprotocol.Protobufs.PersoanaOficiuDtoOrBuilder>(
                   getUser(),
                   getParentForChildren(),
                   isClean());
@@ -1923,7 +3163,7 @@ public final class Protobufs {
         return userBuilder_;
       }
 
-      private Object persoanaOficiuName_ = "";
+      private java.lang.Object persoanaOficiuName_ = "";
       /**
        * <pre>
        * pentru LOGOUT persoanaOficiu
@@ -1932,16 +3172,16 @@ public final class Protobufs {
        * <code>string persoanaOficiuName = 3;</code>
        * @return The persoanaOficiuName.
        */
-      public String getPersoanaOficiuName() {
-        Object ref = persoanaOficiuName_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getPersoanaOficiuName() {
+        java.lang.Object ref = persoanaOficiuName_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
           persoanaOficiuName_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1953,12 +3193,12 @@ public final class Protobufs {
        * @return The bytes for persoanaOficiuName.
        */
       public com.google.protobuf.ByteString
-          getPersoanaOficiuNameBytes() {
-        Object ref = persoanaOficiuName_;
+      getPersoanaOficiuNameBytes() {
+        java.lang.Object ref = persoanaOficiuName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
           persoanaOficiuName_ = b;
           return b;
         } else {
@@ -1975,7 +3215,7 @@ public final class Protobufs {
        * @return This builder for chaining.
        */
       public Builder setPersoanaOficiuName(
-          String value) {
+              java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         persoanaOficiuName_ = value;
         bitField0_ |= 0x00000004;
@@ -2006,7 +3246,7 @@ public final class Protobufs {
        * @return This builder for chaining.
        */
       public Builder setPersoanaOficiuNameBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         persoanaOficiuName_ = value;
@@ -2015,7 +3255,7 @@ public final class Protobufs {
         return this;
       }
 
-      private Object numeEchipa_ = "";
+      private java.lang.Object numeEchipa_ = "";
       /**
        * <pre>
        * pentru FILTRARE PARTICIPANTI DUPA ECHIPA
@@ -2024,16 +3264,16 @@ public final class Protobufs {
        * <code>string numeEchipa = 4;</code>
        * @return The numeEchipa.
        */
-      public String getNumeEchipa() {
-        Object ref = numeEchipa_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getNumeEchipa() {
+        java.lang.Object ref = numeEchipa_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
           numeEchipa_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -2045,12 +3285,12 @@ public final class Protobufs {
        * @return The bytes for numeEchipa.
        */
       public com.google.protobuf.ByteString
-          getNumeEchipaBytes() {
-        Object ref = numeEchipa_;
+      getNumeEchipaBytes() {
+        java.lang.Object ref = numeEchipa_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
           numeEchipa_ = b;
           return b;
         } else {
@@ -2067,7 +3307,7 @@ public final class Protobufs {
        * @return This builder for chaining.
        */
       public Builder setNumeEchipa(
-          String value) {
+              java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         numeEchipa_ = value;
         bitField0_ |= 0x00000008;
@@ -2098,7 +3338,7 @@ public final class Protobufs {
        * @return This builder for chaining.
        */
       public Builder setNumeEchipaBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         numeEchipa_ = value;
@@ -2107,7 +3347,7 @@ public final class Protobufs {
         return this;
       }
 
-      private Object numeParticipant_ = "";
+      private java.lang.Object numeParticipant_ = "";
       /**
        * <pre>
        * adaugare nou participant
@@ -2116,16 +3356,16 @@ public final class Protobufs {
        * <code>string numeParticipant = 5;</code>
        * @return The numeParticipant.
        */
-      public String getNumeParticipant() {
-        Object ref = numeParticipant_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getNumeParticipant() {
+        java.lang.Object ref = numeParticipant_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
           numeParticipant_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -2137,12 +3377,12 @@ public final class Protobufs {
        * @return The bytes for numeParticipant.
        */
       public com.google.protobuf.ByteString
-          getNumeParticipantBytes() {
-        Object ref = numeParticipant_;
+      getNumeParticipantBytes() {
+        java.lang.Object ref = numeParticipant_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
           numeParticipant_ = b;
           return b;
         } else {
@@ -2159,7 +3399,7 @@ public final class Protobufs {
        * @return This builder for chaining.
        */
       public Builder setNumeParticipant(
-          String value) {
+              java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         numeParticipant_ = value;
         bitField0_ |= 0x00000010;
@@ -2190,7 +3430,7 @@ public final class Protobufs {
        * @return This builder for chaining.
        */
       public Builder setNumeParticipantBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         numeParticipant_ = value;
@@ -2199,7 +3439,7 @@ public final class Protobufs {
         return this;
       }
 
-      private Object numeCursa_ = "";
+      private java.lang.Object numeCursa_ = "";
       /**
        * <pre>
        * string numeEchipa = 6;
@@ -2208,16 +3448,16 @@ public final class Protobufs {
        * <code>string numeCursa = 7;</code>
        * @return The numeCursa.
        */
-      public String getNumeCursa() {
-        Object ref = numeCursa_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getNumeCursa() {
+        java.lang.Object ref = numeCursa_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
           numeCursa_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -2229,12 +3469,12 @@ public final class Protobufs {
        * @return The bytes for numeCursa.
        */
       public com.google.protobuf.ByteString
-          getNumeCursaBytes() {
-        Object ref = numeCursa_;
+      getNumeCursaBytes() {
+        java.lang.Object ref = numeCursa_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
           numeCursa_ = b;
           return b;
         } else {
@@ -2251,7 +3491,7 @@ public final class Protobufs {
        * @return This builder for chaining.
        */
       public Builder setNumeCursa(
-          String value) {
+              java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         numeCursa_ = value;
         bitField0_ |= 0x00000020;
@@ -2282,7 +3522,7 @@ public final class Protobufs {
        * @return This builder for chaining.
        */
       public Builder setNumeCursaBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         numeCursa_ = value;
@@ -2295,22 +3535,22 @@ public final class Protobufs {
     }
 
     // @@protoc_insertion_point(class_scope:org.example.ClientRequest)
-    private static final ClientRequest DEFAULT_INSTANCE;
+    private static final org.example.protobuffprotocol.Protobufs.ClientRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ClientRequest();
+      DEFAULT_INSTANCE = new org.example.protobuffprotocol.Protobufs.ClientRequest();
     }
 
-    public static ClientRequest getDefaultInstance() {
+    public static org.example.protobuffprotocol.Protobufs.ClientRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<ClientRequest>
-        PARSER = new com.google.protobuf.AbstractParser<ClientRequest>() {
-      @Override
+            PARSER = new com.google.protobuf.AbstractParser<ClientRequest>() {
+      @java.lang.Override
       public ClientRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
         Builder builder = newBuilder();
         try {
           builder.mergeFrom(input, extensionRegistry);
@@ -2320,7 +3560,7 @@ public final class Protobufs {
           throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
+                  .setUnfinishedMessage(builder.buildPartial());
         }
         return builder.buildPartial();
       }
@@ -2330,21 +3570,21 @@ public final class Protobufs {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<ClientRequest> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public ClientRequest getDefaultInstanceForType() {
+    @java.lang.Override
+    public org.example.protobuffprotocol.Protobufs.ClientRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface ClientResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:org.example.ClientResponse)
-      com.google.protobuf.MessageOrBuilder {
+          // @@protoc_insertion_point(interface_extends:org.example.ClientResponse)
+          com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
@@ -2363,7 +3603,7 @@ public final class Protobufs {
      * <code>.org.example.ClientResponse.Type type = 1;</code>
      * @return The type.
      */
-    ClientResponse.Type getType();
+    org.example.protobuffprotocol.Protobufs.ClientResponse.Type getType();
 
     /**
      * <pre>
@@ -2373,7 +3613,7 @@ public final class Protobufs {
      * <code>string error = 2;</code>
      * @return The error.
      */
-    String getError();
+    java.lang.String getError();
     /**
      * <pre>
      * One of the following will be filled in, depending on the type.
@@ -2383,63 +3623,102 @@ public final class Protobufs {
      * @return The bytes for error.
      */
     com.google.protobuf.ByteString
-        getErrorBytes();
+    getErrorBytes();
 
     /**
-     * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+     * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
      */
-    java.util.List<PersoanaOficiuDto>
-        getPersoanaOficiuDtosList();
+    java.util.List<org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto>
+    getParticipantsByRaceDtoList();
     /**
-     * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+     * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
      */
-    PersoanaOficiuDto getPersoanaOficiuDtos(int index);
+    org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto getParticipantsByRaceDto(int index);
     /**
-     * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+     * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
      */
-    int getPersoanaOficiuDtosCount();
+    int getParticipantsByRaceDtoCount();
     /**
-     * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+     * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
      */
-    java.util.List<? extends PersoanaOficiuDtoOrBuilder>
-        getPersoanaOficiuDtosOrBuilderList();
+    java.util.List<? extends org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDtoOrBuilder>
+    getParticipantsByRaceDtoOrBuilderList();
     /**
-     * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+     * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
      */
-    PersoanaOficiuDtoOrBuilder getPersoanaOficiuDtosOrBuilder(
-        int index);
+    org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDtoOrBuilder getParticipantsByRaceDtoOrBuilder(
+            int index);
 
     /**
-     * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
-     * @return Whether the persoanaOficiuDto field is set.
+     * <code>.org.example.ParticipantsByRaceDto participantByRaceDto = 4;</code>
+     * @return Whether the participantByRaceDto field is set.
      */
-    boolean hasPersoanaOficiuDto();
+    boolean hasParticipantByRaceDto();
     /**
-     * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
-     * @return The persoanaOficiuDto.
+     * <code>.org.example.ParticipantsByRaceDto participantByRaceDto = 4;</code>
+     * @return The participantByRaceDto.
      */
-    PersoanaOficiuDto getPersoanaOficiuDto();
+    org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto getParticipantByRaceDto();
     /**
-     * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
+     * <code>.org.example.ParticipantsByRaceDto participantByRaceDto = 4;</code>
      */
-    PersoanaOficiuDtoOrBuilder getPersoanaOficiuDtoOrBuilder();
+    org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDtoOrBuilder getParticipantByRaceDtoOrBuilder();
+
+    /**
+     * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+     */
+    java.util.List<org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto>
+    getTeamsAndParticipantsDtoList();
+    /**
+     * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+     */
+    org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto getTeamsAndParticipantsDto(int index);
+    /**
+     * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+     */
+    int getTeamsAndParticipantsDtoCount();
+    /**
+     * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+     */
+    java.util.List<? extends org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDtoOrBuilder>
+    getTeamsAndParticipantsDtoOrBuilderList();
+    /**
+     * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+     */
+    org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDtoOrBuilder getTeamsAndParticipantsDtoOrBuilder(
+            int index);
+
+    /**
+     * <code>.org.example.TeamsAndParticipantsDto teamAndParticipantsDto = 6;</code>
+     * @return Whether the teamAndParticipantsDto field is set.
+     */
+    boolean hasTeamAndParticipantsDto();
+    /**
+     * <code>.org.example.TeamsAndParticipantsDto teamAndParticipantsDto = 6;</code>
+     * @return The teamAndParticipantsDto.
+     */
+    org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto getTeamAndParticipantsDto();
+    /**
+     * <code>.org.example.TeamsAndParticipantsDto teamAndParticipantsDto = 6;</code>
+     */
+    org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDtoOrBuilder getTeamAndParticipantsDtoOrBuilder();
   }
   /**
    * Protobuf type {@code org.example.ClientResponse}
    */
   public static final class ClientResponse extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:org.example.ClientResponse)
-      ClientResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
+          com.google.protobuf.GeneratedMessage implements
+          // @@protoc_insertion_point(message_implements:org.example.ClientResponse)
+          ClientResponseOrBuilder {
+    private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 26,
-        /* patch= */ 1,
-        /* suffix= */ "",
-        ClientResponse.class.getName());
+              com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+              /* major= */ 4,
+              /* minor= */ 26,
+              /* patch= */ 1,
+              /* suffix= */ "",
+              ClientResponse.class.getName());
     }
     // Use ClientResponse.newBuilder() to construct.
     private ClientResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -2448,27 +3727,28 @@ public final class Protobufs {
     private ClientResponse() {
       type_ = 0;
       error_ = "";
-      persoanaOficiuDtos_ = java.util.Collections.emptyList();
+      participantsByRaceDto_ = java.util.Collections.emptyList();
+      teamsAndParticipantsDto_ = java.util.Collections.emptyList();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return Protobufs.internal_static_org_example_ClientResponse_descriptor;
+    getDescriptor() {
+      return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ClientResponse_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return Protobufs.internal_static_org_example_ClientResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              ClientResponse.class, Builder.class);
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ClientResponse_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                      org.example.protobuffprotocol.Protobufs.ClientResponse.class, org.example.protobuffprotocol.Protobufs.ClientResponse.Builder.class);
     }
 
     /**
      * Protobuf enum {@code org.example.ClientResponse.Type}
      */
     public enum Type
-        implements com.google.protobuf.ProtocolMessageEnum {
+            implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <code>Unknown = 0;</code>
        */
@@ -2490,12 +3770,12 @@ public final class Protobufs {
 
       static {
         com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 26,
-          /* patch= */ 1,
-          /* suffix= */ "",
-          Type.class.getName());
+                com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+                /* major= */ 4,
+                /* minor= */ 26,
+                /* patch= */ 1,
+                /* suffix= */ "",
+                Type.class.getName());
       }
       /**
        * <code>Unknown = 0;</code>
@@ -2517,8 +3797,8 @@ public final class Protobufs {
 
       public final int getNumber() {
         if (this == UNRECOGNIZED) {
-          throw new IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
+          throw new java.lang.IllegalArgumentException(
+                  "Can't get the number of an unknown enum value.");
         }
         return value;
       }
@@ -2528,7 +3808,7 @@ public final class Protobufs {
        * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
-      @Deprecated
+      @java.lang.Deprecated
       public static Type valueOf(int value) {
         return forNumber(value);
       }
@@ -2548,41 +3828,41 @@ public final class Protobufs {
       }
 
       public static com.google.protobuf.Internal.EnumLiteMap<Type>
-          internalGetValueMap() {
+      internalGetValueMap() {
         return internalValueMap;
       }
       private static final com.google.protobuf.Internal.EnumLiteMap<
-          Type> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<Type>() {
-              public Type findValueByNumber(int number) {
-                return Type.forNumber(number);
-              }
-            };
+              Type> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<Type>() {
+                public Type findValueByNumber(int number) {
+                  return Type.forNumber(number);
+                }
+              };
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
+      getValueDescriptor() {
         if (this == UNRECOGNIZED) {
-          throw new IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
+          throw new java.lang.IllegalStateException(
+                  "Can't get the descriptor of an unrecognized enum value.");
         }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
+      getDescriptorForType() {
         return getDescriptor();
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return ClientResponse.getDescriptor().getEnumTypes().get(0);
+      getDescriptor() {
+        return org.example.protobuffprotocol.Protobufs.ClientResponse.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final Type[] VALUES = values();
 
       public static Type valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+              com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
-          throw new IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
+          throw new java.lang.IllegalArgumentException(
+                  "EnumValueDescriptor is not for this type.");
         }
         if (desc.getIndex() == -1) {
           return UNRECOGNIZED;
@@ -2610,7 +3890,7 @@ public final class Protobufs {
      * <code>.org.example.ClientResponse.Type type = 1;</code>
      * @return The enum numeric value on the wire for type.
      */
-    @Override public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -2621,14 +3901,14 @@ public final class Protobufs {
      * <code>.org.example.ClientResponse.Type type = 1;</code>
      * @return The type.
      */
-    @Override public Type getType() {
-      Type result = Type.forNumber(type_);
-      return result == null ? Type.UNRECOGNIZED : result;
+    @java.lang.Override public org.example.protobuffprotocol.Protobufs.ClientResponse.Type getType() {
+      org.example.protobuffprotocol.Protobufs.ClientResponse.Type result = org.example.protobuffprotocol.Protobufs.ClientResponse.Type.forNumber(type_);
+      return result == null ? org.example.protobuffprotocol.Protobufs.ClientResponse.Type.UNRECOGNIZED : result;
     }
 
     public static final int ERROR_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private volatile Object error_ = "";
+    private volatile java.lang.Object error_ = "";
     /**
      * <pre>
      * One of the following will be filled in, depending on the type.
@@ -2637,15 +3917,15 @@ public final class Protobufs {
      * <code>string error = 2;</code>
      * @return The error.
      */
-    @Override
-    public String getError() {
-      Object ref = error_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getError() {
+      java.lang.Object ref = error_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
         error_ = s;
         return s;
       }
@@ -2658,14 +3938,14 @@ public final class Protobufs {
      * <code>string error = 2;</code>
      * @return The bytes for error.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
-        getErrorBytes() {
-      Object ref = error_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+    getErrorBytes() {
+      java.lang.Object ref = error_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
         error_ = b;
         return b;
       } else {
@@ -2673,75 +3953,142 @@ public final class Protobufs {
       }
     }
 
-    public static final int PERSOANAOFICIUDTOS_FIELD_NUMBER = 3;
+    public static final int PARTICIPANTSBYRACEDTO_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private java.util.List<PersoanaOficiuDto> persoanaOficiuDtos_;
+    private java.util.List<org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto> participantsByRaceDto_;
     /**
-     * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+     * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
      */
-    @Override
-    public java.util.List<PersoanaOficiuDto> getPersoanaOficiuDtosList() {
-      return persoanaOficiuDtos_;
+    @java.lang.Override
+    public java.util.List<org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto> getParticipantsByRaceDtoList() {
+      return participantsByRaceDto_;
     }
     /**
-     * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+     * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
      */
-    @Override
-    public java.util.List<? extends PersoanaOficiuDtoOrBuilder>
-        getPersoanaOficiuDtosOrBuilderList() {
-      return persoanaOficiuDtos_;
+    @java.lang.Override
+    public java.util.List<? extends org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDtoOrBuilder>
+    getParticipantsByRaceDtoOrBuilderList() {
+      return participantsByRaceDto_;
     }
     /**
-     * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+     * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
      */
-    @Override
-    public int getPersoanaOficiuDtosCount() {
-      return persoanaOficiuDtos_.size();
+    @java.lang.Override
+    public int getParticipantsByRaceDtoCount() {
+      return participantsByRaceDto_.size();
     }
     /**
-     * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+     * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
      */
-    @Override
-    public PersoanaOficiuDto getPersoanaOficiuDtos(int index) {
-      return persoanaOficiuDtos_.get(index);
+    @java.lang.Override
+    public org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto getParticipantsByRaceDto(int index) {
+      return participantsByRaceDto_.get(index);
     }
     /**
-     * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+     * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
      */
-    @Override
-    public PersoanaOficiuDtoOrBuilder getPersoanaOficiuDtosOrBuilder(
-        int index) {
-      return persoanaOficiuDtos_.get(index);
+    @java.lang.Override
+    public org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDtoOrBuilder getParticipantsByRaceDtoOrBuilder(
+            int index) {
+      return participantsByRaceDto_.get(index);
     }
 
-    public static final int PERSOANAOFICIUDTO_FIELD_NUMBER = 4;
-    private PersoanaOficiuDto persoanaOficiuDto_;
+    public static final int PARTICIPANTBYRACEDTO_FIELD_NUMBER = 4;
+    private org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto participantByRaceDto_;
     /**
-     * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
-     * @return Whether the persoanaOficiuDto field is set.
+     * <code>.org.example.ParticipantsByRaceDto participantByRaceDto = 4;</code>
+     * @return Whether the participantByRaceDto field is set.
      */
-    @Override
-    public boolean hasPersoanaOficiuDto() {
+    @java.lang.Override
+    public boolean hasParticipantByRaceDto() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
-     * @return The persoanaOficiuDto.
+     * <code>.org.example.ParticipantsByRaceDto participantByRaceDto = 4;</code>
+     * @return The participantByRaceDto.
      */
-    @Override
-    public PersoanaOficiuDto getPersoanaOficiuDto() {
-      return persoanaOficiuDto_ == null ? PersoanaOficiuDto.getDefaultInstance() : persoanaOficiuDto_;
+    @java.lang.Override
+    public org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto getParticipantByRaceDto() {
+      return participantByRaceDto_ == null ? org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.getDefaultInstance() : participantByRaceDto_;
     }
     /**
-     * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
+     * <code>.org.example.ParticipantsByRaceDto participantByRaceDto = 4;</code>
      */
-    @Override
-    public PersoanaOficiuDtoOrBuilder getPersoanaOficiuDtoOrBuilder() {
-      return persoanaOficiuDto_ == null ? PersoanaOficiuDto.getDefaultInstance() : persoanaOficiuDto_;
+    @java.lang.Override
+    public org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDtoOrBuilder getParticipantByRaceDtoOrBuilder() {
+      return participantByRaceDto_ == null ? org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.getDefaultInstance() : participantByRaceDto_;
+    }
+
+    public static final int TEAMSANDPARTICIPANTSDTO_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto> teamsAndParticipantsDto_;
+    /**
+     * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto> getTeamsAndParticipantsDtoList() {
+      return teamsAndParticipantsDto_;
+    }
+    /**
+     * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDtoOrBuilder>
+    getTeamsAndParticipantsDtoOrBuilderList() {
+      return teamsAndParticipantsDto_;
+    }
+    /**
+     * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+     */
+    @java.lang.Override
+    public int getTeamsAndParticipantsDtoCount() {
+      return teamsAndParticipantsDto_.size();
+    }
+    /**
+     * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+     */
+    @java.lang.Override
+    public org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto getTeamsAndParticipantsDto(int index) {
+      return teamsAndParticipantsDto_.get(index);
+    }
+    /**
+     * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+     */
+    @java.lang.Override
+    public org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDtoOrBuilder getTeamsAndParticipantsDtoOrBuilder(
+            int index) {
+      return teamsAndParticipantsDto_.get(index);
+    }
+
+    public static final int TEAMANDPARTICIPANTSDTO_FIELD_NUMBER = 6;
+    private org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto teamAndParticipantsDto_;
+    /**
+     * <code>.org.example.TeamsAndParticipantsDto teamAndParticipantsDto = 6;</code>
+     * @return Whether the teamAndParticipantsDto field is set.
+     */
+    @java.lang.Override
+    public boolean hasTeamAndParticipantsDto() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.org.example.TeamsAndParticipantsDto teamAndParticipantsDto = 6;</code>
+     * @return The teamAndParticipantsDto.
+     */
+    @java.lang.Override
+    public org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto getTeamAndParticipantsDto() {
+      return teamAndParticipantsDto_ == null ? org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.getDefaultInstance() : teamAndParticipantsDto_;
+    }
+    /**
+     * <code>.org.example.TeamsAndParticipantsDto teamAndParticipantsDto = 6;</code>
+     */
+    @java.lang.Override
+    public org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDtoOrBuilder getTeamAndParticipantsDtoOrBuilder() {
+      return teamAndParticipantsDto_ == null ? org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.getDefaultInstance() : teamAndParticipantsDto_;
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2751,75 +4098,96 @@ public final class Protobufs {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (type_ != Type.Unknown.getNumber()) {
+            throws java.io.IOException {
+      if (type_ != org.example.protobuffprotocol.Protobufs.ClientResponse.Type.Unknown.getNumber()) {
         output.writeEnum(1, type_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(error_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 2, error_);
       }
-      for (int i = 0; i < persoanaOficiuDtos_.size(); i++) {
-        output.writeMessage(3, persoanaOficiuDtos_.get(i));
+      for (int i = 0; i < participantsByRaceDto_.size(); i++) {
+        output.writeMessage(3, participantsByRaceDto_.get(i));
       }
       if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(4, getPersoanaOficiuDto());
+        output.writeMessage(4, getParticipantByRaceDto());
+      }
+      for (int i = 0; i < teamsAndParticipantsDto_.size(); i++) {
+        output.writeMessage(5, teamsAndParticipantsDto_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(6, getTeamAndParticipantsDto());
       }
       getUnknownFields().writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
-      if (type_ != Type.Unknown.getNumber()) {
+      if (type_ != org.example.protobuffprotocol.Protobufs.ClientResponse.Type.Unknown.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, type_);
+                .computeEnumSize(1, type_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(error_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(2, error_);
       }
-      for (int i = 0; i < persoanaOficiuDtos_.size(); i++) {
+      for (int i = 0; i < participantsByRaceDto_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, persoanaOficiuDtos_.get(i));
+                .computeMessageSize(3, participantsByRaceDto_.get(i));
       }
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getPersoanaOficiuDto());
+                .computeMessageSize(4, getParticipantByRaceDto());
+      }
+      for (int i = 0; i < teamsAndParticipantsDto_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeMessageSize(5, teamsAndParticipantsDto_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeMessageSize(6, getTeamAndParticipantsDto());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
-      if (!(obj instanceof ClientResponse)) {
+      if (!(obj instanceof org.example.protobuffprotocol.Protobufs.ClientResponse)) {
         return super.equals(obj);
       }
-      ClientResponse other = (ClientResponse) obj;
+      org.example.protobuffprotocol.Protobufs.ClientResponse other = (org.example.protobuffprotocol.Protobufs.ClientResponse) obj;
 
       if (type_ != other.type_) return false;
       if (!getError()
-          .equals(other.getError())) return false;
-      if (!getPersoanaOficiuDtosList()
-          .equals(other.getPersoanaOficiuDtosList())) return false;
-      if (hasPersoanaOficiuDto() != other.hasPersoanaOficiuDto()) return false;
-      if (hasPersoanaOficiuDto()) {
-        if (!getPersoanaOficiuDto()
-            .equals(other.getPersoanaOficiuDto())) return false;
+              .equals(other.getError())) return false;
+      if (!getParticipantsByRaceDtoList()
+              .equals(other.getParticipantsByRaceDtoList())) return false;
+      if (hasParticipantByRaceDto() != other.hasParticipantByRaceDto()) return false;
+      if (hasParticipantByRaceDto()) {
+        if (!getParticipantByRaceDto()
+                .equals(other.getParticipantByRaceDto())) return false;
+      }
+      if (!getTeamsAndParticipantsDtoList()
+              .equals(other.getTeamsAndParticipantsDtoList())) return false;
+      if (hasTeamAndParticipantsDto() != other.hasTeamAndParticipantsDto()) return false;
+      if (hasTeamAndParticipantsDto()) {
+        if (!getTeamAndParticipantsDto()
+                .equals(other.getTeamAndParticipantsDto())) return false;
       }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -2830,108 +4198,116 @@ public final class Protobufs {
       hash = (53 * hash) + type_;
       hash = (37 * hash) + ERROR_FIELD_NUMBER;
       hash = (53 * hash) + getError().hashCode();
-      if (getPersoanaOficiuDtosCount() > 0) {
-        hash = (37 * hash) + PERSOANAOFICIUDTOS_FIELD_NUMBER;
-        hash = (53 * hash) + getPersoanaOficiuDtosList().hashCode();
+      if (getParticipantsByRaceDtoCount() > 0) {
+        hash = (37 * hash) + PARTICIPANTSBYRACEDTO_FIELD_NUMBER;
+        hash = (53 * hash) + getParticipantsByRaceDtoList().hashCode();
       }
-      if (hasPersoanaOficiuDto()) {
-        hash = (37 * hash) + PERSOANAOFICIUDTO_FIELD_NUMBER;
-        hash = (53 * hash) + getPersoanaOficiuDto().hashCode();
+      if (hasParticipantByRaceDto()) {
+        hash = (37 * hash) + PARTICIPANTBYRACEDTO_FIELD_NUMBER;
+        hash = (53 * hash) + getParticipantByRaceDto().hashCode();
+      }
+      if (getTeamsAndParticipantsDtoCount() > 0) {
+        hash = (37 * hash) + TEAMSANDPARTICIPANTSDTO_FIELD_NUMBER;
+        hash = (53 * hash) + getTeamsAndParticipantsDtoList().hashCode();
+      }
+      if (hasTeamAndParticipantsDto()) {
+        hash = (37 * hash) + TEAMANDPARTICIPANTSDTO_FIELD_NUMBER;
+        hash = (53 * hash) + getTeamAndParticipantsDto().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static ClientResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ClientResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ClientResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ClientResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ClientResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ClientResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ClientResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
+    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input);
     }
-    public static ClientResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static ClientResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseDelimitedWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static ClientResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static ClientResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input);
-    }
-    public static ClientResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input, extensionRegistry);
+              .parseDelimitedWithIOException(PARSER, input);
     }
 
-    @Override
+    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+              .parseWithIOException(PARSER, input);
+    }
+    public static org.example.protobuffprotocol.Protobufs.ClientResponse parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+              .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ClientResponse prototype) {
+    public static Builder newBuilder(org.example.protobuffprotocol.Protobufs.ClientResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+              ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2939,20 +4315,20 @@ public final class Protobufs {
      * Protobuf type {@code org.example.ClientResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:org.example.ClientResponse)
-        ClientResponseOrBuilder {
+            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:org.example.ClientResponse)
+            org.example.protobuffprotocol.Protobufs.ClientResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return Protobufs.internal_static_org_example_ClientResponse_descriptor;
+      getDescriptor() {
+        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ClientResponse_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return Protobufs.internal_static_org_example_ClientResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                ClientResponse.class, Builder.class);
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ClientResponse_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        org.example.protobuffprotocol.Protobufs.ClientResponse.class, org.example.protobuffprotocol.Protobufs.ClientResponse.Builder.class);
       }
 
       // Construct using org.example.protobuffprotocol.Protobufs.ClientResponse.newBuilder()
@@ -2961,80 +4337,103 @@ public final class Protobufs {
       }
 
       private Builder(
-          BuilderParent parent) {
+              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage
                 .alwaysUseFieldBuilders) {
-          getPersoanaOficiuDtosFieldBuilder();
-          getPersoanaOficiuDtoFieldBuilder();
+          getParticipantsByRaceDtoFieldBuilder();
+          getParticipantByRaceDtoFieldBuilder();
+          getTeamsAndParticipantsDtoFieldBuilder();
+          getTeamAndParticipantsDtoFieldBuilder();
         }
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
         type_ = 0;
         error_ = "";
-        if (persoanaOficiuDtosBuilder_ == null) {
-          persoanaOficiuDtos_ = java.util.Collections.emptyList();
+        if (participantsByRaceDtoBuilder_ == null) {
+          participantsByRaceDto_ = java.util.Collections.emptyList();
         } else {
-          persoanaOficiuDtos_ = null;
-          persoanaOficiuDtosBuilder_.clear();
+          participantsByRaceDto_ = null;
+          participantsByRaceDtoBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
-        persoanaOficiuDto_ = null;
-        if (persoanaOficiuDtoBuilder_ != null) {
-          persoanaOficiuDtoBuilder_.dispose();
-          persoanaOficiuDtoBuilder_ = null;
+        participantByRaceDto_ = null;
+        if (participantByRaceDtoBuilder_ != null) {
+          participantByRaceDtoBuilder_.dispose();
+          participantByRaceDtoBuilder_ = null;
+        }
+        if (teamsAndParticipantsDtoBuilder_ == null) {
+          teamsAndParticipantsDto_ = java.util.Collections.emptyList();
+        } else {
+          teamsAndParticipantsDto_ = null;
+          teamsAndParticipantsDtoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        teamAndParticipantsDto_ = null;
+        if (teamAndParticipantsDtoBuilder_ != null) {
+          teamAndParticipantsDtoBuilder_.dispose();
+          teamAndParticipantsDtoBuilder_ = null;
         }
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return Protobufs.internal_static_org_example_ClientResponse_descriptor;
+      getDescriptorForType() {
+        return org.example.protobuffprotocol.Protobufs.internal_static_org_example_ClientResponse_descriptor;
       }
 
-      @Override
-      public ClientResponse getDefaultInstanceForType() {
-        return ClientResponse.getDefaultInstance();
+      @java.lang.Override
+      public org.example.protobuffprotocol.Protobufs.ClientResponse getDefaultInstanceForType() {
+        return org.example.protobuffprotocol.Protobufs.ClientResponse.getDefaultInstance();
       }
 
-      @Override
-      public ClientResponse build() {
-        ClientResponse result = buildPartial();
+      @java.lang.Override
+      public org.example.protobuffprotocol.Protobufs.ClientResponse build() {
+        org.example.protobuffprotocol.Protobufs.ClientResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public ClientResponse buildPartial() {
-        ClientResponse result = new ClientResponse(this);
+      @java.lang.Override
+      public org.example.protobuffprotocol.Protobufs.ClientResponse buildPartial() {
+        org.example.protobuffprotocol.Protobufs.ClientResponse result = new org.example.protobuffprotocol.Protobufs.ClientResponse(this);
         buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(ClientResponse result) {
-        if (persoanaOficiuDtosBuilder_ == null) {
+      private void buildPartialRepeatedFields(org.example.protobuffprotocol.Protobufs.ClientResponse result) {
+        if (participantsByRaceDtoBuilder_ == null) {
           if (((bitField0_ & 0x00000004) != 0)) {
-            persoanaOficiuDtos_ = java.util.Collections.unmodifiableList(persoanaOficiuDtos_);
+            participantsByRaceDto_ = java.util.Collections.unmodifiableList(participantsByRaceDto_);
             bitField0_ = (bitField0_ & ~0x00000004);
           }
-          result.persoanaOficiuDtos_ = persoanaOficiuDtos_;
+          result.participantsByRaceDto_ = participantsByRaceDto_;
         } else {
-          result.persoanaOficiuDtos_ = persoanaOficiuDtosBuilder_.build();
+          result.participantsByRaceDto_ = participantsByRaceDtoBuilder_.build();
+        }
+        if (teamsAndParticipantsDtoBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            teamsAndParticipantsDto_ = java.util.Collections.unmodifiableList(teamsAndParticipantsDto_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.teamsAndParticipantsDto_ = teamsAndParticipantsDto_;
+        } else {
+          result.teamsAndParticipantsDto_ = teamsAndParticipantsDtoBuilder_.build();
         }
       }
 
-      private void buildPartial0(ClientResponse result) {
+      private void buildPartial0(org.example.protobuffprotocol.Protobufs.ClientResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.type_ = type_;
@@ -3044,26 +4443,32 @@ public final class Protobufs {
         }
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.persoanaOficiuDto_ = persoanaOficiuDtoBuilder_ == null
-              ? persoanaOficiuDto_
-              : persoanaOficiuDtoBuilder_.build();
+          result.participantByRaceDto_ = participantByRaceDtoBuilder_ == null
+                  ? participantByRaceDto_
+                  : participantByRaceDtoBuilder_.build();
           to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.teamAndParticipantsDto_ = teamAndParticipantsDtoBuilder_ == null
+                  ? teamAndParticipantsDto_
+                  : teamAndParticipantsDtoBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         result.bitField0_ |= to_bitField0_;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ClientResponse) {
-          return mergeFrom((ClientResponse)other);
+        if (other instanceof org.example.protobuffprotocol.Protobufs.ClientResponse) {
+          return mergeFrom((org.example.protobuffprotocol.Protobufs.ClientResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ClientResponse other) {
-        if (other == ClientResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.example.protobuffprotocol.Protobufs.ClientResponse other) {
+        if (other == org.example.protobuffprotocol.Protobufs.ClientResponse.getDefaultInstance()) return this;
         if (other.type_ != 0) {
           setTypeValue(other.getTypeValue());
         }
@@ -3072,52 +4477,81 @@ public final class Protobufs {
           bitField0_ |= 0x00000002;
           onChanged();
         }
-        if (persoanaOficiuDtosBuilder_ == null) {
-          if (!other.persoanaOficiuDtos_.isEmpty()) {
-            if (persoanaOficiuDtos_.isEmpty()) {
-              persoanaOficiuDtos_ = other.persoanaOficiuDtos_;
+        if (participantsByRaceDtoBuilder_ == null) {
+          if (!other.participantsByRaceDto_.isEmpty()) {
+            if (participantsByRaceDto_.isEmpty()) {
+              participantsByRaceDto_ = other.participantsByRaceDto_;
               bitField0_ = (bitField0_ & ~0x00000004);
             } else {
-              ensurePersoanaOficiuDtosIsMutable();
-              persoanaOficiuDtos_.addAll(other.persoanaOficiuDtos_);
+              ensureParticipantsByRaceDtoIsMutable();
+              participantsByRaceDto_.addAll(other.participantsByRaceDto_);
             }
             onChanged();
           }
         } else {
-          if (!other.persoanaOficiuDtos_.isEmpty()) {
-            if (persoanaOficiuDtosBuilder_.isEmpty()) {
-              persoanaOficiuDtosBuilder_.dispose();
-              persoanaOficiuDtosBuilder_ = null;
-              persoanaOficiuDtos_ = other.persoanaOficiuDtos_;
+          if (!other.participantsByRaceDto_.isEmpty()) {
+            if (participantsByRaceDtoBuilder_.isEmpty()) {
+              participantsByRaceDtoBuilder_.dispose();
+              participantsByRaceDtoBuilder_ = null;
+              participantsByRaceDto_ = other.participantsByRaceDto_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              persoanaOficiuDtosBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getPersoanaOficiuDtosFieldBuilder() : null;
+              participantsByRaceDtoBuilder_ =
+                      com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                              getParticipantsByRaceDtoFieldBuilder() : null;
             } else {
-              persoanaOficiuDtosBuilder_.addAllMessages(other.persoanaOficiuDtos_);
+              participantsByRaceDtoBuilder_.addAllMessages(other.participantsByRaceDto_);
             }
           }
         }
-        if (other.hasPersoanaOficiuDto()) {
-          mergePersoanaOficiuDto(other.getPersoanaOficiuDto());
+        if (other.hasParticipantByRaceDto()) {
+          mergeParticipantByRaceDto(other.getParticipantByRaceDto());
+        }
+        if (teamsAndParticipantsDtoBuilder_ == null) {
+          if (!other.teamsAndParticipantsDto_.isEmpty()) {
+            if (teamsAndParticipantsDto_.isEmpty()) {
+              teamsAndParticipantsDto_ = other.teamsAndParticipantsDto_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureTeamsAndParticipantsDtoIsMutable();
+              teamsAndParticipantsDto_.addAll(other.teamsAndParticipantsDto_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.teamsAndParticipantsDto_.isEmpty()) {
+            if (teamsAndParticipantsDtoBuilder_.isEmpty()) {
+              teamsAndParticipantsDtoBuilder_.dispose();
+              teamsAndParticipantsDtoBuilder_ = null;
+              teamsAndParticipantsDto_ = other.teamsAndParticipantsDto_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              teamsAndParticipantsDtoBuilder_ =
+                      com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                              getTeamsAndParticipantsDtoFieldBuilder() : null;
+            } else {
+              teamsAndParticipantsDtoBuilder_.addAllMessages(other.teamsAndParticipantsDto_);
+            }
+          }
+        }
+        if (other.hasTeamAndParticipantsDto()) {
+          mergeTeamAndParticipantsDto(other.getTeamAndParticipantsDto());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new NullPointerException();
+          throw new java.lang.NullPointerException();
         }
         try {
           boolean done = false;
@@ -3138,25 +4572,45 @@ public final class Protobufs {
                 break;
               } // case 18
               case 26: {
-                PersoanaOficiuDto m =
-                    input.readMessage(
-                        PersoanaOficiuDto.parser(),
-                        extensionRegistry);
-                if (persoanaOficiuDtosBuilder_ == null) {
-                  ensurePersoanaOficiuDtosIsMutable();
-                  persoanaOficiuDtos_.add(m);
+                org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto m =
+                        input.readMessage(
+                                org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.parser(),
+                                extensionRegistry);
+                if (participantsByRaceDtoBuilder_ == null) {
+                  ensureParticipantsByRaceDtoIsMutable();
+                  participantsByRaceDto_.add(m);
                 } else {
-                  persoanaOficiuDtosBuilder_.addMessage(m);
+                  participantsByRaceDtoBuilder_.addMessage(m);
                 }
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
-                    getPersoanaOficiuDtoFieldBuilder().getBuilder(),
-                    extensionRegistry);
+                        getParticipantByRaceDtoFieldBuilder().getBuilder(),
+                        extensionRegistry);
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
+              case 42: {
+                org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto m =
+                        input.readMessage(
+                                org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.parser(),
+                                extensionRegistry);
+                if (teamsAndParticipantsDtoBuilder_ == null) {
+                  ensureTeamsAndParticipantsDtoIsMutable();
+                  teamsAndParticipantsDto_.add(m);
+                } else {
+                  teamsAndParticipantsDtoBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                        getTeamAndParticipantsDtoFieldBuilder().getBuilder(),
+                        extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3183,7 +4637,7 @@ public final class Protobufs {
        * <code>.org.example.ClientResponse.Type type = 1;</code>
        * @return The enum numeric value on the wire for type.
        */
-      @Override public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -3209,10 +4663,10 @@ public final class Protobufs {
        * <code>.org.example.ClientResponse.Type type = 1;</code>
        * @return The type.
        */
-      @Override
-      public Type getType() {
-        Type result = Type.forNumber(type_);
-        return result == null ? Type.UNRECOGNIZED : result;
+      @java.lang.Override
+      public org.example.protobuffprotocol.Protobufs.ClientResponse.Type getType() {
+        org.example.protobuffprotocol.Protobufs.ClientResponse.Type result = org.example.protobuffprotocol.Protobufs.ClientResponse.Type.forNumber(type_);
+        return result == null ? org.example.protobuffprotocol.Protobufs.ClientResponse.Type.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -3223,7 +4677,7 @@ public final class Protobufs {
        * @param value The type to set.
        * @return This builder for chaining.
        */
-      public Builder setType(Type value) {
+      public Builder setType(org.example.protobuffprotocol.Protobufs.ClientResponse.Type value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -3247,7 +4701,7 @@ public final class Protobufs {
         return this;
       }
 
-      private Object error_ = "";
+      private java.lang.Object error_ = "";
       /**
        * <pre>
        * One of the following will be filled in, depending on the type.
@@ -3256,16 +4710,16 @@ public final class Protobufs {
        * <code>string error = 2;</code>
        * @return The error.
        */
-      public String getError() {
-        Object ref = error_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getError() {
+        java.lang.Object ref = error_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
           error_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -3277,12 +4731,12 @@ public final class Protobufs {
        * @return The bytes for error.
        */
       public com.google.protobuf.ByteString
-          getErrorBytes() {
-        Object ref = error_;
+      getErrorBytes() {
+        java.lang.Object ref = error_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
           error_ = b;
           return b;
         } else {
@@ -3299,7 +4753,7 @@ public final class Protobufs {
        * @return This builder for chaining.
        */
       public Builder setError(
-          String value) {
+              java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         error_ = value;
         bitField0_ |= 0x00000002;
@@ -3330,7 +4784,7 @@ public final class Protobufs {
        * @return This builder for chaining.
        */
       public Builder setErrorBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         error_ = value;
@@ -3339,387 +4793,748 @@ public final class Protobufs {
         return this;
       }
 
-      private java.util.List<PersoanaOficiuDto> persoanaOficiuDtos_ =
-        java.util.Collections.emptyList();
-      private void ensurePersoanaOficiuDtosIsMutable() {
+      private java.util.List<org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto> participantsByRaceDto_ =
+              java.util.Collections.emptyList();
+      private void ensureParticipantsByRaceDtoIsMutable() {
         if (!((bitField0_ & 0x00000004) != 0)) {
-          persoanaOficiuDtos_ = new java.util.ArrayList<PersoanaOficiuDto>(persoanaOficiuDtos_);
+          participantsByRaceDto_ = new java.util.ArrayList<org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto>(participantsByRaceDto_);
           bitField0_ |= 0x00000004;
-         }
+        }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          PersoanaOficiuDto, PersoanaOficiuDto.Builder, PersoanaOficiuDtoOrBuilder> persoanaOficiuDtosBuilder_;
+              org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto, org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.Builder, org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDtoOrBuilder> participantsByRaceDtoBuilder_;
 
       /**
-       * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+       * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
        */
-      public java.util.List<PersoanaOficiuDto> getPersoanaOficiuDtosList() {
-        if (persoanaOficiuDtosBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(persoanaOficiuDtos_);
+      public java.util.List<org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto> getParticipantsByRaceDtoList() {
+        if (participantsByRaceDtoBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(participantsByRaceDto_);
         } else {
-          return persoanaOficiuDtosBuilder_.getMessageList();
+          return participantsByRaceDtoBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+       * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
        */
-      public int getPersoanaOficiuDtosCount() {
-        if (persoanaOficiuDtosBuilder_ == null) {
-          return persoanaOficiuDtos_.size();
+      public int getParticipantsByRaceDtoCount() {
+        if (participantsByRaceDtoBuilder_ == null) {
+          return participantsByRaceDto_.size();
         } else {
-          return persoanaOficiuDtosBuilder_.getCount();
+          return participantsByRaceDtoBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+       * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
        */
-      public PersoanaOficiuDto getPersoanaOficiuDtos(int index) {
-        if (persoanaOficiuDtosBuilder_ == null) {
-          return persoanaOficiuDtos_.get(index);
+      public org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto getParticipantsByRaceDto(int index) {
+        if (participantsByRaceDtoBuilder_ == null) {
+          return participantsByRaceDto_.get(index);
         } else {
-          return persoanaOficiuDtosBuilder_.getMessage(index);
+          return participantsByRaceDtoBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+       * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
        */
-      public Builder setPersoanaOficiuDtos(
-          int index, PersoanaOficiuDto value) {
-        if (persoanaOficiuDtosBuilder_ == null) {
+      public Builder setParticipantsByRaceDto(
+              int index, org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto value) {
+        if (participantsByRaceDtoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensurePersoanaOficiuDtosIsMutable();
-          persoanaOficiuDtos_.set(index, value);
+          ensureParticipantsByRaceDtoIsMutable();
+          participantsByRaceDto_.set(index, value);
           onChanged();
         } else {
-          persoanaOficiuDtosBuilder_.setMessage(index, value);
+          participantsByRaceDtoBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+       * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
        */
-      public Builder setPersoanaOficiuDtos(
-          int index, PersoanaOficiuDto.Builder builderForValue) {
-        if (persoanaOficiuDtosBuilder_ == null) {
-          ensurePersoanaOficiuDtosIsMutable();
-          persoanaOficiuDtos_.set(index, builderForValue.build());
+      public Builder setParticipantsByRaceDto(
+              int index, org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.Builder builderForValue) {
+        if (participantsByRaceDtoBuilder_ == null) {
+          ensureParticipantsByRaceDtoIsMutable();
+          participantsByRaceDto_.set(index, builderForValue.build());
           onChanged();
         } else {
-          persoanaOficiuDtosBuilder_.setMessage(index, builderForValue.build());
+          participantsByRaceDtoBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+       * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
        */
-      public Builder addPersoanaOficiuDtos(PersoanaOficiuDto value) {
-        if (persoanaOficiuDtosBuilder_ == null) {
+      public Builder addParticipantsByRaceDto(org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto value) {
+        if (participantsByRaceDtoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensurePersoanaOficiuDtosIsMutable();
-          persoanaOficiuDtos_.add(value);
+          ensureParticipantsByRaceDtoIsMutable();
+          participantsByRaceDto_.add(value);
           onChanged();
         } else {
-          persoanaOficiuDtosBuilder_.addMessage(value);
+          participantsByRaceDtoBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+       * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
        */
-      public Builder addPersoanaOficiuDtos(
-          int index, PersoanaOficiuDto value) {
-        if (persoanaOficiuDtosBuilder_ == null) {
+      public Builder addParticipantsByRaceDto(
+              int index, org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto value) {
+        if (participantsByRaceDtoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensurePersoanaOficiuDtosIsMutable();
-          persoanaOficiuDtos_.add(index, value);
+          ensureParticipantsByRaceDtoIsMutable();
+          participantsByRaceDto_.add(index, value);
           onChanged();
         } else {
-          persoanaOficiuDtosBuilder_.addMessage(index, value);
+          participantsByRaceDtoBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+       * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
        */
-      public Builder addPersoanaOficiuDtos(
-          PersoanaOficiuDto.Builder builderForValue) {
-        if (persoanaOficiuDtosBuilder_ == null) {
-          ensurePersoanaOficiuDtosIsMutable();
-          persoanaOficiuDtos_.add(builderForValue.build());
+      public Builder addParticipantsByRaceDto(
+              org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.Builder builderForValue) {
+        if (participantsByRaceDtoBuilder_ == null) {
+          ensureParticipantsByRaceDtoIsMutable();
+          participantsByRaceDto_.add(builderForValue.build());
           onChanged();
         } else {
-          persoanaOficiuDtosBuilder_.addMessage(builderForValue.build());
+          participantsByRaceDtoBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+       * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
        */
-      public Builder addPersoanaOficiuDtos(
-          int index, PersoanaOficiuDto.Builder builderForValue) {
-        if (persoanaOficiuDtosBuilder_ == null) {
-          ensurePersoanaOficiuDtosIsMutable();
-          persoanaOficiuDtos_.add(index, builderForValue.build());
+      public Builder addParticipantsByRaceDto(
+              int index, org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.Builder builderForValue) {
+        if (participantsByRaceDtoBuilder_ == null) {
+          ensureParticipantsByRaceDtoIsMutable();
+          participantsByRaceDto_.add(index, builderForValue.build());
           onChanged();
         } else {
-          persoanaOficiuDtosBuilder_.addMessage(index, builderForValue.build());
+          participantsByRaceDtoBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+       * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
        */
-      public Builder addAllPersoanaOficiuDtos(
-          Iterable<? extends PersoanaOficiuDto> values) {
-        if (persoanaOficiuDtosBuilder_ == null) {
-          ensurePersoanaOficiuDtosIsMutable();
+      public Builder addAllParticipantsByRaceDto(
+              java.lang.Iterable<? extends org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto> values) {
+        if (participantsByRaceDtoBuilder_ == null) {
+          ensureParticipantsByRaceDtoIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, persoanaOficiuDtos_);
+                  values, participantsByRaceDto_);
           onChanged();
         } else {
-          persoanaOficiuDtosBuilder_.addAllMessages(values);
+          participantsByRaceDtoBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+       * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
        */
-      public Builder clearPersoanaOficiuDtos() {
-        if (persoanaOficiuDtosBuilder_ == null) {
-          persoanaOficiuDtos_ = java.util.Collections.emptyList();
+      public Builder clearParticipantsByRaceDto() {
+        if (participantsByRaceDtoBuilder_ == null) {
+          participantsByRaceDto_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
-          persoanaOficiuDtosBuilder_.clear();
+          participantsByRaceDtoBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+       * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
        */
-      public Builder removePersoanaOficiuDtos(int index) {
-        if (persoanaOficiuDtosBuilder_ == null) {
-          ensurePersoanaOficiuDtosIsMutable();
-          persoanaOficiuDtos_.remove(index);
+      public Builder removeParticipantsByRaceDto(int index) {
+        if (participantsByRaceDtoBuilder_ == null) {
+          ensureParticipantsByRaceDtoIsMutable();
+          participantsByRaceDto_.remove(index);
           onChanged();
         } else {
-          persoanaOficiuDtosBuilder_.remove(index);
+          participantsByRaceDtoBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+       * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
        */
-      public PersoanaOficiuDto.Builder getPersoanaOficiuDtosBuilder(
-          int index) {
-        return getPersoanaOficiuDtosFieldBuilder().getBuilder(index);
+      public org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.Builder getParticipantsByRaceDtoBuilder(
+              int index) {
+        return getParticipantsByRaceDtoFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+       * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
        */
-      public PersoanaOficiuDtoOrBuilder getPersoanaOficiuDtosOrBuilder(
-          int index) {
-        if (persoanaOficiuDtosBuilder_ == null) {
-          return persoanaOficiuDtos_.get(index);  } else {
-          return persoanaOficiuDtosBuilder_.getMessageOrBuilder(index);
+      public org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDtoOrBuilder getParticipantsByRaceDtoOrBuilder(
+              int index) {
+        if (participantsByRaceDtoBuilder_ == null) {
+          return participantsByRaceDto_.get(index);  } else {
+          return participantsByRaceDtoBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+       * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
        */
-      public java.util.List<? extends PersoanaOficiuDtoOrBuilder>
-           getPersoanaOficiuDtosOrBuilderList() {
-        if (persoanaOficiuDtosBuilder_ != null) {
-          return persoanaOficiuDtosBuilder_.getMessageOrBuilderList();
+      public java.util.List<? extends org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDtoOrBuilder>
+      getParticipantsByRaceDtoOrBuilderList() {
+        if (participantsByRaceDtoBuilder_ != null) {
+          return participantsByRaceDtoBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(persoanaOficiuDtos_);
+          return java.util.Collections.unmodifiableList(participantsByRaceDto_);
         }
       }
       /**
-       * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+       * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
        */
-      public PersoanaOficiuDto.Builder addPersoanaOficiuDtosBuilder() {
-        return getPersoanaOficiuDtosFieldBuilder().addBuilder(
-            PersoanaOficiuDto.getDefaultInstance());
+      public org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.Builder addParticipantsByRaceDtoBuilder() {
+        return getParticipantsByRaceDtoFieldBuilder().addBuilder(
+                org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.getDefaultInstance());
       }
       /**
-       * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+       * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
        */
-      public PersoanaOficiuDto.Builder addPersoanaOficiuDtosBuilder(
-          int index) {
-        return getPersoanaOficiuDtosFieldBuilder().addBuilder(
-            index, PersoanaOficiuDto.getDefaultInstance());
+      public org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.Builder addParticipantsByRaceDtoBuilder(
+              int index) {
+        return getParticipantsByRaceDtoFieldBuilder().addBuilder(
+                index, org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.getDefaultInstance());
       }
       /**
-       * <code>repeated .org.example.PersoanaOficiuDto persoanaOficiuDtos = 3;</code>
+       * <code>repeated .org.example.ParticipantsByRaceDto participantsByRaceDto = 3;</code>
        */
-      public java.util.List<PersoanaOficiuDto.Builder>
-           getPersoanaOficiuDtosBuilderList() {
-        return getPersoanaOficiuDtosFieldBuilder().getBuilderList();
+      public java.util.List<org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.Builder>
+      getParticipantsByRaceDtoBuilderList() {
+        return getParticipantsByRaceDtoFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          PersoanaOficiuDto, PersoanaOficiuDto.Builder, PersoanaOficiuDtoOrBuilder>
-          getPersoanaOficiuDtosFieldBuilder() {
-        if (persoanaOficiuDtosBuilder_ == null) {
-          persoanaOficiuDtosBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              PersoanaOficiuDto, PersoanaOficiuDto.Builder, PersoanaOficiuDtoOrBuilder>(
-                  persoanaOficiuDtos_,
+              org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto, org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.Builder, org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDtoOrBuilder>
+      getParticipantsByRaceDtoFieldBuilder() {
+        if (participantsByRaceDtoBuilder_ == null) {
+          participantsByRaceDtoBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+                  org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto, org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.Builder, org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDtoOrBuilder>(
+                  participantsByRaceDto_,
                   ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
-          persoanaOficiuDtos_ = null;
+          participantsByRaceDto_ = null;
         }
-        return persoanaOficiuDtosBuilder_;
+        return participantsByRaceDtoBuilder_;
       }
 
-      private PersoanaOficiuDto persoanaOficiuDto_;
+      private org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto participantByRaceDto_;
       private com.google.protobuf.SingleFieldBuilder<
-          PersoanaOficiuDto, PersoanaOficiuDto.Builder, PersoanaOficiuDtoOrBuilder> persoanaOficiuDtoBuilder_;
+              org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto, org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.Builder, org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDtoOrBuilder> participantByRaceDtoBuilder_;
       /**
-       * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
-       * @return Whether the persoanaOficiuDto field is set.
+       * <code>.org.example.ParticipantsByRaceDto participantByRaceDto = 4;</code>
+       * @return Whether the participantByRaceDto field is set.
        */
-      public boolean hasPersoanaOficiuDto() {
+      public boolean hasParticipantByRaceDto() {
         return ((bitField0_ & 0x00000008) != 0);
       }
       /**
-       * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
-       * @return The persoanaOficiuDto.
+       * <code>.org.example.ParticipantsByRaceDto participantByRaceDto = 4;</code>
+       * @return The participantByRaceDto.
        */
-      public PersoanaOficiuDto getPersoanaOficiuDto() {
-        if (persoanaOficiuDtoBuilder_ == null) {
-          return persoanaOficiuDto_ == null ? PersoanaOficiuDto.getDefaultInstance() : persoanaOficiuDto_;
+      public org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto getParticipantByRaceDto() {
+        if (participantByRaceDtoBuilder_ == null) {
+          return participantByRaceDto_ == null ? org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.getDefaultInstance() : participantByRaceDto_;
         } else {
-          return persoanaOficiuDtoBuilder_.getMessage();
+          return participantByRaceDtoBuilder_.getMessage();
         }
       }
       /**
-       * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
+       * <code>.org.example.ParticipantsByRaceDto participantByRaceDto = 4;</code>
        */
-      public Builder setPersoanaOficiuDto(PersoanaOficiuDto value) {
-        if (persoanaOficiuDtoBuilder_ == null) {
+      public Builder setParticipantByRaceDto(org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto value) {
+        if (participantByRaceDtoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          persoanaOficiuDto_ = value;
+          participantByRaceDto_ = value;
         } else {
-          persoanaOficiuDtoBuilder_.setMessage(value);
+          participantByRaceDtoBuilder_.setMessage(value);
         }
         bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
+       * <code>.org.example.ParticipantsByRaceDto participantByRaceDto = 4;</code>
        */
-      public Builder setPersoanaOficiuDto(
-          PersoanaOficiuDto.Builder builderForValue) {
-        if (persoanaOficiuDtoBuilder_ == null) {
-          persoanaOficiuDto_ = builderForValue.build();
+      public Builder setParticipantByRaceDto(
+              org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.Builder builderForValue) {
+        if (participantByRaceDtoBuilder_ == null) {
+          participantByRaceDto_ = builderForValue.build();
         } else {
-          persoanaOficiuDtoBuilder_.setMessage(builderForValue.build());
+          participantByRaceDtoBuilder_.setMessage(builderForValue.build());
         }
         bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
+       * <code>.org.example.ParticipantsByRaceDto participantByRaceDto = 4;</code>
        */
-      public Builder mergePersoanaOficiuDto(PersoanaOficiuDto value) {
-        if (persoanaOficiuDtoBuilder_ == null) {
+      public Builder mergeParticipantByRaceDto(org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto value) {
+        if (participantByRaceDtoBuilder_ == null) {
           if (((bitField0_ & 0x00000008) != 0) &&
-            persoanaOficiuDto_ != null &&
-            persoanaOficiuDto_ != PersoanaOficiuDto.getDefaultInstance()) {
-            getPersoanaOficiuDtoBuilder().mergeFrom(value);
+                  participantByRaceDto_ != null &&
+                  participantByRaceDto_ != org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.getDefaultInstance()) {
+            getParticipantByRaceDtoBuilder().mergeFrom(value);
           } else {
-            persoanaOficiuDto_ = value;
+            participantByRaceDto_ = value;
           }
         } else {
-          persoanaOficiuDtoBuilder_.mergeFrom(value);
+          participantByRaceDtoBuilder_.mergeFrom(value);
         }
-        if (persoanaOficiuDto_ != null) {
+        if (participantByRaceDto_ != null) {
           bitField0_ |= 0x00000008;
           onChanged();
         }
         return this;
       }
       /**
-       * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
+       * <code>.org.example.ParticipantsByRaceDto participantByRaceDto = 4;</code>
        */
-      public Builder clearPersoanaOficiuDto() {
+      public Builder clearParticipantByRaceDto() {
         bitField0_ = (bitField0_ & ~0x00000008);
-        persoanaOficiuDto_ = null;
-        if (persoanaOficiuDtoBuilder_ != null) {
-          persoanaOficiuDtoBuilder_.dispose();
-          persoanaOficiuDtoBuilder_ = null;
+        participantByRaceDto_ = null;
+        if (participantByRaceDtoBuilder_ != null) {
+          participantByRaceDtoBuilder_.dispose();
+          participantByRaceDtoBuilder_ = null;
         }
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
+       * <code>.org.example.ParticipantsByRaceDto participantByRaceDto = 4;</code>
        */
-      public PersoanaOficiuDto.Builder getPersoanaOficiuDtoBuilder() {
+      public org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.Builder getParticipantByRaceDtoBuilder() {
         bitField0_ |= 0x00000008;
         onChanged();
-        return getPersoanaOficiuDtoFieldBuilder().getBuilder();
+        return getParticipantByRaceDtoFieldBuilder().getBuilder();
       }
       /**
-       * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
+       * <code>.org.example.ParticipantsByRaceDto participantByRaceDto = 4;</code>
        */
-      public PersoanaOficiuDtoOrBuilder getPersoanaOficiuDtoOrBuilder() {
-        if (persoanaOficiuDtoBuilder_ != null) {
-          return persoanaOficiuDtoBuilder_.getMessageOrBuilder();
+      public org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDtoOrBuilder getParticipantByRaceDtoOrBuilder() {
+        if (participantByRaceDtoBuilder_ != null) {
+          return participantByRaceDtoBuilder_.getMessageOrBuilder();
         } else {
-          return persoanaOficiuDto_ == null ?
-              PersoanaOficiuDto.getDefaultInstance() : persoanaOficiuDto_;
+          return participantByRaceDto_ == null ?
+                  org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.getDefaultInstance() : participantByRaceDto_;
         }
       }
       /**
-       * <code>.org.example.PersoanaOficiuDto persoanaOficiuDto = 4;</code>
+       * <code>.org.example.ParticipantsByRaceDto participantByRaceDto = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          PersoanaOficiuDto, PersoanaOficiuDto.Builder, PersoanaOficiuDtoOrBuilder>
-          getPersoanaOficiuDtoFieldBuilder() {
-        if (persoanaOficiuDtoBuilder_ == null) {
-          persoanaOficiuDtoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              PersoanaOficiuDto, PersoanaOficiuDto.Builder, PersoanaOficiuDtoOrBuilder>(
-                  getPersoanaOficiuDto(),
+              org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto, org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.Builder, org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDtoOrBuilder>
+      getParticipantByRaceDtoFieldBuilder() {
+        if (participantByRaceDtoBuilder_ == null) {
+          participantByRaceDtoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                  org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto, org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDto.Builder, org.example.protobuffprotocol.Protobufs.ParticipantsByRaceDtoOrBuilder>(
+                  getParticipantByRaceDto(),
                   getParentForChildren(),
                   isClean());
-          persoanaOficiuDto_ = null;
+          participantByRaceDto_ = null;
         }
-        return persoanaOficiuDtoBuilder_;
+        return participantByRaceDtoBuilder_;
+      }
+
+      private java.util.List<org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto> teamsAndParticipantsDto_ =
+              java.util.Collections.emptyList();
+      private void ensureTeamsAndParticipantsDtoIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          teamsAndParticipantsDto_ = new java.util.ArrayList<org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto>(teamsAndParticipantsDto_);
+          bitField0_ |= 0x00000010;
+        }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+              org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto, org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.Builder, org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDtoOrBuilder> teamsAndParticipantsDtoBuilder_;
+
+      /**
+       * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+       */
+      public java.util.List<org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto> getTeamsAndParticipantsDtoList() {
+        if (teamsAndParticipantsDtoBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(teamsAndParticipantsDto_);
+        } else {
+          return teamsAndParticipantsDtoBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+       */
+      public int getTeamsAndParticipantsDtoCount() {
+        if (teamsAndParticipantsDtoBuilder_ == null) {
+          return teamsAndParticipantsDto_.size();
+        } else {
+          return teamsAndParticipantsDtoBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+       */
+      public org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto getTeamsAndParticipantsDto(int index) {
+        if (teamsAndParticipantsDtoBuilder_ == null) {
+          return teamsAndParticipantsDto_.get(index);
+        } else {
+          return teamsAndParticipantsDtoBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+       */
+      public Builder setTeamsAndParticipantsDto(
+              int index, org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto value) {
+        if (teamsAndParticipantsDtoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTeamsAndParticipantsDtoIsMutable();
+          teamsAndParticipantsDto_.set(index, value);
+          onChanged();
+        } else {
+          teamsAndParticipantsDtoBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+       */
+      public Builder setTeamsAndParticipantsDto(
+              int index, org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.Builder builderForValue) {
+        if (teamsAndParticipantsDtoBuilder_ == null) {
+          ensureTeamsAndParticipantsDtoIsMutable();
+          teamsAndParticipantsDto_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          teamsAndParticipantsDtoBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+       */
+      public Builder addTeamsAndParticipantsDto(org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto value) {
+        if (teamsAndParticipantsDtoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTeamsAndParticipantsDtoIsMutable();
+          teamsAndParticipantsDto_.add(value);
+          onChanged();
+        } else {
+          teamsAndParticipantsDtoBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+       */
+      public Builder addTeamsAndParticipantsDto(
+              int index, org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto value) {
+        if (teamsAndParticipantsDtoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTeamsAndParticipantsDtoIsMutable();
+          teamsAndParticipantsDto_.add(index, value);
+          onChanged();
+        } else {
+          teamsAndParticipantsDtoBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+       */
+      public Builder addTeamsAndParticipantsDto(
+              org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.Builder builderForValue) {
+        if (teamsAndParticipantsDtoBuilder_ == null) {
+          ensureTeamsAndParticipantsDtoIsMutable();
+          teamsAndParticipantsDto_.add(builderForValue.build());
+          onChanged();
+        } else {
+          teamsAndParticipantsDtoBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+       */
+      public Builder addTeamsAndParticipantsDto(
+              int index, org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.Builder builderForValue) {
+        if (teamsAndParticipantsDtoBuilder_ == null) {
+          ensureTeamsAndParticipantsDtoIsMutable();
+          teamsAndParticipantsDto_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          teamsAndParticipantsDtoBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+       */
+      public Builder addAllTeamsAndParticipantsDto(
+              java.lang.Iterable<? extends org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto> values) {
+        if (teamsAndParticipantsDtoBuilder_ == null) {
+          ensureTeamsAndParticipantsDtoIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                  values, teamsAndParticipantsDto_);
+          onChanged();
+        } else {
+          teamsAndParticipantsDtoBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+       */
+      public Builder clearTeamsAndParticipantsDto() {
+        if (teamsAndParticipantsDtoBuilder_ == null) {
+          teamsAndParticipantsDto_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          teamsAndParticipantsDtoBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+       */
+      public Builder removeTeamsAndParticipantsDto(int index) {
+        if (teamsAndParticipantsDtoBuilder_ == null) {
+          ensureTeamsAndParticipantsDtoIsMutable();
+          teamsAndParticipantsDto_.remove(index);
+          onChanged();
+        } else {
+          teamsAndParticipantsDtoBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+       */
+      public org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.Builder getTeamsAndParticipantsDtoBuilder(
+              int index) {
+        return getTeamsAndParticipantsDtoFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+       */
+      public org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDtoOrBuilder getTeamsAndParticipantsDtoOrBuilder(
+              int index) {
+        if (teamsAndParticipantsDtoBuilder_ == null) {
+          return teamsAndParticipantsDto_.get(index);  } else {
+          return teamsAndParticipantsDtoBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+       */
+      public java.util.List<? extends org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDtoOrBuilder>
+      getTeamsAndParticipantsDtoOrBuilderList() {
+        if (teamsAndParticipantsDtoBuilder_ != null) {
+          return teamsAndParticipantsDtoBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(teamsAndParticipantsDto_);
+        }
+      }
+      /**
+       * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+       */
+      public org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.Builder addTeamsAndParticipantsDtoBuilder() {
+        return getTeamsAndParticipantsDtoFieldBuilder().addBuilder(
+                org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+       */
+      public org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.Builder addTeamsAndParticipantsDtoBuilder(
+              int index) {
+        return getTeamsAndParticipantsDtoFieldBuilder().addBuilder(
+                index, org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .org.example.TeamsAndParticipantsDto teamsAndParticipantsDto = 5;</code>
+       */
+      public java.util.List<org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.Builder>
+      getTeamsAndParticipantsDtoBuilderList() {
+        return getTeamsAndParticipantsDtoFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+              org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto, org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.Builder, org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDtoOrBuilder>
+      getTeamsAndParticipantsDtoFieldBuilder() {
+        if (teamsAndParticipantsDtoBuilder_ == null) {
+          teamsAndParticipantsDtoBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+                  org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto, org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.Builder, org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDtoOrBuilder>(
+                  teamsAndParticipantsDto_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          teamsAndParticipantsDto_ = null;
+        }
+        return teamsAndParticipantsDtoBuilder_;
+      }
+
+      private org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto teamAndParticipantsDto_;
+      private com.google.protobuf.SingleFieldBuilder<
+              org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto, org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.Builder, org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDtoOrBuilder> teamAndParticipantsDtoBuilder_;
+      /**
+       * <code>.org.example.TeamsAndParticipantsDto teamAndParticipantsDto = 6;</code>
+       * @return Whether the teamAndParticipantsDto field is set.
+       */
+      public boolean hasTeamAndParticipantsDto() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>.org.example.TeamsAndParticipantsDto teamAndParticipantsDto = 6;</code>
+       * @return The teamAndParticipantsDto.
+       */
+      public org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto getTeamAndParticipantsDto() {
+        if (teamAndParticipantsDtoBuilder_ == null) {
+          return teamAndParticipantsDto_ == null ? org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.getDefaultInstance() : teamAndParticipantsDto_;
+        } else {
+          return teamAndParticipantsDtoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.org.example.TeamsAndParticipantsDto teamAndParticipantsDto = 6;</code>
+       */
+      public Builder setTeamAndParticipantsDto(org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto value) {
+        if (teamAndParticipantsDtoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          teamAndParticipantsDto_ = value;
+        } else {
+          teamAndParticipantsDtoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.org.example.TeamsAndParticipantsDto teamAndParticipantsDto = 6;</code>
+       */
+      public Builder setTeamAndParticipantsDto(
+              org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.Builder builderForValue) {
+        if (teamAndParticipantsDtoBuilder_ == null) {
+          teamAndParticipantsDto_ = builderForValue.build();
+        } else {
+          teamAndParticipantsDtoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.org.example.TeamsAndParticipantsDto teamAndParticipantsDto = 6;</code>
+       */
+      public Builder mergeTeamAndParticipantsDto(org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto value) {
+        if (teamAndParticipantsDtoBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+                  teamAndParticipantsDto_ != null &&
+                  teamAndParticipantsDto_ != org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.getDefaultInstance()) {
+            getTeamAndParticipantsDtoBuilder().mergeFrom(value);
+          } else {
+            teamAndParticipantsDto_ = value;
+          }
+        } else {
+          teamAndParticipantsDtoBuilder_.mergeFrom(value);
+        }
+        if (teamAndParticipantsDto_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.org.example.TeamsAndParticipantsDto teamAndParticipantsDto = 6;</code>
+       */
+      public Builder clearTeamAndParticipantsDto() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        teamAndParticipantsDto_ = null;
+        if (teamAndParticipantsDtoBuilder_ != null) {
+          teamAndParticipantsDtoBuilder_.dispose();
+          teamAndParticipantsDtoBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.org.example.TeamsAndParticipantsDto teamAndParticipantsDto = 6;</code>
+       */
+      public org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.Builder getTeamAndParticipantsDtoBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getTeamAndParticipantsDtoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.org.example.TeamsAndParticipantsDto teamAndParticipantsDto = 6;</code>
+       */
+      public org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDtoOrBuilder getTeamAndParticipantsDtoOrBuilder() {
+        if (teamAndParticipantsDtoBuilder_ != null) {
+          return teamAndParticipantsDtoBuilder_.getMessageOrBuilder();
+        } else {
+          return teamAndParticipantsDto_ == null ?
+                  org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.getDefaultInstance() : teamAndParticipantsDto_;
+        }
+      }
+      /**
+       * <code>.org.example.TeamsAndParticipantsDto teamAndParticipantsDto = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+              org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto, org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.Builder, org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDtoOrBuilder>
+      getTeamAndParticipantsDtoFieldBuilder() {
+        if (teamAndParticipantsDtoBuilder_ == null) {
+          teamAndParticipantsDtoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                  org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto, org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDto.Builder, org.example.protobuffprotocol.Protobufs.TeamsAndParticipantsDtoOrBuilder>(
+                  getTeamAndParticipantsDto(),
+                  getParentForChildren(),
+                  isClean());
+          teamAndParticipantsDto_ = null;
+        }
+        return teamAndParticipantsDtoBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:org.example.ClientResponse)
     }
 
     // @@protoc_insertion_point(class_scope:org.example.ClientResponse)
-    private static final ClientResponse DEFAULT_INSTANCE;
+    private static final org.example.protobuffprotocol.Protobufs.ClientResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ClientResponse();
+      DEFAULT_INSTANCE = new org.example.protobuffprotocol.Protobufs.ClientResponse();
     }
 
-    public static ClientResponse getDefaultInstance() {
+    public static org.example.protobuffprotocol.Protobufs.ClientResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<ClientResponse>
-        PARSER = new com.google.protobuf.AbstractParser<ClientResponse>() {
-      @Override
+            PARSER = new com.google.protobuf.AbstractParser<ClientResponse>() {
+      @java.lang.Override
       public ClientResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
         Builder builder = newBuilder();
         try {
           builder.mergeFrom(input, extensionRegistry);
@@ -3729,7 +5544,7 @@ public final class Protobufs {
           throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
+                  .setUnfinishedMessage(builder.buildPartial());
         }
         return builder.buildPartial();
       }
@@ -3739,84 +5554,113 @@ public final class Protobufs {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<ClientResponse> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public ClientResponse getDefaultInstanceForType() {
+    @java.lang.Override
+    public org.example.protobuffprotocol.Protobufs.ClientResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_example_PersoanaOficiuDto_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_org_example_PersoanaOficiuDto_fieldAccessorTable;
+          internal_static_org_example_PersoanaOficiuDto_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internal_static_org_example_PersoanaOficiuDto_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_example_ClientRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_org_example_ClientRequest_fieldAccessorTable;
+          internal_static_org_example_ParticipantsByRaceDto_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internal_static_org_example_ParticipantsByRaceDto_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_example_ClientResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_org_example_ClientResponse_fieldAccessorTable;
+          internal_static_org_example_TeamsAndParticipantsDto_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internal_static_org_example_TeamsAndParticipantsDto_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+          internal_static_org_example_ClientRequest_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internal_static_org_example_ClientRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+          internal_static_org_example_ClientResponse_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internal_static_org_example_ClientResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
+  getDescriptor() {
     return descriptor;
   }
   private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
+          descriptor;
   static {
-    String[] descriptorData = {
-      "\n\021Protocol_v3.proto\022\013org.example\"3\n\021Pers" +
-      "oanaOficiuDto\022\014\n\004name\030\001 \001(\t\022\020\n\010password\030" +
-      "\002 \001(\t\"\275\002\n\rClientRequest\022-\n\004type\030\001 \001(\0162\037." +
-      "org.example.ClientRequest.Type\022,\n\004user\030\002" +
-      " \001(\0132\036.org.example.PersoanaOficiuDto\022\032\n\022" +
-      "persoanaOficiuName\030\003 \001(\t\022\022\n\nnumeEchipa\030\004" +
-      " \001(\t\022\027\n\017numeParticipant\030\005 \001(\t\022\021\n\tnumeCur" +
-      "sa\030\007 \001(\t\"s\n\004Type\022\n\n\006Unkown\020\000\022\t\n\005LOGIN\020\001\022" +
-      "\023\n\017NEW_PARTICIPANT\020\002\022\032\n\026NR_PARTICIPANTS_" +
-      "BYRACE\020\003\022\027\n\023PARTICIPANTS_BYTEAM\020\004\022\n\n\006LOG" +
-      "OUT\020\005\"\214\002\n\016ClientResponse\022.\n\004type\030\001 \001(\0162 " +
-      ".org.example.ClientResponse.Type\022\r\n\005erro" +
-      "r\030\002 \001(\t\022:\n\022persoanaOficiuDtos\030\003 \003(\0132\036.or" +
-      "g.example.PersoanaOficiuDto\0229\n\021persoanaO" +
-      "ficiuDto\030\004 \001(\0132\036.org.example.PersoanaOfi" +
-      "ciuDto\"D\n\004Type\022\013\n\007Unknown\020\000\022\006\n\002OK\020\001\022\t\n\005E" +
-      "RROR\020\002\022\034\n\030PERSOANAOFICIU_LOGGED_IN\020\003B*\n\035" +
-      "org.example.protobuffprotocolB\tProtobufs" +
-      "b\006proto3"
+    java.lang.String[] descriptorData = {
+            "\n\021Protocol_v3.proto\022\013org.example\"3\n\021Pers" +
+                    "oanaOficiuDto\022\014\n\004name\030\001 \001(\t\022\020\n\010password\030" +
+                    "\002 \001(\t\">\n\025ParticipantsByRaceDto\022\r\n\005cursa\030" +
+                    "\001 \001(\t\022\026\n\016nrParticipanti\030\002 \001(\005\">\n\027TeamsAn" +
+                    "dParticipantsDto\022\016\n\006echipa\030\001 \001(\t\022\023\n\013part" +
+                    "icipant\030\002 \001(\t\"\275\002\n\rClientRequest\022-\n\004type\030" +
+                    "\001 \001(\0162\037.org.example.ClientRequest.Type\022," +
+                    "\n\004user\030\002 \001(\0132\036.org.example.PersoanaOfici" +
+                    "uDto\022\032\n\022persoanaOficiuName\030\003 \001(\t\022\022\n\nnume" +
+                    "Echipa\030\004 \001(\t\022\027\n\017numeParticipant\030\005 \001(\t\022\021\n" +
+                    "\tnumeCursa\030\007 \001(\t\"s\n\004Type\022\n\n\006Unkown\020\000\022\t\n\005" +
+                    "LOGIN\020\001\022\023\n\017NEW_PARTICIPANT\020\002\022\032\n\026NR_PARTI" +
+                    "CIPANTS_BYRACE\020\003\022\027\n\023PARTICIPANTS_BYTEAM\020" +
+                    "\004\022\n\n\006LOGOUT\020\005\"\247\003\n\016ClientResponse\022.\n\004type" +
+                    "\030\001 \001(\0162 .org.example.ClientResponse.Type" +
+                    "\022\r\n\005error\030\002 \001(\t\022A\n\025participantsByRaceDto" +
+                    "\030\003 \003(\0132\".org.example.ParticipantsByRaceD" +
+                    "to\022@\n\024participantByRaceDto\030\004 \001(\0132\".org.e" +
+                    "xample.ParticipantsByRaceDto\022E\n\027teamsAnd" +
+                    "ParticipantsDto\030\005 \003(\0132$.org.example.Team" +
+                    "sAndParticipantsDto\022D\n\026teamAndParticipan" +
+                    "tsDto\030\006 \001(\0132$.org.example.TeamsAndPartic" +
+                    "ipantsDto\"D\n\004Type\022\013\n\007Unknown\020\000\022\006\n\002OK\020\001\022\t" +
+                    "\n\005ERROR\020\002\022\034\n\030PERSOANAOFICIU_LOGGED_IN\020\003B" +
+                    "*\n\035org.example.protobuffprotocolB\tProtob" +
+                    "ufsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-        });
+            .internalBuildGeneratedFileFrom(descriptorData,
+                    new com.google.protobuf.Descriptors.FileDescriptor[] {
+                    });
     internal_static_org_example_PersoanaOficiuDto_descriptor =
-      getDescriptor().getMessageTypes().get(0);
+            getDescriptor().getMessageTypes().get(0);
     internal_static_org_example_PersoanaOficiuDto_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_org_example_PersoanaOficiuDto_descriptor,
-        new String[] { "Name", "Password", });
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            internal_static_org_example_PersoanaOficiuDto_descriptor,
+            new java.lang.String[] { "Name", "Password", });
+    internal_static_org_example_ParticipantsByRaceDto_descriptor =
+            getDescriptor().getMessageTypes().get(1);
+    internal_static_org_example_ParticipantsByRaceDto_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            internal_static_org_example_ParticipantsByRaceDto_descriptor,
+            new java.lang.String[] { "Cursa", "NrParticipanti", });
+    internal_static_org_example_TeamsAndParticipantsDto_descriptor =
+            getDescriptor().getMessageTypes().get(2);
+    internal_static_org_example_TeamsAndParticipantsDto_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            internal_static_org_example_TeamsAndParticipantsDto_descriptor,
+            new java.lang.String[] { "Echipa", "Participant", });
     internal_static_org_example_ClientRequest_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+            getDescriptor().getMessageTypes().get(3);
     internal_static_org_example_ClientRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_org_example_ClientRequest_descriptor,
-        new String[] { "Type", "User", "PersoanaOficiuName", "NumeEchipa", "NumeParticipant", "NumeCursa", });
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            internal_static_org_example_ClientRequest_descriptor,
+            new java.lang.String[] { "Type", "User", "PersoanaOficiuName", "NumeEchipa", "NumeParticipant", "NumeCursa", });
     internal_static_org_example_ClientResponse_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+            getDescriptor().getMessageTypes().get(4);
     internal_static_org_example_ClientResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_org_example_ClientResponse_descriptor,
-        new String[] { "Type", "Error", "PersoanaOficiuDtos", "PersoanaOficiuDto", });
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            internal_static_org_example_ClientResponse_descriptor,
+            new java.lang.String[] { "Type", "Error", "ParticipantsByRaceDto", "ParticipantByRaceDto", "TeamsAndParticipantsDto", "TeamAndParticipantsDto", });
     descriptor.resolveAllFeaturesImmutable();
   }
 

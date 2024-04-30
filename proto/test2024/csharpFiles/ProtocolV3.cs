@@ -25,28 +25,36 @@ namespace Org.Example {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFQcm90b2NvbF92My5wcm90bxILb3JnLmV4YW1wbGUiMwoRUGVyc29hbmFP",
-            "ZmljaXVEdG8SDAoEbmFtZRgBIAEoCRIQCghwYXNzd29yZBgCIAEoCSK9AgoN",
-            "Q2xpZW50UmVxdWVzdBItCgR0eXBlGAEgASgOMh8ub3JnLmV4YW1wbGUuQ2xp",
-            "ZW50UmVxdWVzdC5UeXBlEiwKBHVzZXIYAiABKAsyHi5vcmcuZXhhbXBsZS5Q",
-            "ZXJzb2FuYU9maWNpdUR0bxIaChJwZXJzb2FuYU9maWNpdU5hbWUYAyABKAkS",
-            "EgoKbnVtZUVjaGlwYRgEIAEoCRIXCg9udW1lUGFydGljaXBhbnQYBSABKAkS",
-            "EQoJbnVtZUN1cnNhGAcgASgJInMKBFR5cGUSCgoGVW5rb3duEAASCQoFTE9H",
-            "SU4QARITCg9ORVdfUEFSVElDSVBBTlQQAhIaChZOUl9QQVJUSUNJUEFOVFNf",
-            "QllSQUNFEAMSFwoTUEFSVElDSVBBTlRTX0JZVEVBTRAEEgoKBkxPR09VVBAF",
-            "IowCCg5DbGllbnRSZXNwb25zZRIuCgR0eXBlGAEgASgOMiAub3JnLmV4YW1w",
-            "bGUuQ2xpZW50UmVzcG9uc2UuVHlwZRINCgVlcnJvchgCIAEoCRI6ChJwZXJz",
-            "b2FuYU9maWNpdUR0b3MYAyADKAsyHi5vcmcuZXhhbXBsZS5QZXJzb2FuYU9m",
-            "aWNpdUR0bxI5ChFwZXJzb2FuYU9maWNpdUR0bxgEIAEoCzIeLm9yZy5leGFt",
-            "cGxlLlBlcnNvYW5hT2ZpY2l1RHRvIkQKBFR5cGUSCwoHVW5rbm93bhAAEgYK",
-            "Ak9LEAESCQoFRVJST1IQAhIcChhQRVJTT0FOQU9GSUNJVV9MT0dHRURfSU4Q",
-            "A0IqCh1vcmcuZXhhbXBsZS5wcm90b2J1ZmZwcm90b2NvbEIJUHJvdG9idWZz",
-            "YgZwcm90bzM="));
+            "ZmljaXVEdG8SDAoEbmFtZRgBIAEoCRIQCghwYXNzd29yZBgCIAEoCSI+ChVQ",
+            "YXJ0aWNpcGFudHNCeVJhY2VEdG8SDQoFY3Vyc2EYASABKAkSFgoObnJQYXJ0",
+            "aWNpcGFudGkYAiABKAUiPgoXVGVhbXNBbmRQYXJ0aWNpcGFudHNEdG8SDgoG",
+            "ZWNoaXBhGAEgASgJEhMKC3BhcnRpY2lwYW50GAIgASgJIr0CCg1DbGllbnRS",
+            "ZXF1ZXN0Ei0KBHR5cGUYASABKA4yHy5vcmcuZXhhbXBsZS5DbGllbnRSZXF1",
+            "ZXN0LlR5cGUSLAoEdXNlchgCIAEoCzIeLm9yZy5leGFtcGxlLlBlcnNvYW5h",
+            "T2ZpY2l1RHRvEhoKEnBlcnNvYW5hT2ZpY2l1TmFtZRgDIAEoCRISCgpudW1l",
+            "RWNoaXBhGAQgASgJEhcKD251bWVQYXJ0aWNpcGFudBgFIAEoCRIRCgludW1l",
+            "Q3Vyc2EYByABKAkicwoEVHlwZRIKCgZVbmtvd24QABIJCgVMT0dJThABEhMK",
+            "D05FV19QQVJUSUNJUEFOVBACEhoKFk5SX1BBUlRJQ0lQQU5UU19CWVJBQ0UQ",
+            "AxIXChNQQVJUSUNJUEFOVFNfQllURUFNEAQSCgoGTE9HT1VUEAUipwMKDkNs",
+            "aWVudFJlc3BvbnNlEi4KBHR5cGUYASABKA4yIC5vcmcuZXhhbXBsZS5DbGll",
+            "bnRSZXNwb25zZS5UeXBlEg0KBWVycm9yGAIgASgJEkEKFXBhcnRpY2lwYW50",
+            "c0J5UmFjZUR0bxgDIAMoCzIiLm9yZy5leGFtcGxlLlBhcnRpY2lwYW50c0J5",
+            "UmFjZUR0bxJAChRwYXJ0aWNpcGFudEJ5UmFjZUR0bxgEIAEoCzIiLm9yZy5l",
+            "eGFtcGxlLlBhcnRpY2lwYW50c0J5UmFjZUR0bxJFChd0ZWFtc0FuZFBhcnRp",
+            "Y2lwYW50c0R0bxgFIAMoCzIkLm9yZy5leGFtcGxlLlRlYW1zQW5kUGFydGlj",
+            "aXBhbnRzRHRvEkQKFnRlYW1BbmRQYXJ0aWNpcGFudHNEdG8YBiABKAsyJC5v",
+            "cmcuZXhhbXBsZS5UZWFtc0FuZFBhcnRpY2lwYW50c0R0byJECgRUeXBlEgsK",
+            "B1Vua25vd24QABIGCgJPSxABEgkKBUVSUk9SEAISHAoYUEVSU09BTkFPRklD",
+            "SVVfTE9HR0VEX0lOEANCKgodb3JnLmV4YW1wbGUucHJvdG9idWZmcHJvdG9j",
+            "b2xCCVByb3RvYnVmc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Org.Example.PersoanaOficiuDto), global::Org.Example.PersoanaOficiuDto.Parser, new[]{ "Name", "Password" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Org.Example.ParticipantsByRaceDto), global::Org.Example.ParticipantsByRaceDto.Parser, new[]{ "Cursa", "NrParticipanti" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Org.Example.TeamsAndParticipantsDto), global::Org.Example.TeamsAndParticipantsDto.Parser, new[]{ "Echipa", "Participant" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Org.Example.ClientRequest), global::Org.Example.ClientRequest.Parser, new[]{ "Type", "User", "PersoanaOficiuName", "NumeEchipa", "NumeParticipant", "NumeCursa" }, null, new[]{ typeof(global::Org.Example.ClientRequest.Types.Type) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Org.Example.ClientResponse), global::Org.Example.ClientResponse.Parser, new[]{ "Type", "Error", "PersoanaOficiuDtos", "PersoanaOficiuDto" }, null, new[]{ typeof(global::Org.Example.ClientResponse.Types.Type) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Org.Example.ClientResponse), global::Org.Example.ClientResponse.Parser, new[]{ "Type", "Error", "ParticipantsByRaceDto", "ParticipantByRaceDto", "TeamsAndParticipantsDto", "TeamAndParticipantsDto" }, null, new[]{ typeof(global::Org.Example.ClientResponse.Types.Type) }, null, null)
           }));
     }
     #endregion
@@ -281,6 +289,460 @@ namespace Org.Example {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ParticipantsByRaceDto : pb::IMessage<ParticipantsByRaceDto>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ParticipantsByRaceDto> _parser = new pb::MessageParser<ParticipantsByRaceDto>(() => new ParticipantsByRaceDto());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ParticipantsByRaceDto> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Org.Example.ProtocolV3Reflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ParticipantsByRaceDto() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ParticipantsByRaceDto(ParticipantsByRaceDto other) : this() {
+      cursa_ = other.cursa_;
+      nrParticipanti_ = other.nrParticipanti_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ParticipantsByRaceDto Clone() {
+      return new ParticipantsByRaceDto(this);
+    }
+
+    /// <summary>Field number for the "cursa" field.</summary>
+    public const int CursaFieldNumber = 1;
+    private string cursa_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Cursa {
+      get { return cursa_; }
+      set {
+        cursa_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "nrParticipanti" field.</summary>
+    public const int NrParticipantiFieldNumber = 2;
+    private int nrParticipanti_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int NrParticipanti {
+      get { return nrParticipanti_; }
+      set {
+        nrParticipanti_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ParticipantsByRaceDto);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ParticipantsByRaceDto other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Cursa != other.Cursa) return false;
+      if (NrParticipanti != other.NrParticipanti) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Cursa.Length != 0) hash ^= Cursa.GetHashCode();
+      if (NrParticipanti != 0) hash ^= NrParticipanti.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Cursa.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Cursa);
+      }
+      if (NrParticipanti != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(NrParticipanti);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Cursa.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Cursa);
+      }
+      if (NrParticipanti != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(NrParticipanti);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Cursa.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Cursa);
+      }
+      if (NrParticipanti != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(NrParticipanti);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ParticipantsByRaceDto other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Cursa.Length != 0) {
+        Cursa = other.Cursa;
+      }
+      if (other.NrParticipanti != 0) {
+        NrParticipanti = other.NrParticipanti;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Cursa = input.ReadString();
+            break;
+          }
+          case 16: {
+            NrParticipanti = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Cursa = input.ReadString();
+            break;
+          }
+          case 16: {
+            NrParticipanti = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TeamsAndParticipantsDto : pb::IMessage<TeamsAndParticipantsDto>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TeamsAndParticipantsDto> _parser = new pb::MessageParser<TeamsAndParticipantsDto>(() => new TeamsAndParticipantsDto());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TeamsAndParticipantsDto> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Org.Example.ProtocolV3Reflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TeamsAndParticipantsDto() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TeamsAndParticipantsDto(TeamsAndParticipantsDto other) : this() {
+      echipa_ = other.echipa_;
+      participant_ = other.participant_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TeamsAndParticipantsDto Clone() {
+      return new TeamsAndParticipantsDto(this);
+    }
+
+    /// <summary>Field number for the "echipa" field.</summary>
+    public const int EchipaFieldNumber = 1;
+    private string echipa_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Echipa {
+      get { return echipa_; }
+      set {
+        echipa_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "participant" field.</summary>
+    public const int ParticipantFieldNumber = 2;
+    private string participant_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Participant {
+      get { return participant_; }
+      set {
+        participant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TeamsAndParticipantsDto);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TeamsAndParticipantsDto other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Echipa != other.Echipa) return false;
+      if (Participant != other.Participant) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Echipa.Length != 0) hash ^= Echipa.GetHashCode();
+      if (Participant.Length != 0) hash ^= Participant.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Echipa.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Echipa);
+      }
+      if (Participant.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Participant);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Echipa.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Echipa);
+      }
+      if (Participant.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Participant);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Echipa.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Echipa);
+      }
+      if (Participant.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Participant);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TeamsAndParticipantsDto other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Echipa.Length != 0) {
+        Echipa = other.Echipa;
+      }
+      if (other.Participant.Length != 0) {
+        Participant = other.Participant;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Echipa = input.ReadString();
+            break;
+          }
+          case 18: {
+            Participant = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Echipa = input.ReadString();
+            break;
+          }
+          case 18: {
+            Participant = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ClientRequest : pb::IMessage<ClientRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -295,7 +757,7 @@ namespace Org.Example {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Org.Example.ProtocolV3Reflection.Descriptor.MessageTypes[1]; }
+      get { return global::Org.Example.ProtocolV3Reflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -714,7 +1176,7 @@ namespace Org.Example {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Org.Example.ProtocolV3Reflection.Descriptor.MessageTypes[2]; }
+      get { return global::Org.Example.ProtocolV3Reflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -736,8 +1198,10 @@ namespace Org.Example {
     public ClientResponse(ClientResponse other) : this() {
       type_ = other.type_;
       error_ = other.error_;
-      persoanaOficiuDtos_ = other.persoanaOficiuDtos_.Clone();
-      persoanaOficiuDto_ = other.persoanaOficiuDto_ != null ? other.persoanaOficiuDto_.Clone() : null;
+      participantsByRaceDto_ = other.participantsByRaceDto_.Clone();
+      participantByRaceDto_ = other.participantByRaceDto_ != null ? other.participantByRaceDto_.Clone() : null;
+      teamsAndParticipantsDto_ = other.teamsAndParticipantsDto_.Clone();
+      teamAndParticipantsDto_ = other.teamAndParticipantsDto_ != null ? other.teamAndParticipantsDto_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -777,26 +1241,49 @@ namespace Org.Example {
       }
     }
 
-    /// <summary>Field number for the "persoanaOficiuDtos" field.</summary>
-    public const int PersoanaOficiuDtosFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Org.Example.PersoanaOficiuDto> _repeated_persoanaOficiuDtos_codec
-        = pb::FieldCodec.ForMessage(26, global::Org.Example.PersoanaOficiuDto.Parser);
-    private readonly pbc::RepeatedField<global::Org.Example.PersoanaOficiuDto> persoanaOficiuDtos_ = new pbc::RepeatedField<global::Org.Example.PersoanaOficiuDto>();
+    /// <summary>Field number for the "participantsByRaceDto" field.</summary>
+    public const int ParticipantsByRaceDtoFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Org.Example.ParticipantsByRaceDto> _repeated_participantsByRaceDto_codec
+        = pb::FieldCodec.ForMessage(26, global::Org.Example.ParticipantsByRaceDto.Parser);
+    private readonly pbc::RepeatedField<global::Org.Example.ParticipantsByRaceDto> participantsByRaceDto_ = new pbc::RepeatedField<global::Org.Example.ParticipantsByRaceDto>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Org.Example.PersoanaOficiuDto> PersoanaOficiuDtos {
-      get { return persoanaOficiuDtos_; }
+    public pbc::RepeatedField<global::Org.Example.ParticipantsByRaceDto> ParticipantsByRaceDto {
+      get { return participantsByRaceDto_; }
     }
 
-    /// <summary>Field number for the "persoanaOficiuDto" field.</summary>
-    public const int PersoanaOficiuDtoFieldNumber = 4;
-    private global::Org.Example.PersoanaOficiuDto persoanaOficiuDto_;
+    /// <summary>Field number for the "participantByRaceDto" field.</summary>
+    public const int ParticipantByRaceDtoFieldNumber = 4;
+    private global::Org.Example.ParticipantsByRaceDto participantByRaceDto_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Org.Example.PersoanaOficiuDto PersoanaOficiuDto {
-      get { return persoanaOficiuDto_; }
+    public global::Org.Example.ParticipantsByRaceDto ParticipantByRaceDto {
+      get { return participantByRaceDto_; }
       set {
-        persoanaOficiuDto_ = value;
+        participantByRaceDto_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "teamsAndParticipantsDto" field.</summary>
+    public const int TeamsAndParticipantsDtoFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Org.Example.TeamsAndParticipantsDto> _repeated_teamsAndParticipantsDto_codec
+        = pb::FieldCodec.ForMessage(42, global::Org.Example.TeamsAndParticipantsDto.Parser);
+    private readonly pbc::RepeatedField<global::Org.Example.TeamsAndParticipantsDto> teamsAndParticipantsDto_ = new pbc::RepeatedField<global::Org.Example.TeamsAndParticipantsDto>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Org.Example.TeamsAndParticipantsDto> TeamsAndParticipantsDto {
+      get { return teamsAndParticipantsDto_; }
+    }
+
+    /// <summary>Field number for the "teamAndParticipantsDto" field.</summary>
+    public const int TeamAndParticipantsDtoFieldNumber = 6;
+    private global::Org.Example.TeamsAndParticipantsDto teamAndParticipantsDto_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Org.Example.TeamsAndParticipantsDto TeamAndParticipantsDto {
+      get { return teamAndParticipantsDto_; }
+      set {
+        teamAndParticipantsDto_ = value;
       }
     }
 
@@ -817,8 +1304,10 @@ namespace Org.Example {
       }
       if (Type != other.Type) return false;
       if (Error != other.Error) return false;
-      if(!persoanaOficiuDtos_.Equals(other.persoanaOficiuDtos_)) return false;
-      if (!object.Equals(PersoanaOficiuDto, other.PersoanaOficiuDto)) return false;
+      if(!participantsByRaceDto_.Equals(other.participantsByRaceDto_)) return false;
+      if (!object.Equals(ParticipantByRaceDto, other.ParticipantByRaceDto)) return false;
+      if(!teamsAndParticipantsDto_.Equals(other.teamsAndParticipantsDto_)) return false;
+      if (!object.Equals(TeamAndParticipantsDto, other.TeamAndParticipantsDto)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -828,8 +1317,10 @@ namespace Org.Example {
       int hash = 1;
       if (Type != global::Org.Example.ClientResponse.Types.Type.Unknown) hash ^= Type.GetHashCode();
       if (Error.Length != 0) hash ^= Error.GetHashCode();
-      hash ^= persoanaOficiuDtos_.GetHashCode();
-      if (persoanaOficiuDto_ != null) hash ^= PersoanaOficiuDto.GetHashCode();
+      hash ^= participantsByRaceDto_.GetHashCode();
+      if (participantByRaceDto_ != null) hash ^= ParticipantByRaceDto.GetHashCode();
+      hash ^= teamsAndParticipantsDto_.GetHashCode();
+      if (teamAndParticipantsDto_ != null) hash ^= TeamAndParticipantsDto.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -856,10 +1347,15 @@ namespace Org.Example {
         output.WriteRawTag(18);
         output.WriteString(Error);
       }
-      persoanaOficiuDtos_.WriteTo(output, _repeated_persoanaOficiuDtos_codec);
-      if (persoanaOficiuDto_ != null) {
+      participantsByRaceDto_.WriteTo(output, _repeated_participantsByRaceDto_codec);
+      if (participantByRaceDto_ != null) {
         output.WriteRawTag(34);
-        output.WriteMessage(PersoanaOficiuDto);
+        output.WriteMessage(ParticipantByRaceDto);
+      }
+      teamsAndParticipantsDto_.WriteTo(output, _repeated_teamsAndParticipantsDto_codec);
+      if (teamAndParticipantsDto_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(TeamAndParticipantsDto);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -879,10 +1375,15 @@ namespace Org.Example {
         output.WriteRawTag(18);
         output.WriteString(Error);
       }
-      persoanaOficiuDtos_.WriteTo(ref output, _repeated_persoanaOficiuDtos_codec);
-      if (persoanaOficiuDto_ != null) {
+      participantsByRaceDto_.WriteTo(ref output, _repeated_participantsByRaceDto_codec);
+      if (participantByRaceDto_ != null) {
         output.WriteRawTag(34);
-        output.WriteMessage(PersoanaOficiuDto);
+        output.WriteMessage(ParticipantByRaceDto);
+      }
+      teamsAndParticipantsDto_.WriteTo(ref output, _repeated_teamsAndParticipantsDto_codec);
+      if (teamAndParticipantsDto_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(TeamAndParticipantsDto);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -900,9 +1401,13 @@ namespace Org.Example {
       if (Error.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Error);
       }
-      size += persoanaOficiuDtos_.CalculateSize(_repeated_persoanaOficiuDtos_codec);
-      if (persoanaOficiuDto_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PersoanaOficiuDto);
+      size += participantsByRaceDto_.CalculateSize(_repeated_participantsByRaceDto_codec);
+      if (participantByRaceDto_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ParticipantByRaceDto);
+      }
+      size += teamsAndParticipantsDto_.CalculateSize(_repeated_teamsAndParticipantsDto_codec);
+      if (teamAndParticipantsDto_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TeamAndParticipantsDto);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -922,12 +1427,19 @@ namespace Org.Example {
       if (other.Error.Length != 0) {
         Error = other.Error;
       }
-      persoanaOficiuDtos_.Add(other.persoanaOficiuDtos_);
-      if (other.persoanaOficiuDto_ != null) {
-        if (persoanaOficiuDto_ == null) {
-          PersoanaOficiuDto = new global::Org.Example.PersoanaOficiuDto();
+      participantsByRaceDto_.Add(other.participantsByRaceDto_);
+      if (other.participantByRaceDto_ != null) {
+        if (participantByRaceDto_ == null) {
+          ParticipantByRaceDto = new global::Org.Example.ParticipantsByRaceDto();
         }
-        PersoanaOficiuDto.MergeFrom(other.PersoanaOficiuDto);
+        ParticipantByRaceDto.MergeFrom(other.ParticipantByRaceDto);
+      }
+      teamsAndParticipantsDto_.Add(other.teamsAndParticipantsDto_);
+      if (other.teamAndParticipantsDto_ != null) {
+        if (teamAndParticipantsDto_ == null) {
+          TeamAndParticipantsDto = new global::Org.Example.TeamsAndParticipantsDto();
+        }
+        TeamAndParticipantsDto.MergeFrom(other.TeamAndParticipantsDto);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -953,14 +1465,25 @@ namespace Org.Example {
             break;
           }
           case 26: {
-            persoanaOficiuDtos_.AddEntriesFrom(input, _repeated_persoanaOficiuDtos_codec);
+            participantsByRaceDto_.AddEntriesFrom(input, _repeated_participantsByRaceDto_codec);
             break;
           }
           case 34: {
-            if (persoanaOficiuDto_ == null) {
-              PersoanaOficiuDto = new global::Org.Example.PersoanaOficiuDto();
+            if (participantByRaceDto_ == null) {
+              ParticipantByRaceDto = new global::Org.Example.ParticipantsByRaceDto();
             }
-            input.ReadMessage(PersoanaOficiuDto);
+            input.ReadMessage(ParticipantByRaceDto);
+            break;
+          }
+          case 42: {
+            teamsAndParticipantsDto_.AddEntriesFrom(input, _repeated_teamsAndParticipantsDto_codec);
+            break;
+          }
+          case 50: {
+            if (teamAndParticipantsDto_ == null) {
+              TeamAndParticipantsDto = new global::Org.Example.TeamsAndParticipantsDto();
+            }
+            input.ReadMessage(TeamAndParticipantsDto);
             break;
           }
         }
@@ -987,14 +1510,25 @@ namespace Org.Example {
             break;
           }
           case 26: {
-            persoanaOficiuDtos_.AddEntriesFrom(ref input, _repeated_persoanaOficiuDtos_codec);
+            participantsByRaceDto_.AddEntriesFrom(ref input, _repeated_participantsByRaceDto_codec);
             break;
           }
           case 34: {
-            if (persoanaOficiuDto_ == null) {
-              PersoanaOficiuDto = new global::Org.Example.PersoanaOficiuDto();
+            if (participantByRaceDto_ == null) {
+              ParticipantByRaceDto = new global::Org.Example.ParticipantsByRaceDto();
             }
-            input.ReadMessage(PersoanaOficiuDto);
+            input.ReadMessage(ParticipantByRaceDto);
+            break;
+          }
+          case 42: {
+            teamsAndParticipantsDto_.AddEntriesFrom(ref input, _repeated_teamsAndParticipantsDto_codec);
+            break;
+          }
+          case 50: {
+            if (teamAndParticipantsDto_ == null) {
+              TeamAndParticipantsDto = new global::Org.Example.TeamsAndParticipantsDto();
+            }
+            input.ReadMessage(TeamAndParticipantsDto);
             break;
           }
         }

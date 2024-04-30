@@ -2,16 +2,15 @@ package org.example.protobuffprotocol;
 
 import com.google.protobuf.ServiceException;
 import jdk.jshell.spi.ExecutionControl;
-import org.example.dto.CursaDto;
-import org.example.dto.DTOUtils;
-import org.example.dto.ParticipantDto;
-import org.example.dto.PersoanaOficiuDto;
+import org.example.dto.*;
 import org.example.models.*;
 import org.example.rpcprotocol.*;
 import org.example.services.IServices;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -43,12 +42,11 @@ public class ClientServicesProtoProxy implements IServices {
         PersoanaOficiu persoanaOficiu = new PersoanaOficiu(name, password);
 
         System.out.println("Urmeaza sa trimitem un request PROTO PROXY");
-//        sendRequest(ProtoUtils.createLoginRequest(DTOUtils.getDTO(persoanaOficiu)));
         sendRequest(ProtoUtils.createLoginRequest(persoanaOficiu));
         System.out.println("Request trimis din UI PROTO PROXY");
         Protobufs.ClientResponse response = readResponse();
         System.out.println("Raspuns primit din SERVER PROTO PROXY");
-        if (response.getType()== OK) {
+        if (response.getType() == OK) {
             System.out.println("Raspuns OK pentru LOGIN - PersoanaOficiu");
             return true;
         }
@@ -67,7 +65,6 @@ public class ClientServicesProtoProxy implements IServices {
         System.out.println("LogoutPersoanaOFICIU PROTO PROXY");
 
         System.out.println("Urmeaza sa trimitem un request PROTO PROXY");
-//        sendRequest(ProtoUtils.createLoginRequest(DTOUtils.getDTO(persoanaOficiu)));
         sendRequest(ProtoUtils.createLogoutRequest(numeParticipant));
         System.out.println("Request trimis din UI PROTO PROXY");
         Protobufs.ClientResponse response = readResponse();
@@ -83,8 +80,9 @@ public class ClientServicesProtoProxy implements IServices {
     }
 
     @Override
-    public void InscrieParticipant(String numeParticipant, String numeEchipa, String capMotor) {        sendRequest(ProtoUtils.createNewParticipantRequest(numeParticipant, numeEchipa, capMotor));
+    public void InscrieParticipant(String numeParticipant, String numeEchipa, String capMotor) {
         System.out.println("Request trimis din UI PROTO PROXY - ADD NEW PARTICIPANT");
+        sendRequest(ProtoUtils.createNewParticipantRequest(numeParticipant, numeEchipa, capMotor));
         Protobufs.ClientResponse response = readResponse();
         System.out.println("Raspuns primit din SERVER PROTO PROXY");
         if (response.getType() == OK) {
@@ -99,24 +97,27 @@ public class ClientServicesProtoProxy implements IServices {
 
     @Override
     public Map<String, Integer> GetNumberOfParticipantsByRace() {
-//        Request req = new Request.Builder().type(RequestType.NR_PARTICIPANTS_BYRACE).build();
-//        sendRequest(req);
-//        Response response = readResponse();
-//        if (response.type() == ResponseType.ERROR) {
-//            String err = response.data().toString();
-//            System.out.println("Ceva eroare la GetNumberOfParticipantsByRace: " + err);
-//            return null;
-//        }
-//        if (response.type() == ResponseType.OK) {
-//            try {
-//                Map<String, Integer> result = (Map<String, Integer>) response.data();
-//                return result;
-//            } catch (ClassCastException e) {
-//                System.out.println("Failed to cast response data to Map<String, Integer>");
-//                return null;
-//            }
-//        }
-        return null;
+        sendRequest(ProtoUtils.createNR_PARTICIPANTS_BYRACERequest());
+        Protobufs.ClientResponse response = readResponse();
+        List<Protobufs.ParticipantsByRaceDto> participantsByRaceDtoList = response.getParticipantsByRaceDtoList();
+
+        Map<String, Integer> map = new HashMap<>();
+        System.out.println("Raspuns primit din SERVER PROTO PROXY");
+        if (response.getType() == OK) {
+            System.out.println("Raspuns OK primire - GetNumberOfParticipantsByRace");
+
+            // Populate the map with data from the ParticipantsByRaceDto objects
+            for (Protobufs.ParticipantsByRaceDto dto : participantsByRaceDtoList) {
+                map.put(dto.getCursa(), dto.getNrParticipanti());
+            }
+        }
+        if (response.getType() == ERROR) {
+//            String err = ProtoUtils.(response);
+            closeConnection();
+            System.out.println("EROARE GetNumberOfParticipantsByRace: ");
+        }
+
+        return map;
     }
 
     @Override
@@ -171,15 +172,15 @@ public class ClientServicesProtoProxy implements IServices {
 
     }
 
-    private void sendRequest(Protobufs.ClientRequest request){
+    private void sendRequest(Protobufs.ClientRequest request) {
         try {
-            System.out.println("Sending request ..."+request);
+            System.out.println("Sending request ..." + request);
             //request.writeTo(output);
             request.writeDelimitedTo(output);
             output.flush();
             System.out.println("Request sent.");
         } catch (IOException e) {
-            System.out.println("Error sending object "+e);
+            System.out.println("Error sending object " + e);
         }
     }
 
@@ -215,25 +216,25 @@ public class ClientServicesProtoProxy implements IServices {
 
     }
 
-    private class ReaderThread implements Runnable{
+    private class ReaderThread implements Runnable {
         public void run() {
-            while(!finished){
+            while (!finished) {
                 try {
-                    Protobufs.ClientResponse response=Protobufs.ClientResponse.parseDelimitedFrom(input);
-                    System.out.println("response received into ReaderThread " +response);
+                    Protobufs.ClientResponse response = Protobufs.ClientResponse.parseDelimitedFrom(input);
+                    System.out.println("response received into ReaderThread " + response);
 
                     if (isUpdateResponse(response.getType())){
                         handleUpdate(response);
                     }else{
-                        try {
-                            System.out.println("Adding in qresponses");
-                            qresponses.put(response);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
+                    try {
+                        System.out.println("Adding in qresponses");
+                        qresponses.put(response);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     }
                 } catch (IOException e) {
-                    System.out.println("Reading error "+e);
+                    System.out.println("Reading error " + e);
                 }
             }
         }
